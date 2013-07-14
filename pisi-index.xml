@@ -1,0 +1,383 @@
+<PISI>
+    <SpecFile>
+        <Source>
+            <Name>google-talkplugin</Name>
+            <Homepage>http://www.google.com/chat/video</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>as-is</License>
+            <License>openssl</License>
+            <IsA>library</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Video chat browser plug-in for Google Talk</Summary>
+            <Summary xml:lang="tr">Google Talk için video sohbet tarayıcı eklentisi</Summary>
+            <Description xml:lang="en">The Google Talk Plugin is a browser plugin that enables you to use Google voice and video chat to chat face to face with family and friends.</Description>
+            <Description xml:lang="tr">Google Talk Plugin, aileniz ve arkadaşlarınızla yüz yüze sohbet etmek için Google&apos;nin sesli ve görüntülü sohbet hizmetini kullanmanızı sağlayan bir tarayıcı eklentisidir.</Description>
+            <Archive type="binary" sha1sum="8f661caba85a194cd3578c59caeb2fd60765ad57" target="i686">http://dl.google.com/linux/direct/google-talkplugin_current_i386.deb</Archive>
+            <Archive type="binary" sha1sum="80f02ba5cc733b0477df7450de33d194ddefcb9e" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
+            <SourceURI>google-talkplugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>google-talkplugin</Name>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/opt/google/talkplugin/GoogleTalkPlugin</Path>
+                <Path fileType="config">/opt/google/talkplugin/envvars</Path>
+                <Path fileType="executable">/opt/google/talkplugin</Path>
+                <Path fileType="library">/opt/google/talkplugin/lib</Path>
+                <Path fileType="library">/opt/google/talkplugin/libnpg*</Path>
+                <Path fileType="library">/opt/google/talkplugin/libgoogle*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/opt/google/talkplugin/windowpicker.glade</Path>
+                <Path fileType="data">/opt/google/talkplugin/data</Path>
+                <Path fileType="localedata">/opt/google/talkplugin/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/opt/google/talkplugin/envvars" permission="0644" owner="root">envvars</AdditionalFile>
+                <AdditionalFile target="/usr/share/doc/google-talkplugin/LICENSE" permission="0644" owner="root">LICENSE</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2013-04-10</Date>
+                <Version>4.2.1.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2013-04-10</Date>
+                <Version>3.10.2.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Sezai Yeniay</Name>
+                <Email>sezaiyeniay@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2012-11-09</Date>
+                <Version>3.10.2.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2012-08-20</Date>
+                <Version>3.2.4.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2012-05-27</Date>
+                <Version>2.9.10.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-04-30</Date>
+                <Version>2.8.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Fatih Arslan</Name>
+                <Email>farslan@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>google-chrome</Name>
+            <Homepage>http://chrome.google.com/</Homepage>
+            <Packager>
+                <Name>Gürkan ZEGNIN</Name>
+                <Email>gurkan@pardususer.de</Email>
+            </Packager>
+            <License>EULA</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network.web</PartOf>
+            <Summary xml:lang="de">Google Chrome für Linux</Summary>
+            <Summary xml:lang="en">Google Chrome for Linux</Summary>
+            <Summary xml:lang="es">Google Chrome para Linux</Summary>
+            <Description xml:lang="de">Google Chrome ist ein Web-Browser der von Google Inc. entwickelt wird. Wichtige Bestandteile sind die Rendering-Engine Webkit, sowie die JavaScript Engine. Beliebt macht den Browser seine einfach zu bedienende Oberfläche und die hohe Geschwindigkeit.</Description>
+            <Description xml:lang="en">Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
+            <Description xml:lang="es">Google Chrome es un navegador web desarrollado por Google Inc... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
+            <Icon>google-chrome</Icon>
+            <Archive type="binary" sha1sum="c3ee26996d5f37cf48534121e3b374a8baf3f332">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>google-chrome/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>google-chrome</Name>
+            <RuntimeDependencies>
+                <Dependency>cairo</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>icon-theme-hicolor</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>libevent</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>minizip</Dependency>
+                <Dependency>nspr</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+                <Dependency>icu4c</Dependency>
+                <Dependency>nss</Dependency>
+                <Dependency>cups</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libgcrypt</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libvpx</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>bzip2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="library">/usr/lib/</Path>
+                <Path fileType="man">/usr/share/man/</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="data">/opt/google/</Path>
+                <Path fileType="data">/usr/share/pixmaps/</Path>
+                <Path fileType="data">/usr/share/applications/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="24">
+                <Date>2013-07-15</Date>
+                <Version>28.0.1500.71</Version>
+                <Comment>Version update</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@gmail.com</Email>
+            </Update>
+            <Update release="23" type="security">
+                <Date>2013-29-06</Date>
+                <Version>28.0.1500.63</Version>
+                <Comment>Version update</Comment>
+                <Name>Yoyo Fernández</Name>
+                <Email>yoyofv@gmail.com</Email>
+            </Update>
+            <Update release="22" type="security">
+                <Date>2013-05-25</Date>
+                <Version>27.0.1453.93</Version>
+                <Comment>Version update</Comment>
+                <Name>Yoyo Fernández</Name>
+                <Email>yoyofv@gmail.com</Email>
+            </Update>
+            <Update release="21" type="security">
+                <Date>2013-03-27</Date>
+                <Version>26.0.1410.43</Version>
+                <Comment>Version update</Comment>
+                <Name>Yoyo Fernández</Name>
+                <Email>yoyofv@gmail.com</Email>
+            </Update>
+            <Update release="20" type="security">
+                <Date>2013-03-14</Date>
+                <Version>25.0.1364.172</Version>
+                <Comment>Version update</Comment>
+                <Name>Yoyo Fernández</Name>
+                <Email>parduslife@gmail.com</Email>
+            </Update>
+            <Update release="19" type="security">
+                <Date>2013-02-28</Date>
+                <Version>25.0.1364.97</Version>
+                <Comment>Version update</Comment>
+                <Name>Yoyo Fernández</Name>
+                <Email>parduslife@gmail.com</Email>
+            </Update>
+            <Update release="18" type="security">
+                <Date>2013-02-15</Date>
+                <Version>24.0.1312.70</Version>
+                <Comment>Version update</Comment>
+                <Name>Yoyo Fernández</Name>
+                <Email>parduslife@gmail.com</Email>
+            </Update>
+            <Update release="17" type="security">
+                <Date>2013-02-07</Date>
+                <Version>24.0.1312.69</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="16" type="security">
+                <Date>2013-01-20</Date>
+                <Version>24.0.1312.56</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="15" type="security">
+                <Date>2012-09-13</Date>
+                <Version>21.0.1180.89</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="14" type="security">
+                <Date>2012-08-09</Date>
+                <Version>21.0.1180.75</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="13" type="security">
+                <Date>2012-07-22</Date>
+                <Version>20.0.1132.57</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="12" type="security">
+                <Date>2012-05-17</Date>
+                <Version>19.0.1084.46</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2012-04-14</Date>
+                <Version>18.0.1025.162</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="10" type="security">
+                <Date>2012-03-29</Date>
+                <Version>18.0.1025.142</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="9" type="security">
+                <Date>2012-03-12</Date>
+                <Version>17.0.963.79</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="8" type="security">
+                <Date>2012-02-20</Date>
+                <Version>17.0.963.56</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2012-02-09</Date>
+                <Version>17.0.963.46</Version>
+                <Comment>Version update and make releasenumber equal to i686</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2011-12-02</Date>
+                <Version>15.0.874.121</Version>
+                <Comment>Version update and move runtimedep libpng12 to libpng12-pardususerde</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2011-11-13</Date>
+                <Version>15.0.874.120</Version>
+                <Comment>Version update and wrong package name in translations.xml (there was &quot;picasa&quot; - instead of &quot;google-chrome&quot;)</Comment>
+                <Name>Gürkan ZENGIN</Name>
+                <Email>gurkan@pardususer.de</Email>
+            </Update>
+            <Update release="3">
+                <Date>2011-09-20</Date>
+                <Version>14.0.835.163</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2011-08-20</Date>
+                <Version>13.0.782.112</Version>
+                <Comment>Version update</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-05-13</Date>
+                <Version>11.0.696.68</Version>
+                <Comment>First release.</Comment>
+                <Name>Gürkan ZENGIN</Name>
+                <Email>gurkan@pardususer.de</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wuala</Name>
+            <Homepage>http://www.wuala.com/</Homepage>
+            <Packager>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Packager>
+            <License>2011 LaCie AG. Alls rights reserved.</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Wuala için dosya aktarım paketi</Summary>
+            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
+            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>sun-jdk</Dependency>
+                <Dependency>sun-jre</Dependency>
+            </BuildDependencies>
+            <SourceURI>wuala/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wuala</Name>
+            <RuntimeDependencies>
+                <Dependency>sun-jdk</Dependency>
+                <Dependency>sun-jre</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2012-03-09</Date>
+                <Version>1.0</Version>
+                <Comment>new version.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Update>
+        </History>
+    </SpecFile>
+</PISI>

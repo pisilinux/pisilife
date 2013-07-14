@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wuala</Name>
+        <Homepage>http://www.wuala.com/</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>namso-01@hotmail.it</Email>
+        </Packager>
+        <License>2011 LaCie AG. Alls rights reserved.</License>
+        <IsA>app:gui</IsA>
+        <Summary>Wuala için dosya aktarım paketi</Summary>
+        <Description>wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+        <Archive sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073" type="targz">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
+	<BuildDependencies>
+            <Dependency>sun-jdk</Dependency>
+	    <Dependency>sun-jre</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wuala</Name>
+        <RuntimeDependencies>
+	    <Dependency>sun-jdk</Dependency>
+	    <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+	<AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/icons/wuala.ico">wuala.ico</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/wuala.png">wuala.png</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/wuala.desktop">wuala.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="doc">/usr/share</Path>
+	    <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2012-03-09</Date>
+            <Version>1.0</Version>
+            <Comment>new version.</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>namso-01@hotmail.it</Email>
+        </Update>
+    </History>
+</PISI>

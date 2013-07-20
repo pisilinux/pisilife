@@ -101,6 +101,88 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>picasa</Name>
+            <Homepage>http://picasa.google.com/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>EULA</License>
+            <License>GPLV2</License>
+            <License>LGPLV2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="tr">Linux İçin Picasa</Summary>
+            <Summary xml:lang="de">Picasa für Linux</Summary>
+            <Summary xml:lang="en">Picasa for Linux with face recognition</Summary>
+            <Description xml:lang="tr">Picasa, dijital fotoğraflarınızı aramaya, düzenlemeye, üzerinde değişiklik yapmaya, ve internet aracı&apos;ile paylaşmak için bir Google programıdır.</Description>
+            <Description xml:lang="de">Picasa ist eine Bilderverwaltungssoftware von Google, zum Verwalten, Archivieren, Bearbeiten und Erstellung von online Webalben Ihrer Fotos.</Description>
+            <Description xml:lang="en">Picasa is a software from Google for organizing, editing or sharing digital photos over internet from your computer.</Description>
+            <Icon>picasa</Icon>
+            <Archive type="binary" sha1sum="148a74dc0c39e2e676c4ccc8d9c0bf919a9afc56">ftp://ftp.is.co.za/mirror/pclinuxos.com/pclinuxos/srpms/SRPMS.pclos/picasa-3.9-2pclos2012.src.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>picasa/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>picasa</Name>
+            <RuntimeDependencies>
+                <Dependency>openssl-32bit</Dependency>
+                <Dependency>libXau-32bit</Dependency>
+                <Dependency>libXmu-32bit</Dependency>
+                <Dependency>libXpm-32bit</Dependency>
+                <Dependency>libXxf86vm-32bit</Dependency>
+                <Dependency>alsa-lib-32bit</Dependency>
+                <Dependency>audiofile-32bit</Dependency>
+                <Dependency>cups-32bit</Dependency>
+                <Dependency>freetype-32bit</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>libgphoto2</Dependency>
+                <Dependency>sane-backends</Dependency>
+                <Dependency>libxslt-32bit</Dependency>
+                <Dependency>lcms-32bit</Dependency>
+                <Dependency>lsb-release</Dependency>
+                <Dependency>firefox</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/opt/google/</Path>
+                <Path fileType="data">/usr/</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="data">/etc/xdg</Path>
+                <Path fileType="data">/usr/share/desktop-directories</Path>
+            </Files>
+            <Conflicts>
+                <Package>picasa-improved-play-function</Package>
+            </Conflicts>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/picasa.desktop" permission="0644" owner="root">picasa.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/picasa-kdehal.desktop" permission="0644" owner="root">picasa-kdehal.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/picasa-fontcfg.desktop" permission="0644" owner="root">picasa-fontcfg.desktop</AdditionalFile>
+                <AdditionalFile target="/etc/xdg/menus/applications-merged/picasa.menu" permission="0644">picasa.menu</AdditionalFile>
+                <AdditionalFile target="/usr/share/desktop-directories/Picasa.directory" permission="0644">Picasa.directory</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2013-07-20</Date>
+                <Version>3.9.0</Version>
+                <Comment>change source</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-12-17</Date>
+                <Version>3.9.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>google-chrome</Name>
             <Homepage>http://chrome.google.com/</Homepage>
             <Packager>

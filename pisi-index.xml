@@ -1,6 +1,137 @@
 <PISI>
     <SpecFile>
         <Source>
+            <Name>picasa</Name>
+            <Homepage>http://picasa.google.com/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>EULA</License>
+            <License>GPLV2</License>
+            <License>LGPLV2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="tr">Linux İçin Picasa</Summary>
+            <Summary xml:lang="de">Picasa für Linux</Summary>
+            <Summary xml:lang="en">Picasa for Linux with face recognition</Summary>
+            <Description xml:lang="tr">Picasa, dijital fotoğraflarınızı aramaya, düzenlemeye, üzerinde değişiklik yapmaya, ve internet aracı&apos;ile paylaşmak için bir Google programıdır.</Description>
+            <Description xml:lang="de">Picasa ist eine Bilderverwaltungssoftware von Google, zum Verwalten, Archivieren, Bearbeiten und Erstellung von online Webalben Ihrer Fotos.</Description>
+            <Description xml:lang="en">Picasa is a software from Google for organizing, editing or sharing digital photos over internet from your computer.</Description>
+            <Icon>picasa</Icon>
+            <Archive type="binary" sha1sum="148a74dc0c39e2e676c4ccc8d9c0bf919a9afc56">ftp://ftp.is.co.za/mirror/pclinuxos.com/pclinuxos/srpms/SRPMS.pclos/picasa-3.9-2pclos2012.src.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>picasa/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>picasa</Name>
+            <RuntimeDependencies>
+                <Dependency>openssl-32bit</Dependency>
+                <Dependency>libXau-32bit</Dependency>
+                <Dependency>libXmu-32bit</Dependency>
+                <Dependency>libXpm-32bit</Dependency>
+                <Dependency>libXxf86vm-32bit</Dependency>
+                <Dependency>alsa-lib-32bit</Dependency>
+                <Dependency>audiofile-32bit</Dependency>
+                <Dependency>cups-32bit</Dependency>
+                <Dependency>freetype-32bit</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>libgphoto2</Dependency>
+                <Dependency>sane-backends</Dependency>
+                <Dependency>libxslt-32bit</Dependency>
+                <Dependency>lcms-32bit</Dependency>
+                <Dependency>lsb-release</Dependency>
+                <Dependency>firefox</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/opt/google/</Path>
+                <Path fileType="data">/usr/</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="data">/etc/xdg</Path>
+                <Path fileType="data">/usr/share/desktop-directories</Path>
+            </Files>
+            <Conflicts>
+                <Package>picasa-improved-play-function</Package>
+            </Conflicts>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/picasa.desktop" permission="0644" owner="root">picasa.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/picasa-kdehal.desktop" permission="0644" owner="root">picasa-kdehal.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/picasa-fontcfg.desktop" permission="0644" owner="root">picasa-fontcfg.desktop</AdditionalFile>
+                <AdditionalFile target="/etc/xdg/menus/applications-merged/picasa.menu" permission="0644">picasa.menu</AdditionalFile>
+                <AdditionalFile target="/usr/share/desktop-directories/Picasa.directory" permission="0644">Picasa.directory</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2013-07-20</Date>
+                <Version>3.9.0</Version>
+                <Comment>change source</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-12-17</Date>
+                <Version>3.9.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wuala</Name>
+            <Homepage>http://www.wuala.com/</Homepage>
+            <Packager>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Packager>
+            <License>2011 LaCie AG. Alls rights reserved.</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Wuala için dosya aktarım paketi</Summary>
+            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
+            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>sun-jdk</Dependency>
+                <Dependency>sun-jre</Dependency>
+            </BuildDependencies>
+            <SourceURI>wuala/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wuala</Name>
+            <RuntimeDependencies>
+                <Dependency>sun-jdk</Dependency>
+                <Dependency>sun-jre</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2012-03-09</Date>
+                <Version>1.0</Version>
+                <Comment>new version.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>google-talkplugin</Name>
             <Homepage>http://www.google.com/chat/video</Homepage>
             <Packager>
@@ -101,88 +232,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>picasa</Name>
-            <Homepage>http://picasa.google.com/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>EULA</License>
-            <License>GPLV2</License>
-            <License>LGPLV2</License>
-            <IsA>app:gui</IsA>
-            <PartOf>multimedia.graphics</PartOf>
-            <Summary xml:lang="tr">Linux İçin Picasa</Summary>
-            <Summary xml:lang="de">Picasa für Linux</Summary>
-            <Summary xml:lang="en">Picasa for Linux with face recognition</Summary>
-            <Description xml:lang="tr">Picasa, dijital fotoğraflarınızı aramaya, düzenlemeye, üzerinde değişiklik yapmaya, ve internet aracı&apos;ile paylaşmak için bir Google programıdır.</Description>
-            <Description xml:lang="de">Picasa ist eine Bilderverwaltungssoftware von Google, zum Verwalten, Archivieren, Bearbeiten und Erstellung von online Webalben Ihrer Fotos.</Description>
-            <Description xml:lang="en">Picasa is a software from Google for organizing, editing or sharing digital photos over internet from your computer.</Description>
-            <Icon>picasa</Icon>
-            <Archive type="binary" sha1sum="148a74dc0c39e2e676c4ccc8d9c0bf919a9afc56">ftp://ftp.is.co.za/mirror/pclinuxos.com/pclinuxos/srpms/SRPMS.pclos/picasa-3.9-2pclos2012.src.rpm</Archive>
-            <BuildDependencies>
-                <Dependency>rpm2targz</Dependency>
-            </BuildDependencies>
-            <SourceURI>picasa/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>picasa</Name>
-            <RuntimeDependencies>
-                <Dependency>openssl-32bit</Dependency>
-                <Dependency>libXau-32bit</Dependency>
-                <Dependency>libXmu-32bit</Dependency>
-                <Dependency>libXpm-32bit</Dependency>
-                <Dependency>libXxf86vm-32bit</Dependency>
-                <Dependency>alsa-lib-32bit</Dependency>
-                <Dependency>audiofile-32bit</Dependency>
-                <Dependency>cups-32bit</Dependency>
-                <Dependency>freetype-32bit</Dependency>
-                <Dependency>libexif</Dependency>
-                <Dependency>libgphoto2</Dependency>
-                <Dependency>sane-backends</Dependency>
-                <Dependency>libxslt-32bit</Dependency>
-                <Dependency>lcms-32bit</Dependency>
-                <Dependency>lsb-release</Dependency>
-                <Dependency>firefox</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/opt/google/</Path>
-                <Path fileType="data">/usr/</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-                <Path fileType="executable">/usr/bin/</Path>
-                <Path fileType="data">/etc/xdg</Path>
-                <Path fileType="data">/usr/share/desktop-directories</Path>
-            </Files>
-            <Conflicts>
-                <Package>picasa-improved-play-function</Package>
-            </Conflicts>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/picasa.desktop" permission="0644" owner="root">picasa.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/picasa-kdehal.desktop" permission="0644" owner="root">picasa-kdehal.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/picasa-fontcfg.desktop" permission="0644" owner="root">picasa-fontcfg.desktop</AdditionalFile>
-                <AdditionalFile target="/etc/xdg/menus/applications-merged/picasa.menu" permission="0644">picasa.menu</AdditionalFile>
-                <AdditionalFile target="/usr/share/desktop-directories/Picasa.directory" permission="0644">Picasa.directory</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2013-07-20</Date>
-                <Version>3.9.0</Version>
-                <Comment>change source</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2011-12-17</Date>
-                <Version>3.9.0</Version>
-                <Comment>First release.</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>google-chrome</Name>
             <Homepage>http://chrome.google.com/</Homepage>
             <Packager>
@@ -199,7 +248,7 @@
             <Description xml:lang="en">Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
             <Description xml:lang="es">Google Chrome es un navegador web desarrollado por Google Inc... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
             <Icon>google-chrome</Icon>
-            <Archive type="binary" sha1sum="c3ee26996d5f37cf48534121e3b374a8baf3f332">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+            <Archive type="binary" sha1sum="71b4d6a65203df5ce25af5e2996cdbfa53771980">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
             <BuildDependencies>
                 <Dependency>rpm2targz</Dependency>
             </BuildDependencies>
@@ -250,6 +299,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="25">
+                <Date>2013-08-31</Date>
+                <Version>28.0.1500.95</Version>
+                <Comment>Version update</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@gmail.com</Email>
+            </Update>
             <Update release="24">
                 <Date>2013-07-15</Date>
                 <Version>28.0.1500.71</Version>
@@ -410,55 +466,6 @@
                 <Comment>First release.</Comment>
                 <Name>Gürkan ZENGIN</Name>
                 <Email>gurkan@pardususer.de</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>wuala</Name>
-            <Homepage>http://www.wuala.com/</Homepage>
-            <Packager>
-                <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
-            </Packager>
-            <License>2011 LaCie AG. Alls rights reserved.</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Wuala için dosya aktarım paketi</Summary>
-            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
-            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
-            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
-            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>sun-jdk</Dependency>
-                <Dependency>sun-jre</Dependency>
-            </BuildDependencies>
-            <SourceURI>wuala/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>wuala</Name>
-            <RuntimeDependencies>
-                <Dependency>sun-jdk</Dependency>
-                <Dependency>sun-jre</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share</Path>
-                <Path fileType="library">/usr/lib</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2012-03-09</Date>
-                <Version>1.0</Version>
-                <Comment>new version.</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
             </Update>
         </History>
     </SpecFile>

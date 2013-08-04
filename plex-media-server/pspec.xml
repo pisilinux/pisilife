@@ -11,8 +11,8 @@
         <License>GPL</License>
         <Summary>Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
         <Description>Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir. </Description>
-        <Archive sha1sum="79bf6d284e5b5f1493af7119083c8ce75d900404" type="binary" target="i686">http://www.plexapp.com/repo/pool/main/p/plexmediaserver/plexmediaserver_0.9.7.12.408-74b62af_i386.deb</Archive>
-        <Archive sha1sum="708cc27e0c74ea6ceb57ba83b8acacf7cc068983" type="binary" target="x86_64">http://www.plexapp.com/repo/pool/main/p/plexmediaserver/plexmediaserver_0.9.7.12.408-74b62af_amd64.deb</Archive>
+        <Archive sha1sum="887c457730dfe07725e2a5ac83851aa40f72d0ce" type="binary" target="i686">http://www.plexapp.com/repo/pool/main/p/plexmediaserver/plexmediaserver_0.9.7.22.510-8faeab3_i386.deb</Archive>
+        <Archive sha1sum="173a44e7dd5f1fa7f7b953783ba1e80afcdde8f3" type="binary" target="x86_64">http://www.plexapp.com/repo/pool/main/p/plexmediaserver/plexmediaserver_0.9.7.22.510-8faeab3_amd64.deb</Archive>
     </Source>
 
     <Package>
@@ -43,14 +43,21 @@
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/sbin</Path>
         </Files>
-	<AdditionalFiles>
-	    <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/plexmediamanager.desktop">plexmediamanager.desktop</AdditionalFile>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/plexmediamanager.desktop">plexmediamanager.desktop</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/plex-start.desktop">plex-start.desktop</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/plexstart.png">plexstart.png</AdditionalFile>
-	</AdditionalFiles>
+        </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2013-08-04</Date>
+            <Version>0.9.7.22.510</Version>
+            <Comment>V.Bump</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2013-07-29</Date>
             <Version>0.9.7.12.408</Version>

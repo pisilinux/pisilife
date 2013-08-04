@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>teamviewer</Name> 
+        <Homepage>http://www.teamviewer.com/</Homepage> 
+        <Packager>
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Packager>
+        <License>as-is</License> 
+        <Icon>qnext</Icon>
+        <IsA>app:gui</IsA> 
+        <Summary>User friendly remote control application</Summary>
+        <Description>TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com </Description>
+        <Archive sha1sum="56ee7329b188fc2421b939990c997a765d76a06a" type="binary">http://download.teamviewer.com/download/version_7x/teamviewer_linux.rpm</Archive>
+        <BuildDependencies>
+            <Dependency>rpm2targz</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>teamviewer</Name>
+        <RuntimeDependencies>
+	    <Dependency>wine-32bit</Dependency>
+            <Dependency>libXtst-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/teamviewer/</Path>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/teamviewer.desktop">teamviewer.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/teamviewer/teamviewer-help.html">teamviewer-help.html</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/teamviewer.png">teamviewer.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-08-03</Date>
+            <Version>7.0.9377</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

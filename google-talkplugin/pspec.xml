@@ -13,8 +13,8 @@
         <IsA>library</IsA>
         <Summary>Video chat browser plug-in for Google Talk</Summary>
         <Description>The Google Talk Plugin is a browser plugin that enables you to use Google voice and video chat to chat face to face with family and friends.</Description>
-        <Archive sha1sum="8f661caba85a194cd3578c59caeb2fd60765ad57" type="binary" target="i686">http://dl.google.com/linux/direct/google-talkplugin_current_i386.deb</Archive>
-        <Archive sha1sum="80f02ba5cc733b0477df7450de33d194ddefcb9e" type="binary" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
+	<!--<Archive sha1sum="8f661caba85a194cd3578c59caeb2fd60765ad57" type="binary" target="i686">http://dl.google.com/linux/direct/google-talkplugin_current_i386.deb</Archive>-->
+        <Archive sha1sum="bbe6d95e1477ccb9b514c3caf2dfb267a0bda109" type="binary" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
     </Source>
 
     <Package>
@@ -56,6 +56,13 @@
     </Package>
 
     <History>
+	<Update release="7">
+            <Date>2013-10-19</Date>
+            <Version>4.7.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Richard de Bruin</Name>
+            <Email>richdb@pisilinux.org</Email>
+        </Update>
         <Update release="6">
             <Date>2013-04-10</Date>
             <Version>4.2.1.0</Version>

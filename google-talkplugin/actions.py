@@ -28,7 +28,7 @@ def install():
     pisitools.insinto("/opt/google/talkplugin", "opt/google/talkplugin/*")
 
     # We don't need cron stuff
-    pisitools.removeDir("/opt/google/talkplugin/cron")
+    #pisitools.removeDir("/opt/google/talkplugin/cron")
 
     # All doc files go to proper directory
     pisitools.domove("/opt/google/talkplugin/attributions.txt", "/usr/share/doc/google-talkplugin")

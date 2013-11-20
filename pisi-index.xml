@@ -66,7 +66,7 @@
             <Description xml:lang="en">Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
             <Description xml:lang="es">Google Chrome es un navegador web desarrollado por Google Inc... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
             <Icon>google-chrome</Icon>
-            <Archive type="binary" sha1sum="4c8049b1f68a284e3101e657d7d8149342e73f8b">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+            <Archive type="binary" sha1sum="40894fe63b5642e88e2c31dbd9091874bc7816d5">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
             <BuildDependencies>
                 <Dependency>rpm2targz</Dependency>
             </BuildDependencies>
@@ -104,6 +104,8 @@
                 <Dependency>flac</Dependency>
                 <Dependency>libpng</Dependency>
                 <Dependency>bzip2</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>libXcomposite</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc/</Path>
@@ -117,6 +119,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="29">
+                <Date>2013-11-20</Date>
+                <Version>31.0.1650.57</Version>
+                <Comment>Version bump</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
             <Update release="28">
                 <Date>2013-10-19</Date>
                 <Version>30.0.1599.101</Version>

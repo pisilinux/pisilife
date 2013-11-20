@@ -1,105 +1,50 @@
 <PISI>
     <SpecFile>
         <Source>
-            <Name>draftsight</Name>
-            <Homepage>http://chrome.google.com/</Homepage>
+            <Name>wuala</Name>
+            <Homepage>http://www.wuala.com/</Homepage>
             <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
             </Packager>
-            <License>AS IS</License>
-            <License>EULA</License>
+            <License>2011 LaCie AG. Alls rights reserved.</License>
             <IsA>app:gui</IsA>
-            <PartOf>multimedia.graphics</PartOf>
-            <Summary xml:lang="tr">DraftSight ® - DWG dosyaları için CAD ​​yazılımı.</Summary>
-            <Summary xml:lang="de">DraftSight®: Kostenlose Profi-CAD-Software.</Summary>
-            <Summary xml:lang="en">DraftSight® - Free CAD software for your DWG files</Summary>
-            <Summary xml:lang="es">DraftSight®: Programa CAD gratuito* de nivel profesional.</Summary>
-            <Description xml:lang="tr">DraftSight profesyonel CAD kullanıcılarının, öğrencilerin ve eğitimcilerin DWG dosyalarını oluşturmasını, düzenlemesini ve görüntülemesini sağlar.</Description>
-            <Description xml:lang="de">Mit DraftSight können professionelle CAD-Anwender, Studenten und Ausbilder DWG-Dateien erstellen, bearbeiten und ansehen.</Description>
-            <Description xml:lang="en">DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
-            <Description xml:lang="es">Con DraftSight, los usuarios CAD profesionales, estudiantes y educadores pueden crear, editar y visualizar ficheros DWG.</Description>
-            <Icon>draftsight</Icon>
-            <Archive type="binary" sha1sum="ece212be59bf64d0907899048095a058b2828ff9">http://dl-ak.solidworks.com/nonsecure/draftsight/V1R4.0/draftSight.rpm</Archive>
-            <AdditionalFiles>
-                <AdditionalFile target="libaudio.so.2">libaudio.so.2</AdditionalFile>
-            </AdditionalFiles>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Wuala için dosya aktarım paketi</Summary>
+            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
+            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>rpm2targz</Dependency>
+                <Dependency>sun-jdk</Dependency>
+                <Dependency>sun-jre</Dependency>
             </BuildDependencies>
-            <SourceURI>draftsight/pspec.xml</SourceURI>
+            <SourceURI>wuala/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>draftsight-dummy</Name>
-            <Summary xml:lang="en">Dummy file for draftsight</Summary>
+            <Name>wuala</Name>
             <RuntimeDependencies>
-                <Dependency>mesa-glu</Dependency>
-                <Dependency>mesa</Dependency>
-                <Dependency>libglade</Dependency>
-                <Dependency>libICE</Dependency>
-                <Dependency>libSM</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>libXrender</Dependency>
-                <Dependency>libXt</Dependency>
-                <Dependency>nas</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>expat</Dependency>
+                <Dependency>sun-jdk</Dependency>
+                <Dependency>sun-jre</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin/draftsight.bin</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>draftsight-dummy</Name>
-            <Summary xml:lang="en">Dummy file for draftsight</Summary>
-            <RuntimeDependencies>
-                <Dependency>glib2-32bit</Dependency>
-                <Dependency>mesa-glu-32bit</Dependency>
-                <Dependency>mesa-32bit</Dependency>
-                <Dependency>cups-32bit</Dependency>
-                <Dependency>libglade</Dependency>
-                <Dependency>libICE-32bit</Dependency>
-                <Dependency>libSM-32bit</Dependency>
-                <Dependency>libX11-32bit</Dependency>
-                <Dependency>libXext-32bit</Dependency>
-                <Dependency>libXrender-32bit</Dependency>
-                <Dependency>libXt-32bit</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-                <Dependency>alsa-lib-32bit</Dependency>
-                <Dependency>fontconfig-32bit</Dependency>
-                <Dependency>expat-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/32/draftsight.bin</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>draftsight</Name>
-            <RuntimeDependencies>
-                <Dependency release="1">draftsight-dummy</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/draftsight</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-                <Path fileType="data">/usr/share/pixmaps/</Path>
-                <Path fileType="data">/usr/share/applications/</Path>
-                <Path fileType="data">/opt/dassault-systemes/</Path>
-                <Path fileType="data">/var/opt/dassault-systemes/</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
             </Files>
             <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/draftsight.desktop" permission="0644" owner="root">draftsight.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
             <Update release="1">
-                <Date>2013-09-27</Date>
-                <Version>4.0</Version>
-                <Comment>first relaese</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@pisilinux.org</Email>
+                <Date>2012-03-09</Date>
+                <Version>1.0</Version>
+                <Comment>new version.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
             </Update>
         </History>
     </SpecFile>
@@ -121,7 +66,7 @@
             <Description xml:lang="en">Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
             <Description xml:lang="es">Google Chrome es un navegador web desarrollado por Google Inc... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
             <Icon>google-chrome</Icon>
-            <Archive type="binary" sha1sum="82cb14f18110cb3dc62f4733cc851b475fe0cf39">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+            <Archive type="binary" sha1sum="4c8049b1f68a284e3101e657d7d8149342e73f8b">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
             <BuildDependencies>
                 <Dependency>rpm2targz</Dependency>
             </BuildDependencies>
@@ -172,6 +117,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="28">
+                <Date>2013-10-19</Date>
+                <Version>30.0.1599.101</Version>
+                <Comment>Version bump</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
             <Update release="27">
                 <Date>2013-09-19</Date>
                 <Version>29.0.1547.76</Version>
@@ -358,106 +310,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>google-talkplugin</Name>
-            <Homepage>http://www.google.com/chat/video</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>as-is</License>
-            <License>openssl</License>
-            <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Video chat browser plug-in for Google Talk</Summary>
-            <Summary xml:lang="tr">Google Talk için video sohbet tarayıcı eklentisi</Summary>
-            <Description xml:lang="en">The Google Talk Plugin is a browser plugin that enables you to use Google voice and video chat to chat face to face with family and friends.</Description>
-            <Description xml:lang="tr">Google Talk Plugin, aileniz ve arkadaşlarınızla yüz yüze sohbet etmek için Google&apos;nin sesli ve görüntülü sohbet hizmetini kullanmanızı sağlayan bir tarayıcı eklentisidir.</Description>
-            <Archive type="binary" sha1sum="8f661caba85a194cd3578c59caeb2fd60765ad57" target="i686">http://dl.google.com/linux/direct/google-talkplugin_current_i386.deb</Archive>
-            <Archive type="binary" sha1sum="80f02ba5cc733b0477df7450de33d194ddefcb9e" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
-            <SourceURI>google-talkplugin/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>google-talkplugin</Name>
-            <RuntimeDependencies>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>libXcomposite</Dependency>
-                <Dependency>libXfixes</Dependency>
-                <Dependency>libXrandr</Dependency>
-                <Dependency>libXrender</Dependency>
-                <Dependency>libXt</Dependency>
-                <Dependency>mesa</Dependency>
-                <Dependency>pulseaudio-libs</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/opt/google/talkplugin/GoogleTalkPlugin</Path>
-                <Path fileType="config">/opt/google/talkplugin/envvars</Path>
-                <Path fileType="executable">/opt/google/talkplugin</Path>
-                <Path fileType="library">/opt/google/talkplugin/lib</Path>
-                <Path fileType="library">/opt/google/talkplugin/libnpg*</Path>
-                <Path fileType="library">/opt/google/talkplugin/libgoogle*</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/opt/google/talkplugin/windowpicker.glade</Path>
-                <Path fileType="data">/opt/google/talkplugin/data</Path>
-                <Path fileType="localedata">/opt/google/talkplugin/locale</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/opt/google/talkplugin/envvars" permission="0644" owner="root">envvars</AdditionalFile>
-                <AdditionalFile target="/usr/share/doc/google-talkplugin/LICENSE" permission="0644" owner="root">LICENSE</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="6">
-                <Date>2013-04-10</Date>
-                <Version>4.2.1.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@pisilinux.org</Email>
-            </Update>
-            <Update release="5">
-                <Date>2013-04-10</Date>
-                <Version>3.10.2.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Sezai Yeniay</Name>
-                <Email>sezaiyeniay@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2012-11-09</Date>
-                <Version>3.10.2.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Anıl Özbek</Name>
-                <Email>ozbekanil@gmail.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2012-08-20</Date>
-                <Version>3.2.4.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Anıl Özbek</Name>
-                <Email>ozbekanil@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2012-05-27</Date>
-                <Version>2.9.10.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Anıl Özbek</Name>
-                <Email>ozbekanil@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-04-30</Date>
-                <Version>2.8.5.0</Version>
-                <Comment>First release</Comment>
-                <Name>Fatih Arslan</Name>
-                <Email>farslan@pardus.org.tr</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>picasa</Name>
             <Homepage>http://picasa.google.com/</Homepage>
             <Packager>
@@ -540,6 +392,334 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>teamviewer</Name>
+            <Homepage>http://www.teamviewer.com/</Homepage>
+            <Packager>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">User friendly remote control application</Summary>
+            <Summary xml:lang="tr">Kullanıcı dostu masaüstü paylaşım uygulaması</Summary>
+            <Description xml:lang="en">TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com</Description>
+            <Description xml:lang="tr">Teamviewer uzaktan bakım,online sunum ,dosya transferi yapmaya olanak sağlayan bir masaüstü paylaşım yazılımıdır.</Description>
+            <Icon>qnext</Icon>
+            <Archive type="binary" sha1sum="56ee7329b188fc2421b939990c997a765d76a06a">http://download.teamviewer.com/download/version_7x/teamviewer_linux.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>teamviewer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>teamviewer</Name>
+            <RuntimeDependencies>
+                <Dependency>wine-32bit</Dependency>
+                <Dependency>libXtst-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/opt/teamviewer/</Path>
+                <Path fileType="data">/usr/</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/teamviewer.desktop" permission="0644" owner="root">teamviewer.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/doc/teamviewer/teamviewer-help.html" permission="0644" owner="root">teamviewer-help.html</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/teamviewer.png" permission="0644" owner="root">teamviewer.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2013-08-03</Date>
+                <Version>7.0.9377</Version>
+                <Comment>First release</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>steam</Name>
+            <Homepage>http://store.steampowered.com/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>Valve Corporation</License>
+            <IsA>app</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Steam for linux</Summary>
+            <Summary xml:lang="tr">Linux için steam</Summary>
+            <Description xml:lang="en">Steam Digital Platform Runner</Description>
+            <Description xml:lang="tr">Steam dijital platform çalıştırıcısı</Description>
+            <Icon>steam</Icon>
+            <Archive type="targz" sha1sum="ec9fb3565dbf58a36179bb8119b68aa1f2a21433">http://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.44.tar.gz</Archive>
+            <SourceURI>steam/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>steam</Name>
+            <RuntimeDependencies>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2013-11-20</Date>
+                <Version>1.0.0.44</Version>
+                <Comment>Version bump</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-09-07</Date>
+                <Version>1.0.0.41</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>draftsight</Name>
+            <Homepage>http://www.3ds.com/products-services/draftsight/overview/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>AS IS</License>
+            <License>EULA</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="tr">DraftSight ® - DWG dosyaları için CAD ​​yazılımı.</Summary>
+            <Summary xml:lang="de">DraftSight®: Kostenlose Profi-CAD-Software.</Summary>
+            <Summary xml:lang="en">DraftSight® - Free CAD software for your DWG files</Summary>
+            <Summary xml:lang="es">DraftSight®: Programa CAD gratuito* de nivel profesional.</Summary>
+            <Description xml:lang="tr">DraftSight profesyonel CAD kullanıcılarının, öğrencilerin ve eğitimcilerin DWG dosyalarını oluşturmasını, düzenlemesini ve görüntülemesini sağlar.</Description>
+            <Description xml:lang="de">Mit DraftSight können professionelle CAD-Anwender, Studenten und Ausbilder DWG-Dateien erstellen, bearbeiten und ansehen.</Description>
+            <Description xml:lang="en">DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
+            <Description xml:lang="es">Con DraftSight, los usuarios CAD profesionales, estudiantes y educadores pueden crear, editar y visualizar ficheros DWG.</Description>
+            <Icon>draftsight</Icon>
+            <Archive type="binary" sha1sum="ece212be59bf64d0907899048095a058b2828ff9">http://dl-ak.solidworks.com/nonsecure/draftsight/V1R4.0/draftSight.rpm</Archive>
+            <AdditionalFiles>
+                <AdditionalFile target="libaudio.so.2">libaudio.so.2</AdditionalFile>
+            </AdditionalFiles>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>draftsight/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>draftsight-dummy</Name>
+            <Summary xml:lang="en">Dummy file for draftsight</Summary>
+            <RuntimeDependencies>
+                <Dependency>mesa-glu</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>nas</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>expat</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/draftsight.bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>draftsight-dummy</Name>
+            <Summary xml:lang="en">Dummy file for draftsight</Summary>
+            <RuntimeDependencies>
+                <Dependency>glib2-32bit</Dependency>
+                <Dependency>mesa-glu-32bit</Dependency>
+                <Dependency>mesa-32bit</Dependency>
+                <Dependency>cups-32bit</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libICE-32bit</Dependency>
+                <Dependency>libSM-32bit</Dependency>
+                <Dependency>libX11-32bit</Dependency>
+                <Dependency>libXext-32bit</Dependency>
+                <Dependency>libXrender-32bit</Dependency>
+                <Dependency>libXt-32bit</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+                <Dependency>alsa-lib-32bit</Dependency>
+                <Dependency>fontconfig-32bit</Dependency>
+                <Dependency>expat-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/32/draftsight.bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>draftsight</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">draftsight-dummy</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/draftsight</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="data">/usr/share/pixmaps/</Path>
+                <Path fileType="data">/usr/share/applications/</Path>
+                <Path fileType="data">/opt/dassault-systemes/</Path>
+                <Path fileType="data">/var/opt/dassault-systemes/</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/draftsight.desktop" permission="0644" owner="root">draftsight.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2013-09-27</Date>
+                <Version>4.0</Version>
+                <Comment>first relaese</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>google-talkplugin</Name>
+            <Homepage>http://www.google.com/chat/video</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>as-is</License>
+            <License>openssl</License>
+            <IsA>library</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Video chat browser plug-in for Google Talk</Summary>
+            <Summary xml:lang="tr">Google Talk için video sohbet tarayıcı eklentisi</Summary>
+            <Description xml:lang="en">The Google Talk Plugin is a browser plugin that enables you to use Google voice and video chat to chat face to face with family and friends.</Description>
+            <Description xml:lang="tr">Google Talk Plugin, aileniz ve arkadaşlarınızla yüz yüze sohbet etmek için Google&apos;nin sesli ve görüntülü sohbet hizmetini kullanmanızı sağlayan bir tarayıcı eklentisidir.</Description>
+            <Archive type="binary" sha1sum="c59c5a72df59f3a1fd4ec9a1b192c4ee837b7575" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
+            <SourceURI>google-talkplugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>google-talkplugin</Name>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>pango</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/opt/google/talkplugin/GoogleTalkPlugin</Path>
+                <Path fileType="config">/opt/google/talkplugin/envvars</Path>
+                <Path fileType="executable">/opt/google/talkplugin</Path>
+                <Path fileType="library">/opt/google/talkplugin/lib</Path>
+                <Path fileType="library">/opt/google/talkplugin/libnpg*</Path>
+                <Path fileType="library">/opt/google/talkplugin/libgoogle*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/opt/google/talkplugin/windowpicker.glade</Path>
+                <Path fileType="data">/opt/google/talkplugin/data</Path>
+                <Path fileType="localedata">/opt/google/talkplugin/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/doc/google-talkplugin/LICENSE" permission="0644" owner="root">LICENSE</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="9">
+                <Date>2013-11-17</Date>
+                <Version>4.9.1.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
+            <Update release="8">
+                <Date>2013-10-19</Date>
+                <Version>4.7.0.0</Version>
+                <Comment>rebuild</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
+            <Update release="7">
+                <Date>2013-10-19</Date>
+                <Version>4.7.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2013-04-10</Date>
+                <Version>4.2.1.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2013-04-10</Date>
+                <Version>3.10.2.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Sezai Yeniay</Name>
+                <Email>sezaiyeniay@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2012-11-09</Date>
+                <Version>3.10.2.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2012-08-20</Date>
+                <Version>3.2.4.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2012-05-27</Date>
+                <Version>2.9.10.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-04-30</Date>
+                <Version>2.8.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Fatih Arslan</Name>
+                <Email>farslan@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>plex-media-server</Name>
             <Homepage>http://www.plexapp.com</Homepage>
             <Packager>
@@ -611,105 +791,6 @@
                 <Comment>First release.</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>teamviewer</Name>
-            <Homepage>http://www.teamviewer.com/</Homepage>
-            <Packager>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Packager>
-            <License>as-is</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">User friendly remote control application</Summary>
-            <Summary xml:lang="tr">Kullanıcı dostu masaüstü paylaşım uygulaması</Summary>
-            <Description xml:lang="en">TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com</Description>
-            <Description xml:lang="tr">Teamviewer uzaktan bakım,online sunum ,dosya transferi yapmaya olanak sağlayan bir masaüstü paylaşım yazılımıdır.</Description>
-            <Icon>qnext</Icon>
-            <Archive type="binary" sha1sum="56ee7329b188fc2421b939990c997a765d76a06a">http://download.teamviewer.com/download/version_7x/teamviewer_linux.rpm</Archive>
-            <BuildDependencies>
-                <Dependency>rpm2targz</Dependency>
-            </BuildDependencies>
-            <SourceURI>teamviewer/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>teamviewer</Name>
-            <RuntimeDependencies>
-                <Dependency>wine-32bit</Dependency>
-                <Dependency>libXtst-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/opt/teamviewer/</Path>
-                <Path fileType="data">/usr/</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-                <Path fileType="executable">/usr/bin/</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/teamviewer.desktop" permission="0644" owner="root">teamviewer.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/doc/teamviewer/teamviewer-help.html" permission="0644" owner="root">teamviewer-help.html</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/teamviewer.png" permission="0644" owner="root">teamviewer.png</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2013-08-03</Date>
-                <Version>7.0.9377</Version>
-                <Comment>First release</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>wuala</Name>
-            <Homepage>http://www.wuala.com/</Homepage>
-            <Packager>
-                <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
-            </Packager>
-            <License>2011 LaCie AG. Alls rights reserved.</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Wuala için dosya aktarım paketi</Summary>
-            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
-            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
-            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
-            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>sun-jdk</Dependency>
-                <Dependency>sun-jre</Dependency>
-            </BuildDependencies>
-            <SourceURI>wuala/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>wuala</Name>
-            <RuntimeDependencies>
-                <Dependency>sun-jdk</Dependency>
-                <Dependency>sun-jre</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share</Path>
-                <Path fileType="library">/usr/lib</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2012-03-09</Date>
-                <Version>1.0</Version>
-                <Comment>new version.</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
             </Update>
         </History>
     </SpecFile>

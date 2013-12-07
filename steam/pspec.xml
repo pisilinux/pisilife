@@ -21,6 +21,7 @@
         <RuntimeDependencies>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mesa-32bit</Dependency>
         </RuntimeDependencies>
 
         <Files>

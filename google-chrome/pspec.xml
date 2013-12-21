@@ -24,6 +24,8 @@
         <Name>google-chrome</Name>
         <RuntimeDependencies>
             <Dependency>cairo</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>libXcomposite</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>libXrender</Dependency>
             <Dependency>icon-theme-hicolor</Dependency>

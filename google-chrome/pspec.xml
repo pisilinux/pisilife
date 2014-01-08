@@ -5,8 +5,8 @@
         <Name>google-chrome</Name> 
         <Homepage>http://chrome.google.com/</Homepage> 
         <Packager>
-            <Name>Gürkan ZEGNIN</Name> 
-            <Email>gurkan@pardususer.de</Email> 
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
         </Packager>
         <License>EULA</License> 
         <Icon>google-chrome</Icon>

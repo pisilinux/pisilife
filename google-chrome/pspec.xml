@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA> 
         <Summary>Google Chrome for Linux</Summary>
         <Description>Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
-	<Archive sha1sum="a676c2cbac7a073dac7b41008d45d919bfa2a486" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+	<Archive sha1sum="79c64dfc62fc0c58ac0510f8b1fb3730a3e733f8" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
         <BuildDependencies>
             <Dependency>rpm2targz</Dependency>
         </BuildDependencies>
@@ -68,42 +68,49 @@
     </Package>
 
     <History>
-        <Update release="29">
+	<Update release="30" type="security">
+            <Date>2014-01-18</Date>
+            <Version>32.0.1700.77</Version>
+            <Comment>Version bump</Comment>
+            <Name>Richard de Bruin</Name>
+            <Email>richdb@pisilinux.org</Email>
+        </Update>
+        <Update release="29" type="security">
             <Date>2013-12-06</Date>
             <Version>31.0.1650.63</Version>
             <Comment>Version bump</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>
-	<Update release="28">
+	<Update release="28" type="security">
             <Date>2013-10-19</Date>
             <Version>30.0.1599.101</Version>
             <Comment>Version bump</Comment>
             <Name>Richard de Bruin</Name>
             <Email>richdb@pisilinux.org</Email>
         </Update>
-         <Update release="27">
+         <Update release="27" type="security">
             <Date>2013-09-19</Date>
             <Version>29.0.1547.76</Version>
             <Comment>Version update</Comment>
             <Name>Yoyo Fernández</Name>
             <Email>yoyofv@gmail.com</Email>
         </Update>
-         <Update release="26">
+         <Update release="26" type="security">
             <Date>2013-08-31</Date>
             <Version>29.0.1547.65</Version>
             <Comment>Version update</Comment>
             <Name>Yoyo Fernández</Name>
             <Email>yoyofv@gmail.com</Email>
         </Update>
-        <Update release="25">
+        <Update release="25" type="security">
             <Date>2013-08-31</Date>
             <Version>28.0.1500.95</Version>
             <Comment>Version update</Comment>
             <Name>Erdinç Gültekin</Name>
             <Email>erdincgultekin@gmail.com</Email>
         </Update>
-        <Update release="24">
+        <Update release="24" type="security">
             <Date>2013-07-15</Date>
             <Version>28.0.1500.71</Version>
             <Comment>Version update</Comment>

@@ -14,6 +14,9 @@
         <Summary>Steam for linux</Summary>
         <Description>Steam Digital Platform Runner</Description>
         <Archive sha1sum="ce58c68347e72866ae798b61fa6c861f5d84742b" type="targz">http://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.47.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">alsa_sdl_audiodriver.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>

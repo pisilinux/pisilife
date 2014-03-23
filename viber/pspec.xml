@@ -1,0 +1,48 @@
+<PISI>
+    <Source>
+        <Name>viber</Name>
+        <Homepage>http://www.viber.com/products/linux/</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>app:gui</IsA>
+        <Icon>viber</Icon>
+        <Summary>Ücretsiz arama, mesajlaşma ve konuşma yazılımı</Summary>
+        <Description>Free calls, text and picture sharing with anyone, anywhere!</Description>
+        <Archive sha1sum="59fe606f84c81a8d1cb8df606bb5e25bf4c750a9" type="tarxz">https://dl.dropboxusercontent.com/u/60245852/source/viber-3.1.2.3.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>viber</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXcomposite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>            
+            <Path fileType="data">/usr/share/viber</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2014-03-23</Date>
+            <Version>3.1.2.3</Version>
+            <Comment>First Release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

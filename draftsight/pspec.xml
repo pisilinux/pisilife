@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>draftsight</Name> 
-        <Homepage>http://www.3ds.com/products-services/draftsight/overview/</Homepage> 
+        <Homepage>http://www.3ds.com/products-services/draftsight</Homepage> 
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -11,46 +11,17 @@
         <License>AS IS</License>
         <License>EULA</License> 
         <Icon>draftsight</Icon>
-        <PartOf>multimedia.graphics</PartOf>
         <IsA>app:gui</IsA> 
         <Summary>DraftSight® - Free CAD software for your DWG files</Summary>
         <Description>DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
-	<Archive sha1sum="ece212be59bf64d0907899048095a058b2828ff9" type="binary">http://dl-ak.solidworks.com/nonsecure/draftsight/V1R4.0/draftSight.rpm</Archive>
-        <AdditionalFiles>
-            <AdditionalFile target="libaudio.so.2">libaudio.so.2</AdditionalFile>
-        </AdditionalFiles>
+        <Archive sha1sum="2efeadc97c02a371e4d8d885f3a42ff9fce8a7e3" type="binary">http://dl-ak.solidworks.com/nonsecure/draftsight/V1R5.1/draftSight.rpm</Archive>
         <BuildDependencies>
             <Dependency>rpm2targz</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>draftsight-dummy</Name>
-        <Summary>Dummy file for draftsight</Summary>
-        <RuntimeDependencies>
-            <Dependency>mesa-glu</Dependency>
-            <Dependency>mesa</Dependency>
-            <Dependency>libglade</Dependency>
-            <Dependency>libICE</Dependency>
-            <Dependency>libSM</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>libXext</Dependency>
-            <Dependency>libXrender</Dependency>
-            <Dependency>libXt</Dependency>
-            <Dependency>nas</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>alsa-lib</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>expat</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin/draftsight.bin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>draftsight-dummy</Name>
-        <Summary>Dummy file for draftsight</Summary>
+        <Name>draftsight</Name>
         <RuntimeDependencies>
             <Dependency>glib2-32bit</Dependency>
             <Dependency>mesa-glu-32bit</Dependency>
@@ -63,40 +34,37 @@
             <Dependency>libXext-32bit</Dependency>
             <Dependency>libXrender-32bit</Dependency>
             <Dependency>libXt-32bit</Dependency>
-	    <!--<Dependency>nas-32bit</Dependency> fix me -->
+            <Dependency>nas-32bit</Dependency>
             <Dependency>zlib-32bit</Dependency>
             <Dependency>alsa-lib-32bit</Dependency>
             <Dependency>fontconfig-32bit</Dependency>
             <Dependency>expat-32bit</Dependency>
         </RuntimeDependencies>
+        
         <Files>
-            <Path fileType="executable">/usr/bin/32/draftsight.bin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>draftsight</Name>
-        <RuntimeDependencies>
-            <Dependency release="current">draftsight-dummy</Dependency>
-        </RuntimeDependencies>
-        <Files>
+            <Path fileType="executable">/usr/bin/draftsight.bin</Path>
             <Path fileType="executable">/usr/bin/draftsight</Path>
             <Path fileType="doc">/usr/share/doc/</Path>
             <Path fileType="data">/usr/share/pixmaps/</Path>
             <Path fileType="data">/usr/share/applications/</Path>
             <Path fileType="data">/opt/dassault-systemes/</Path>
             <Path fileType="data">/var/opt/dassault-systemes/</Path>
+            <Path fileType="data">/etc/profile.d</Path>
         </Files>
+        
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/draftsight.desktop">draftsight.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/draftsight">draftsight</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/opt/dassault-systemes/DraftSight/Libraries/libaudio.so.2">libaudio.so.2</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/draftsight.png">draftsight.png</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <History>
         <Update release="1">
-            <Date>2013-09-27</Date>
-            <Version>4.0</Version>
-            <Comment>first relaese</Comment>
+            <Date>2014-04-01</Date>
+            <Version>5.1</Version>
+            <Comment>First Release</Comment>
             <Name>Erdinç Gültekin</Name>
             <Email>erdincgultekin@pisilinux.org</Email>
         </Update>

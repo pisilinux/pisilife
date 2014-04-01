@@ -49,7 +49,6 @@
             <Path fileType="data">/usr/share/applications/</Path>
             <Path fileType="data">/opt/dassault-systemes/</Path>
             <Path fileType="data">/var/opt/dassault-systemes/</Path>
-            <Path fileType="data">/etc/profile.d</Path>
         </Files>
         
         <AdditionalFiles>

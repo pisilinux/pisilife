@@ -14,16 +14,16 @@
         <Description>wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
         <Archive sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073" type="targz">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
 	<BuildDependencies>
-            <Dependency>sun-jdk</Dependency>
-	    <Dependency>sun-jre</Dependency>
+            <Dependency>jre7-openjdk</Dependency>
+            <Dependency>jre7-openjdk-headless</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>wuala</Name>
         <RuntimeDependencies>
-	    <Dependency>sun-jdk</Dependency>
-	    <Dependency>sun-jre</Dependency>
+            <Dependency>jre7-openjdk</Dependency>
+            <Dependency>jre7-openjdk-headless</Dependency>
         </RuntimeDependencies>
 	<AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/icons/wuala.ico">wuala.ico</AdditionalFile>

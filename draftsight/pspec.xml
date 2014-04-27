@@ -39,6 +39,7 @@
             <Dependency>alsa-lib-32bit</Dependency>
             <Dependency>fontconfig-32bit</Dependency>
             <Dependency>expat-32bit</Dependency>
+            <Dependency>libudev-32bit</Dependency>
         </RuntimeDependencies>
         
         <Files>

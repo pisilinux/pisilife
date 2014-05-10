@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>module-ndiswrapper</Name>
+        <Name>ndiswrapper</Name>
         <Homepage>http://ndiswrapper.sourceforge.net/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
@@ -15,25 +15,17 @@
         <Description>module-ndiswrapper allows you to use Windows XP drivers for WLAN cards without proper Linux drivers.</Description>
         <Archive sha1sum="75fbbda677fe91ee07a6f6a8e19b1f3e2479540f" type="targz">http://download.sourceforge.net/ndiswrapper/ndiswrapper-1.59.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency version="3.13.10">kernel-module-headers</Dependency>
+            <Dependency>kernel-module-headers</Dependency>
         </BuildDependencies>
+         <AdditionalFiles>
+            <AdditionalFile target="ndiswrapper-1.59.patch">ndiswrapper-1.59.patch</AdditionalFile>
+        </AdditionalFiles>
     </Source>
 
     <Package>
-        <Name>module-ndiswrapper</Name>
-        <RuntimeDependencies>
-            <Dependency version="3.13.10">kernel</Dependency>
-            <Dependency>module-ndiswrapper-userspace</Dependency>
-        </RuntimeDependencies>
+        <Name>ndiswrapper</Name>
         <Files>
             <Path fileType="library" permanent="true">/lib/modules</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>module-ndiswrapper-userspace</Name>
-        <Summary>Userspace tools and documentation for ndiswrapper kernel module</Summary>
-        <Files>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/etc/ndiswrapper</Path>
             <Path fileType="executable">/usr/sbin</Path>

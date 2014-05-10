@@ -7,11 +7,13 @@
 from pisi.actionsapi import kerneltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 KDIR = kerneltools.getKernelVersion()
 
 def build():
+    shelltools.system("patch -p1 < ndiswrapper-1.59.patch")
     autotools.make("-C /lib/modules/%s/build M=`pwd`" % KDIR)
 
 def install():

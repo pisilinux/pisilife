@@ -1,0 +1,11 @@
+<PISI>
+    <Source>
+        <Name>luckybackup</Name>
+        <Summary xml:lang="en">A powerful, fast and reliable backup and sync tool</Summary>
+        <Summary xml:lang="tr">A, güçlü, hızlı ve güvenilir bir yedekleme ve senkronizasyon aracı</Summary>
+        <Description xml:lang="en">LuckyBackup is an application for data back-up and synchronization powered by the rsync tool.</Description>
+        <Description xml:lang="tr">LuckyBackup temel amacı, adından da belirttiği gibi, verilerin yedekleri yaratılmasıdır.</Description>
+    </Source>
+</PISI>
+
+

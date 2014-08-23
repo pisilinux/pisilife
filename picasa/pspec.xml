@@ -16,7 +16,7 @@
         <IsA>app:gui</IsA> 
         <Summary>Picasa for Linux with face recognition</Summary>
         <Description>Picasa is a software from Google for organizing, editing or sharing digital photos over internet from your computer.</Description>
-        <Archive sha1sum="148a74dc0c39e2e676c4ccc8d9c0bf919a9afc56" type="binary">ftp://ftp.is.co.za/mirror/pclinuxos.com/pclinuxos/srpms/SRPMS.pclos/picasa-3.9-2pclos2012.src.rpm</Archive>
+        <Archive sha1sum="148a74dc0c39e2e676c4ccc8d9c0bf919a9afc56" type="binary">http://www.mediafire.com/download/wjpkhrbdjkf5h9k/picasa-3.9-2pclos2012.src.rpm</Archive>
         <BuildDependencies>
             <Dependency>rpm2targz</Dependency>
         </BuildDependencies>

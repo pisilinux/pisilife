@@ -50,6 +50,13 @@
             <Name>Nikolay Semenov</Name>
             <Email>tribunal@pisilinux.org</Email>
         </Update>
+        <Update release="5">
+            <Date>2014-08-23</Date>
+            <Version>1.0.0.48</Version>
+            <Comment>Version bump</Comment>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="4">
             <Date>2014-06-29</Date>
             <Version>1.0.0.47</Version>

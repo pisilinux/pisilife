@@ -11,8 +11,8 @@
         <License>GPL</License>
         <Summary>Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
         <Description>Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir. </Description>
-        <Archive sha1sum="cb8aa8eec10a2c33a1c8182bdf9eac4fae8ecc6b" type="binary" target="i686">http://downloads.plexapp.com/plex-media-server/0.9.8.18.290-11b7fdd/plexmediaserver_0.9.8.18.290-11b7fdd_i386.deb</Archive>
-        <Archive sha1sum="43b4a6bc69f7af0e75df025da67d06fb33f6fa26" type="binary" target="x86_64">http://downloads.plexapp.com/plex-media-server/0.9.8.18.290-11b7fdd/plexmediaserver_0.9.8.18.290-11b7fdd_amd64.deb</Archive>
+        <Archive sha1sum="1c44ce0febb4aa7a1950b6aeb786c8b742e292a7" type="binary" target="i686">http://downloads.plexapp.com/plex-media-server/0.9.9.14.531-7eef8c6/plexmediaserver_0.9.9.14.531-7eef8c6_i386.deb</Archive>
+        <Archive sha1sum="51f3d46634eee245d89a471e4e324ac5dc159d3a" type="binary" target="x86_64">http://downloads.plexapp.com/plex-media-server/0.9.9.14.531-7eef8c6/plexmediaserver_0.9.9.14.531-7eef8c6_amd64.deb</Archive>
     </Source>
 
     <Package>
@@ -51,7 +51,14 @@
     </Package>
 
     <History>
-		<Update release="4">
+        <Update release="5">
+            <Date>2014-08-23</Date>
+            <Version>0.9.9.14.531</Version>
+            <Comment>V.Bump</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
             <Date>2014-01-03</Date>
             <Version>0.9.8.18.290</Version>
             <Comment>V.Bump</Comment>

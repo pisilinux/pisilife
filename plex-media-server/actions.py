@@ -15,7 +15,7 @@ def install():
     bits = "amd64" if get.ARCH() == "x86_64" else "i386"
 
     # Extract Debian package
-    shelltools.system("ar -xv plexmediaserver_0.9.8.18.290-11b7fdd_%s.deb" % bits)
+    shelltools.system("ar -xv plexmediaserver_0.9.9.14.531-7eef8c6_%s.deb" % bits)
 
     shelltools.system("tar -xzvf data.tar.gz")
 

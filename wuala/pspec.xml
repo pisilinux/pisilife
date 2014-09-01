@@ -10,8 +10,8 @@
         </Packager>
         <License>2011 LaCie AG. Alls rights reserved.</License>
         <IsA>app:gui</IsA>
-        <Summary>Wuala için dosya aktarım paketi</Summary>
-        <Description>wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+        <Summary>Wuala için dosya aktarım paketi.Wuala is secure storage for all your files.</Summary>
+        <Description>wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.Wuala is secure cloud storage, a haven in the cloud to store your files. You can safely access and share your files with friends, family, and co-workers.</Description>
         <Archive sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073" type="targz">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
 	<BuildDependencies>
             <Dependency>jre7-openjdk</Dependency>

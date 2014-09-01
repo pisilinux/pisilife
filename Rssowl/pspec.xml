@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>Rssowl</Name>
+        <Homepage>http://www.rssowl.org/</Homepage>
+        <Packager>
+            <Name>Pisi Linux community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>Eclipse Public License</License>
+        <PartOf>network.rss</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>RSSOwl is a free and powerful news feed reader.</Summary>
+        <Description>RSSOwl is a free and powerful news feed reader. RSSOwl lets you gather, organize and search news in a convenient, easy to use interface with endless flexibility.</Description>
+        <Archive sha1sum="d69e059317f831484fc6b27df299f7e3e6b18d1b" type="zip">http://sourceforge.net/projects/rssowl/files/rssowl%202/2.2.1/rssowl-2.2.1.linux.x86_64.zip</Archive>
+    </Source>
+    <Package>
+        <Name>Rssowl</Name>
+        <Files>
+            <Path fileType="data">/opt</Path>
+            <Path fileType="data">/usr</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/rssowl.desktop" permission="0644" group="root" owner="root">rssowl.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/rssowl.xpm" permission="0644" group="root" owner="root">rssowl.xpm</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libIDL</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2014-08-23</Date>
+            <Version>2.2</Version>
+            <Comment>First Release</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

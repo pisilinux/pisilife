@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cherrytree</Name>
+        <Homepage>http://www.giuspen.com/cherrytree/</Homepage>
+        <Packager>
+            <Name>Pisi Linux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <PartOf>office</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Cherrytree A hierarchical note taking application</Summary>
+        <Description>A hierarchical note taking application, featuring rich text and syntax highlighting, storing data in a single xml or sqlite file.</Description>
+        <BuildDependencies>
+            <Dependency>desktop-file-utils</Dependency>
+        </BuildDependencies>
+           <Archive sha1sum="0048c3b7821d4785206fae32806a7ae5a3354dd3" type="tarxz">http://www.giuspen.com/software/cherrytree-0.34.1.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>cherrytree</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/cherrytree/cherrytree.desktop" permission="0644" group="root" owner="root">cherrytree.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/cherrytree/cherrytree.svg" permission="0644" group="root" owner="root">cherrytree.png</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>python-enchant</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-gtksourceview</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2014-08-23</Date>
+            <Version>0.34.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-07-13</Date>
+            <Version>0.33.4</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Ganesh Iyer</Name>
+            <Email>iyer.gb.linux@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2013-12-13</Date>
+            <Version>0.31.5</Version>
+            <Comment>First release</Comment>
+            <Name>Ganesh Iyer</Name>
+            <Email>iyer.gb.linux@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

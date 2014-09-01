@@ -1,0 +1,10 @@
+<PISI>
+    <Source>
+        <Name>Rssowl</Name>
+        <Summary xml:lang="en">RSS Owl is a powerful application to organize, search and read feeds.</Summary>
+        <Summary xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu.</Summary>
+        <Description xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu. RSSOwl sen, toplamak, düzenlemek ve haber arama sağlayan kullanışlı, sonsuz esneklik ile kullanımı kolay arayüz.</Description>
+        <Description xml:lang="en">RSS Owl is a powerful application to organize, search and read your news feeds in a comfortable way.</Description>
+    </Source>
+</PISI>
+

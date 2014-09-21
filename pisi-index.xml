@@ -126,7 +126,7 @@
             <Summary xml:lang="tr">Kullanıcı dostu masaüstü paylaşım uygulaması</Summary>
             <Description xml:lang="en">TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com</Description>
             <Description xml:lang="tr">Teamviewer uzaktan bakım,online sunum ,dosya transferi yapmaya olanak sağlayan bir masaüstü paylaşım yazılımıdır.</Description>
-            <Archive type="binary" sha1sum="7809e0250a1cad672bbf1aa7bc1948c49b9090ba">http://download.teamviewer.com/download/teamviewer_linux.rpm</Archive>
+            <Archive type="binary" sha1sum="81ba4f997455e12b422b29c7616c4a2c33ef6c22">http://download.teamviewer.com/download/teamviewer_linux.rpm</Archive>
             <BuildDependencies>
                 <Dependency>rpm2targz</Dependency>
             </BuildDependencies>
@@ -833,7 +833,7 @@
             <Description xml:lang="en">Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
             <Description xml:lang="es">Google Chrome es un navegador web desarrollado por Google Inc... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
             <Icon>google-chrome</Icon>
-            <Archive type="binary" sha1sum="7f47121c38c2051f7c7072f67701520582a998e9">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+            <Archive type="binary" sha1sum="74fdf78ca65f117987a43e71f896a8eb7605a6d2">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
             <BuildDependencies>
                 <Dependency>rpm2targz</Dependency>
             </BuildDependencies>
@@ -886,6 +886,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="41" type="security">
+                <Date>2014-09-10</Date>
+                <Version>37.0.2062.120</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="40">
+                <Date>2014-09-06</Date>
+                <Version>37.0.2062.103</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Richard de Bruin(richdb)</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
             <Update release="39">
                 <Date>2014-09-04</Date>
                 <Version>37.0.2062.94</Version>
@@ -1426,4 +1440,74 @@
             </Update>
         </History>
     </SpecFile>
+    <Package>
+        <Name>picasa</Name>
+        <Summary xml:lang="de">Picasa für Linux</Summary>
+        <Summary xml:lang="tr">Linux İçin Picasa</Summary>
+        <Summary xml:lang="en">Picasa for Linux with face recognition</Summary>
+        <Description xml:lang="de">Picasa ist eine Bilderverwaltungssoftware von Google, zum Verwalten, Archivieren, Bearbeiten und Erstellung von online Webalben Ihrer Fotos.</Description>
+        <Description xml:lang="tr">Picasa, dijital fotoğraflarınızı aramaya, düzenlemeye, üzerinde değişiklik yapmaya, ve internet aracı&apos;ile paylaşmak için bir Google programıdır.</Description>
+        <Description xml:lang="en">Picasa is a software from Google for organizing, editing or sharing digital photos over internet from your computer.</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>EULA</License>
+        <License>GPLV2</License>
+        <License>LGPLV2</License>
+        <Icon>picasa</Icon>
+        <RuntimeDependencies>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>libXau-32bit</Dependency>
+            <Dependency>libXmu-32bit</Dependency>
+            <Dependency>libXpm-32bit</Dependency>
+            <Dependency>libXxf86vm-32bit</Dependency>
+            <Dependency>alsa-lib-32bit</Dependency>
+            <Dependency>audiofile-32bit</Dependency>
+            <Dependency>cups-32bit</Dependency>
+            <Dependency>freetype-32bit</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>libgphoto2</Dependency>
+            <Dependency>sane-backends</Dependency>
+            <Dependency>libxslt-32bit</Dependency>
+            <Dependency>lcms-32bit</Dependency>
+            <Dependency>lsb-release</Dependency>
+            <Dependency>firefox</Dependency>
+        </RuntimeDependencies>
+        <Conflicts>
+            <Package>picasa-improved-play-function</Package>
+        </Conflicts>
+        <History>
+            <Update release="2">
+                <Date>2013-07-20</Date>
+                <Version>3.9.0</Version>
+                <Comment>change source</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-12-17</Date>
+                <Version>3.9.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>1.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>158115342</InstalledSize>
+        <PackageSize>40564357</PackageSize>
+        <PackageHash>bcc27d339f304c37dd73aadaa301e59e83b659db</PackageHash>
+        <InstallTarHash>fd5949820caad37a76d4fcac626c79a2fabbb83b</InstallTarHash>
+        <PackageURI>picasa/picasa-3.9.0-2-p01-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>picasa</Name>
+            <Homepage>http://picasa.google.com/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
 </PISI>

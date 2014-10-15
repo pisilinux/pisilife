@@ -66,6 +66,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="43">
+            <Date>2014-10-15</Date>
+            <Version>38.0.2125.104</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="42">
             <Date>2014-10-08</Date>
             <Version>38.0.2125.101</Version>

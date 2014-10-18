@@ -1,20 +1,20 @@
-﻿<?xml version="1.0" ?> 
+﻿<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>google-chrome</Name> 
-        <Homepage>http://chrome.google.com/</Homepage> 
+        <Name>google-chrome</Name>
+        <Homepage>http://chrome.google.com/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
-        <License>EULA</License> 
+        <License>EULA</License>
         <Icon>google-chrome</Icon>
         <PartOf>network.web</PartOf>
-        <IsA>app:gui</IsA> 
+        <IsA>app:gui</IsA>
         <Summary>Google Chrome for Linux</Summary>
         <Description>Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
-        <Archive sha1sum="cb0187db4fa9efc4d5d8273073b1be2e55e7280f" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+        <Archive sha1sum="5653b1eebfd7b62b690204f8bd3261491dfd18ae" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
         <BuildDependencies>
             <Dependency>rpm2targz</Dependency>
         </BuildDependencies>
@@ -86,7 +86,7 @@
             <Comment>Version bump.</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
-	 </Update>   
+	 </Update>
      <Update release="40">
             <Date>2014-09-06</Date>
             <Version>37.0.2062.103</Version>

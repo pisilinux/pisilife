@@ -14,7 +14,7 @@ pidFile = "/run/teamviewerd.pid"
 @synchronized
 def start():
     loadEnvironment()
-    startService(command="/opt/teamviewer/tv_bin/teamviewerd",
+    startService(command="/opt/teamviewer9/tv_bin/teamviewerd",
                  args="-d",
                  pidfile=pidFile,
                  makepid=True,

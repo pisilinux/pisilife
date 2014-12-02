@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -55,6 +55,13 @@
     </Package>
 
     <History>
+      <Update release="3">
+            <Date>2014-12-03</Date>
+            <Version>10.0.35002</Version>
+            <Comment>*Version bump</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2014-05-10</Date>
             <Version>9.0.24147</Version>
@@ -71,4 +78,4 @@
             <Email>admins@pisilinux.org</Email>
         </Update>
     </History>
-</PISI>
+</PISI> 

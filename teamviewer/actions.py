@@ -9,7 +9,7 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 WorkDir = "."
-NoStrip = ["/opt/teamviewer9/tv_bin/wine/drive_c/TeamViewer/tvwine.dll.so"]
+NoStrip = ["/opt/teamviewer/tv_bin/wine/drive_c/TeamViewer/tvwine.dll.so"]
 
 def setup():
     shelltools.system("rpm2targz -v %s/teamviewer_linux.rpm" %get.workDIR())
@@ -17,18 +17,18 @@ def setup():
     
 def install():
     pisitools.insinto("/opt/", "./opt/*")
-    pisitools.remove("/opt/teamviewer9/tv_bin/xdg-utils/xdg-email")
+    pisitools.remove("/opt/teamviewer/tv_bin/xdg-utils/xdg-email")
     
     #necessary symlinks
-    pisitools.dosym("/opt/teamviewer9/tv_bin/teamviewerd", "etc/init.d/teamviewerd")
-    pisitools.dosym("/opt/teamviewer9/tv_bin/script/teamviewer", "usr/bin/teamviewer")
-    pisitools.dosym("/opt/teamviewer9/logfiles", "var/log/teamviewer")
-    pisitools.dosym("/opt/teamviewer9/config", "etc/teamviewer")
+    pisitools.dosym("/opt/teamviewer/tv_bin/teamviewerd", "etc/init.d/teamviewerd")
+    pisitools.dosym("/opt/teamviewer/tv_bin/script/teamviewer", "usr/bin/teamviewer")
+    pisitools.dosym("/opt/teamviewer/logfiles", "var/log/teamviewer")
+    pisitools.dosym("/opt/teamviewer/config", "etc/teamviewer")
     
-    pisitools.dodoc("%s/opt/teamviewer9/doc/License.txt" %get.workDIR())
+    pisitools.dodoc("%s/opt/teamviewer/doc/License.txt" %get.workDIR())
     
     
-    shelltools.chmod("%s/opt/teamviewer9/*" % get.installDIR(),0755)  
+    shelltools.chmod("%s/opt/teamviewer/*" % get.installDIR(),0755)  
     
     
     

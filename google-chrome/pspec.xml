@@ -14,14 +14,24 @@
         <IsA>app:gui</IsA>
         <Summary>Google Chrome for Linux</Summary>
         <Description>Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
-        <Archive sha1sum="ddb1be99a168ceb1f5a9c4a7622503aa68b784fc" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+        <Archive sha1sum="d55767ae0f6e5b4a9db5fdbaebf806003ea2cf8f" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
 	<BuildDependencies>
-            <Dependency>rpm2targz</Dependency>
+            <Dependency>rpm2targz</Dependency>	    	    
         </BuildDependencies>
     </Source>
     <Package>
         <Name>google-chrome</Name>
         <RuntimeDependencies>
+	   <Dependency>nspr</Dependency>
+	    <Dependency>bzip2</Dependency>
+	    <Dependency>libpng</Dependency>
+	    <Dependency>freetype</Dependency>
+	    <Dependency>libgcrypt</Dependency>
+	    <Dependency>dbus</Dependency>
+	    <Dependency>expat</Dependency>
+	    <Dependency>glib2</Dependency>
+	    <Dependency>libX11</Dependency>
+	    <Dependency>libgcc</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>libXcomposite</Dependency>
@@ -38,23 +48,18 @@
             <Dependency>libXext</Dependency>
 	    <Dependency>libXrandr</Dependency>
 	    <Dependency>libXcursor</Dependency>
-            <Dependency>minizip</Dependency>
-            <Dependency>nspr</Dependency>
+            <Dependency>minizip</Dependency>            
             <Dependency>alsa-lib</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>libXScrnSaver</Dependency>
             <Dependency>icu4c</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>cups</Dependency>
-            <Dependency>libxslt</Dependency>
-            <Dependency>freetype</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
-            <Dependency>libgcrypt</Dependency>
+            <Dependency>libxslt</Dependency>            
+            <Dependency>libjpeg-turbo</Dependency>            
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libvpx</Dependency>
-            <Dependency>flac</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>bzip2</Dependency>
+            <Dependency>flac</Dependency>                        
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/</Path>
@@ -68,6 +73,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="67">
+            <Date>2015-07-15</Date>
+            <Version>43.0.2357.134</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="66">
             <Date>2015-06-23</Date>
             <Version>43.0.2357.130</Version>

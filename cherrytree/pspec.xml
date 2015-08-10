@@ -16,7 +16,7 @@
         <BuildDependencies>
             <Dependency>desktop-file-utils</Dependency>
         </BuildDependencies>
-           <Archive sha1sum="54873683f366362b95f22f9a0e77674bdad9caea" type="tarxz">http://www.giuspen.com/software/cherrytree-0.35.0.tar.xz</Archive>
+           <Archive sha1sum="eb94c3c16163816176097919b99becaefc6a83e0" type="tarxz">http://www.giuspen.com/software/cherrytree-0.35.9.tar.xz</Archive>
     </Source>
     <Package>
         <Name>cherrytree</Name>
@@ -38,6 +38,13 @@
         </RuntimeDependencies>
     </Package>
     <History>
+        <Update release="5">
+            <Date>2015-08-10</Date>
+            <Version>0.35.9</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="4">
             <Date>2014-10-08</Date>
             <Version>0.35.0</Version>

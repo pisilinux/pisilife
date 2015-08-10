@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
         <Description>Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
-        <Archive sha1sum="1bdcdc9727830cf629cdc729379ed0ea43db8dd3" type="targz">http://sayonara-player.googlecode.com/files/sayonara-player-r695.tar.gz</Archive>
+        <Archive sha1sum="8eba711cf9cf01e281028a8de472553cab409adb" type="targz">ftp://sayonara-player.com/sayonara/sayonara-player-r73.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
@@ -47,6 +47,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2015-08-10</Date>
+            <Version>0.6.6</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2014-08-03</Date>
             <Version>0.4.0</Version>

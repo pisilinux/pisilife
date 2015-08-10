@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA> 
         <Summary>DraftSight® - Free CAD software for your DWG files</Summary>
         <Description>DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
-        <Archive sha1sum="88e5ebc69ef42f5b86b3612502d2baeede23fa3f" type="binary">http://dl-ak.solidworks.com/nonsecure/draftsight/V1R6.0/draftSight.rpm</Archive>
+        <Archive sha1sum="8717571bf0a8ac4b51d8d0206a84b0ffe0cf1917" type="binary">http://www.draftsight.com/download-linux-fedora</Archive>
         <BuildDependencies>
             <Dependency>rpm2targz</Dependency>
         </BuildDependencies>
@@ -61,6 +61,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2015-08-10</Date>
+            <Version>6.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2014-10-17</Date>
             <Version>6.0</Version>

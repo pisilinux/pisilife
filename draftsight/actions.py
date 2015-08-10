@@ -11,8 +11,8 @@ from pisi.actionsapi import shelltools
 WorkDir = "."
 
 def setup():
-    shelltools.system("rpm2targz -v %s/draftSight.rpm" %get.workDIR())
-    shelltools.system("tar xfvz %s/draftSight.tar.gz" %get.workDIR())
+    shelltools.system("rpm2targz -v %s/download-linux-fedora" %get.workDIR())
+    shelltools.system("tar xfvz %s/download-linux-fedora.tar.gz" %get.workDIR())
 
 def install():
     pisitools.insinto("/opt/", "./opt/*")

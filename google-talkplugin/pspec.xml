@@ -14,7 +14,7 @@
         <Summary>Video chat browser plug-in for Google Talk</Summary>
         <Description>The Google Talk Plugin is a browser plugin that enables you to use Google voice and video chat to chat face to face with family and friends.</Description>
 	<!--<Archive sha1sum="8f661caba85a194cd3578c59caeb2fd60765ad57" type="binary" target="i686">http://dl.google.com/linux/direct/google-talkplugin_current_i386.deb</Archive>-->
-        <Archive sha1sum="d75fad757750b4830c4e401ade92b4993e2a4ab2" type="binary" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
+        <Archive sha1sum="1c3cc0411444587b56178de4868eb5d0ff742ec0" type="binary" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
     </Source>
 
     <Package>
@@ -57,6 +57,13 @@
     </Package>
 
     <History>
+        <Update release="12">
+            <Date>2015-08-10</Date>
+            <Version>5.4.3.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="11">
             <Date>2014-08-27</Date>
             <Version>5.4.2.0</Version>

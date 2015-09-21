@@ -11,7 +11,7 @@
         <Icon>chrome-remote-desktop</Icon>
         <Summary>Ücretsiz uzaktan masaüstü erişim programı</Summary>
         <Description>Free remote desktop</Description>
-        <Archive sha1sum="a15369917e51770b132ea76b395b21ae0f8e5924" type="binary">https://dl.dropboxusercontent.com/s/i90kkszfcd4sevu/chrome-remote-desktop_current_amd64.deb</Archive>
+        <Archive sha1sum="ed41acb78707da341ba3ae9e4ec77eb08f473b75" type="binary">https://dl.dropboxusercontent.com/s/i90kkszfcd4sevu/chrome-remote-desktop_current_amd64.deb</Archive>
     </Source>
 
     <Package>
@@ -31,7 +31,14 @@
     </Package>
 
     <History>
-    	<Update release="3">
+        <Update release="5">
+            <Date>2015-09-020</Date>
+            <Version>45.0.2454.17</Version>
+            <Comment>Version bump</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@pisilinux.org</Email>
+        </Update>
+    	<Update release="4">
             <Date>2015-07-08</Date>
             <Version>44.0.2403.44</Version>
             <Comment>Version bump</Comment>

@@ -1,112 +1,250 @@
 <PISI>
     <SpecFile>
         <Source>
-            <Name>luckyBackup</Name>
-            <Homepage>http://luckybackup.sourceforge.net/news.html</Homepage>
+            <Name>cherrytree</Name>
+            <Homepage>http://www.giuspen.com/cherrytree/</Homepage>
             <Packager>
                 <Name>Pisi Linux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Packager>
-            <License>GPLv3</License>
+            <License>GPLv3+</License>
             <IsA>app:gui</IsA>
-            <PartOf>util.archive</PartOf>
-            <Summary xml:lang="en">A powerful, fast and reliable backup and sync tool</Summary>
-            <Description xml:lang="en">luckyBackup is an application for data back-up and synchronization powered by the rsync tool.</Description>
-            <Archive type="targz" sha1sum="067e5ea0ce23944942d3ff0bf7e1133370872ee4">http://sourceforge.net/projects/luckybackup/files/0.4.8/source/luckybackup-0.4.8.tar.gz</Archive>
+            <PartOf>office</PartOf>
+            <Summary xml:lang="en">Cherrytree A hierarchical note taking application</Summary>
+            <Summary xml:lang="tr">Uygulama alarak hiyerarşik not</Summary>
+            <Description xml:lang="en">A hierarchical note taking application, featuring rich text and syntax highlighting, storing data in a single xml or sqlite file.</Description>
+            <Description xml:lang="tr">Özellikler :
+
+- Zengin metin ( ön plan rengi , arka plan rengi , kalın , italik , üstü çizili , altı çizili , küçük , h1 , h2 , h3, simge , üst simge , monospace )
+- Sözdizimi (zengin metingeçerli düğüm devre dışı olduğunda ) vurgulama
+- Taşıma görüntüler : eklememetin , edit ( döndürmek / yeniden boyutlandırma ) , png dosyayı kaydedin
+- Taşıma listeleri ( madde işaretli , numaralı , yapılacaklar aralarında ve anahtarı , vardiya ile çok satırlı + enter )
+- (Düz metin olan hücreler ) işleme basit tablolar , kes / kopyala / yapıştır sıra , ithalat / ihracat csv dosyası olarak
+- Taşıma codeboxes : otomatik kutuları normal bir zengin metin metin vurgulanır
+- Metin, resim , tablo ve codeboxes hizalama ( sol / merkez / sağ)
+- Köprüler ( web sayfalarına bağlantılar , bağlantılar düğümler / düğümleri + çapalar , dosyalara bağlantılar , klasörlere bağlantılar )
+- Yazım denetimi ( pygtkspellcheck ve pyenchant kullanarak)
+- Içi uygulama copy / paste : Tek görüntü , tek codeboxes , tek tablolar ve zengin metin , görüntü , codeboxes ve tablolar bir bileşik seçim desteklenen
+- Çapraz başvuru copy / paste ( OpenOffice ve gmail ile test ) : Tek görüntü, tek codeboxes , tek tablolar ve zengin metin , görüntü , codeboxes ve tablolar bir bileşik seçim desteklenen
+-Dosya yöneticisi ve cherrytree yapıştırarak dosyaların bir listesini kopyalama dosyaların bağlantıları bir liste oluşturmak , görüntülerimetin tanınan ve eklenen
+- Seçim / düğüm / düğüm ve alt düğümler pdf dosyası olarak baskı ve kaydetmek /tüm ağaç
+- Seçim / düğüm / düğüm ve alt düğümler html ihracat /tüm ağaç
+- Seçim / düğüm / düğüm ve alt düğümler düz metin ihracat /tüm ağaç
+- Başlıkları H1, H2 ve H3 dayalı bir düğüm / düğüm ve alt düğümler / bütün ağaç için TOC üretimi
+- Tüm düğümler bulmak , geçerli düğüm bulmak , bir düğümü bulmak
+- , Düğüm adları yerine geçerli düğüm yerine , tüm düğümleri değiştirin
+- En sonen son bulmak , yineleme yineleme , yerineson uygulamalı metin biçimlendirme yineleme
+- Sepet ithalat , Cherrytree , gnote , KeepNote , açış , biliyordun , MemPad , notecase , fatma treepad lite , TuxCards , Zim
+- Seçim / düğüm / düğüm ve alt düğümler /bütün ağacın dosyayı Cherrytree ihracat
+- ( Http://www.7-zip.org/ kullanarak) şifre koruması
+- Ağaç düğümleri sürükle ve bırak</Description>
+            <Archive type="tarxz" sha1sum="eb94c3c16163816176097919b99becaefc6a83e0">http://www.giuspen.com/software/cherrytree-0.35.9.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>qt-devel</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
             </BuildDependencies>
-            <SourceURI>luckyBackup/pspec.xml</SourceURI>
+            <SourceURI>cherrytree/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>luckyBackup</Name>
+            <Name>cherrytree</Name>
             <RuntimeDependencies>
-                <Dependency>openssh</Dependency>
-                <Dependency>qt</Dependency>
-                <Dependency>rsync</Dependency>
-                <Dependency>xdg-utils</Dependency>
+                <Dependency>python-enchant</Dependency>
+                <Dependency>python-gtk</Dependency>
+                <Dependency>python-gtksourceview</Dependency>
+                <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable" permanent="0">/usr/bin/luckybackup</Path>
-                <Path fileType="data" permanent="0">/usr/share/applications/*</Path>
-                <Path fileType="doc" permanent="0">/usr/share/doc/luckybackup/*</Path>
-                <Path fileType="data" permanent="0">/usr/share/luckybackup/*</Path>
-                <Path fileType="data" permanent="0">/usr/share/*</Path>
-                <Path fileType="man" permanent="0">/usr/share/man/man8/luckybackup.8.gz</Path>
-                <Path fileType="data" permanent="0">/usr/share/pixmaps/*</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
             </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/cherrytree/cherrytree.desktop" permission="0644" owner="root" group="root">cherrytree.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/cherrytree/cherrytree.svg" permission="0644" owner="root" group="root">cherrytree.png</AdditionalFile>
+            </AdditionalFiles>
         </Package>
         <History>
-            <Update release="2">
-                <Date>2014-04-13</Date>
-                <Version>0.4.8</Version>
+            <Update release="5">
+                <Date>2015-08-10</Date>
+                <Version>0.35.9</Version>
                 <Comment>Version bump.</Comment>
                 <Name>Stefan Gronewold(groni)</Name>
                 <Email>groni@pisilinux.org</Email>
             </Update>
-            <Update release="1">
-                <Date>2013-12-14</Date>
-                <Version>0.4.7</Version>
-                <Comment>First Release</Comment>
-                <Name>Stefan Gronewold (groni)</Name>
+            <Update release="4">
+                <Date>2014-10-08</Date>
+                <Version>0.35.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
                 <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-08-23</Date>
+                <Version>0.34.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-07-13</Date>
+                <Version>0.33.4</Version>
+                <Comment>Version Bump</Comment>
+                <Name>Ganesh Iyer</Name>
+                <Email>iyer.gb.linux@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-12-13</Date>
+                <Version>0.31.5</Version>
+                <Comment>First release</Comment>
+                <Name>Ganesh Iyer</Name>
+                <Email>iyer.gb.linux@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>sayonara</Name>
-            <Homepage>http://sayonara.luciocarreras.de/index.html</Homepage>
+            <Name>plex-media-server</Name>
+            <Homepage>http://www.plexapp.com</Homepage>
             <Packager>
-                <Name>Pisi Linux Community</Name>
-                <Email>admins@pisilinux.org</Email>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
             </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
+            <License>GPL</License>
             <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
-            <Summary xml:lang="tr">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
-            <Description xml:lang="en">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
-            <Description xml:lang="tr">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
-            <Icon>sayonara</Icon>
-            <Archive type="targz" sha1sum="1bdcdc9727830cf629cdc729379ed0ea43db8dd3">http://sayonara-player.googlecode.com/files/sayonara-player-r695.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>qt-devel</Dependency>
-                <Dependency>gstreamer-devel</Dependency>
-                <Dependency>taglib-devel</Dependency>
-                <Dependency>libnotify-devel</Dependency>
-                <Dependency>gst-plugins-bad-devel</Dependency>
-                <Dependency>gst-plugins-base-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>sayonara/pspec.xml</SourceURI>
+            <Summary xml:lang="en">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
+            <Summary xml:lang="tr">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
+            <Description xml:lang="en">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir.</Description>
+            <Description xml:lang="tr">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir. </Description>
+            <Archive type="binary" sha1sum="3225a2ff1cd8f1684ac6c4a01d0ebe0a547a1b17" target="i686">https://downloads.plex.tv/plex-media-server/0.9.12.8.1362-4601e39/plexmediaserver_0.9.12.8.1362-4601e39_i386.deb</Archive>
+            <Archive type="binary" sha1sum="16b9cdd0c6015f0e43e9d706e264d55a6ad10e90" target="x86_64">https://downloads.plex.tv/plex-media-server/0.9.12.8.1362-4601e39/plexmediaserver_0.9.12.8.1362-4601e39_amd64.deb</Archive>
+            <SourceURI>plex-media-server/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>sayonara</Name>
+            <Name>plex-media-server</Name>
             <RuntimeDependencies>
-                <Dependency>qt</Dependency>
-                <Dependency>gst-plugins-bad</Dependency>
-                <Dependency>gst-plugins-base</Dependency>
-                <Dependency>gst-plugins-good</Dependency>
-                <Dependency>gst-plugins-ugly</Dependency>
-                <Dependency>gstreamer</Dependency>
-                <Dependency>taglib</Dependency>
-                <Dependency>libnotify</Dependency>
-                <Dependency>curl</Dependency>
+                <Dependency>avahi</Dependency>
+                <Dependency>rsync</Dependency>
+                <Dependency>apache</Dependency>
+                <Dependency>firefox</Dependency>
+                <Dependency>lame</Dependency>
+                <Dependency>libass</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>rtmpdump</Dependency>
+                <Dependency>FreeImage</Dependency>
+                <Dependency>avahi-libs</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+                <Dependency>libvo-aacenc</Dependency>
+                <Dependency>libxslt-32bit</Dependency>
+                <Dependency>libxml2-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/plexmediaserver</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="library">/usr/lib/plexmediaserver</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/plexmediamanager.desktop" permission="0644" owner="root">plexmediamanager.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/plex-start.desktop" permission="0644" owner="root">plex-start.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/plexstart.png" permission="0644" owner="root">plexstart.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2015-08-10</Date>
+                <Version>0.9.12.8.1362</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-08-23</Date>
+                <Version>0.9.9.14.531</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-01-03</Date>
+                <Version>0.9.8.18.290</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-08-04</Date>
+                <Version>0.9.7.22.510</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-07-29</Date>
+                <Version>0.9.7.12.408</Version>
+                <Comment>missing dep.</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-07-24</Date>
+                <Version>0.9.7.12.408</Version>
+                <Comment>First release.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>viber</Name>
+            <Homepage>http://www.viber.com/products/linux/</Homepage>
+            <Packager>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Packager>
+            <License>custom</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Free calls, text and picture sharing with anyone, anywhere!</Summary>
+            <Summary xml:lang="tr">Konuşma ve yazışma uygulaması</Summary>
+            <Description xml:lang="en">Free calls, text and picture sharing with anyone, anywhere!</Description>
+            <Description xml:lang="tr">Ücretsiz arama, mesajlaşma ve konuşma yazılımı</Description>
+            <Icon>viber</Icon>
+            <Archive type="tarxz" sha1sum="59fe606f84c81a8d1cb8df606bb5e25bf4c750a9">https://dl.dropboxusercontent.com/u/60245852/source/viber-3.1.2.3.tar.xz</Archive>
+            <SourceURI>viber/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>viber</Name>
+            <RuntimeDependencies>
+                <Dependency>mesa</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXcomposite</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/viber</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/applications</Path>
             </Files>
+            <Provides>
+                <COMAR script="package.py">System.Package</COMAR>
+            </Provides>
         </Package>
         <History>
             <Update release="1">
-                <Date>2014-08-03</Date>
-                <Version>0.4.0</Version>
-                <Comment>First release</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
+                <Date>2014-03-23</Date>
+                <Version>3.1.2.3</Version>
+                <Comment>First Release</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -126,7 +264,7 @@
             <Summary xml:lang="tr">Kullanıcı dostu masaüstü paylaşım uygulaması</Summary>
             <Description xml:lang="en">TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com</Description>
             <Description xml:lang="tr">Teamviewer uzaktan bakım,online sunum ,dosya transferi yapmaya olanak sağlayan bir masaüstü paylaşım yazılımıdır.</Description>
-            <Archive type="binary" sha1sum="0d7d414ca08255444264072d62b0d7274e688c10">http://download.teamviewer.com/download/teamviewer.i686.rpm</Archive>
+            <Archive type="binary" sha1sum="c48bf049cd71390aff26c95627232250883ebf88">http://download.teamviewer.com/download/teamviewer.i686.rpm</Archive>
             <BuildDependencies>
                 <Dependency>rpm2targz</Dependency>
             </BuildDependencies>
@@ -167,6 +305,20 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2015-08-21</Date>
+                <Version>10.0.46203</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2015-01-20</Date>
+                <Version>10.0.37742</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
             <Update release="4">
                 <Date>2014-12-09</Date>
                 <Version>10.0.36281</Version>
@@ -200,182 +352,158 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>steam</Name>
-            <Homepage>http://store.steampowered.com/</Homepage>
+            <Name>google-chrome</Name>
+            <Homepage>http://chrome.google.com/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Packager>
-            <License>Valve Corporation</License>
-            <IsA>app</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Steam for linux</Summary>
-            <Summary xml:lang="tr">Linux için steam</Summary>
-            <Description xml:lang="en">Steam Digital Platform Runner</Description>
-            <Description xml:lang="tr">Steam dijital platform çalıştırıcısı</Description>
-            <Icon>steam</Icon>
-            <Archive type="targz" sha1sum="cf8e9c81ce5af1d2e20e57484985f170c71a5a7a">http://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.49.tar.gz</Archive>
-            <Patches>
-                <Patch level="1">alsa_sdl_audiodriver.patch</Patch>
-            </Patches>
-            <SourceURI>steam/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>steam</Name>
-            <RuntimeDependencies>
-                <Dependency>desktop-file-utils</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>mesa-32bit</Dependency>
-                <Dependency>libudev-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="info">/usr/share/info</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="6">
-                <Date>2014-09-01</Date>
-                <Version>1.0.0.49</Version>
-                <Comment>Version bump</Comment>
-                <Name>Nikolay Semenov</Name>
-                <Email>tribunal@pisilinux.org</Email>
-            </Update>
-            <Update release="5">
-                <Date>2014-08-23</Date>
-                <Version>1.0.0.48</Version>
-                <Comment>Version bump</Comment>
-                <Name>Stefan Gronewold (groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-06-29</Date>
-                <Version>1.0.0.47</Version>
-                <Comment>Dep fix</Comment>
-                <Name>Nikolay Semenov</Name>
-                <Email>tribunal@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-06-15</Date>
-                <Version>1.0.0.47</Version>
-                <Comment>Remove unnecessary deps</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-03-21</Date>
-                <Version>1.0.0.47</Version>
-                <Comment>Version bump</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2013-09-07</Date>
-                <Version>1.0.0.41</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>Rssowl</Name>
-            <Homepage>http://www.rssowl.org/</Homepage>
-            <Packager>
-                <Name>Pisi Linux community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Eclipse Public License</License>
+            <License>EULA</License>
             <IsA>app:gui</IsA>
-            <PartOf>network.rss</PartOf>
-            <Summary xml:lang="en">RSS Owl is a powerful application to organize, search and read feeds.</Summary>
-            <Summary xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu.</Summary>
-            <Description xml:lang="en">RSS Owl is a powerful application to organize, search and read your news feeds in a comfortable way.</Description>
-            <Description xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu. RSSOwl sen, toplamak, düzenlemek ve haber arama sağlayan kullanışlı, sonsuz esneklik ile kullanımı kolay arayüz.</Description>
-            <Archive type="zip" sha1sum="d69e059317f831484fc6b27df299f7e3e6b18d1b">http://sourceforge.net/projects/rssowl/files/rssowl%202/2.2.1/rssowl-2.2.1.linux.x86_64.zip</Archive>
-            <SourceURI>Rssowl/pspec.xml</SourceURI>
+            <PartOf>network.web</PartOf>
+            <Summary xml:lang="de">Google Chrome für Linux</Summary>
+            <Summary xml:lang="en">Google Chrome for Linux</Summary>
+            <Summary xml:lang="es">Google Chrome para Linux</Summary>
+            <Description xml:lang="de">Google Chrome ist ein Web-Browser der von Google Inc. entwickelt wird. Wichtige Bestandteile sind die Rendering-Engine Webkit, sowie die JavaScript Engine. Beliebt macht den Browser seine einfach zu bedienende Oberfläche und die hohe Geschwindigkeit.</Description>
+            <Description xml:lang="en">Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
+            <Description xml:lang="es">Google Chrome es un navegador web desarrollado por Google Inc... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
+            <Icon>google-chrome</Icon>
+            <Archive type="binary" sha1sum="895be32c6526d5ebceb04f5bb2bd369d404dcfde">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>google-chrome/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>Rssowl</Name>
+            <Name>google-chrome</Name>
             <RuntimeDependencies>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency>atk</Dependency>
+                <Dependency>nspr</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libgcrypt</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
                 <Dependency>cairo</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>libXcomposite</Dependency>
                 <Dependency>gtk2</Dependency>
-                <Dependency>libIDL</Dependency>
-                <Dependency>libXext</Dependency>
                 <Dependency>libXrender</Dependency>
-                <Dependency>libXt</Dependency>
-                <Dependency>nss</Dependency>
+                <Dependency>icon-theme-hicolor</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>libevent</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXtst</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>pixman</Dependency>
-                <Dependency>startup-notification</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>minizip</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+                <Dependency>icu4c</Dependency>
+                <Dependency>nss</Dependency>
+                <Dependency>cups</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libvpx</Dependency>
+                <Dependency>flac</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="data">/opt</Path>
-                <Path fileType="data">/usr</Path>
+                <Path fileType="config">/etc/</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="library">/usr/lib/</Path>
+                <Path fileType="man">/usr/share/man/</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="data">/opt/google/</Path>
+                <Path fileType="data">/usr/share/pixmaps/</Path>
+                <Path fileType="data">/usr/share/applications/</Path>
             </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/rssowl.desktop" permission="0644" owner="root" group="root">rssowl.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/rssowl.xpm" permission="0644" owner="root" group="root">rssowl.xpm</AdditionalFile>
-            </AdditionalFiles>
         </Package>
         <History>
-            <Update release="1">
-                <Date>2014-08-23</Date>
-                <Version>2.2</Version>
-                <Comment>First Release</Comment>
+            <Update release="74">
+                <Date>2015-09-21</Date>
+                <Version>45.0.2454.93</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="73">
+                <Date>2015-09-03</Date>
+                <Version>45.0.2454.85</Version>
+                <Comment>Version bump.</Comment>
                 <Name>Stefan Gronewold(groni)</Name>
                 <Email>groni@pisilinux.org</Email>
             </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>e-takip</Name>
-            <Homepage>http://www.uyap.gov.tr/destek/avukatport/etakip/etakip.htm</Homepage>
-            <Packager>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
-            </Packager>
-            <License>FDL-1.3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından işlemlerini yapabilmeri için E-takip.</Summary>
-            <Description xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından icra takibi açabilmesi, dosyalarını inceleyebilmeleri, harç ve masraflarını yatırabilmeleri gibi, fiziksel ortamda yapılan bir çok işlemin elektronik ortamda mekandan bağımsız olarak yapılmasını sağlayan bir sistemdir.</Description>
-            <Archive type="targz" sha1sum="1def0dce0eaebe39f326a47a0f089453984aae47">https://dl.dropboxusercontent.com/s/bh3fdcg2y65kid2/etakip-06042014.tar.gz</Archive>
-            <SourceURI>e-takip/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>e-takip</Name>
-            <RuntimeDependencies>
-                <Dependency>jre7-openjdk</Dependency>
-                <Dependency>jre7-openjdk-headless</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/java/e-takip</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2014-04-06</Date>
-                <Version>1.0</Version>
-                <Comment>First Release</Comment>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
+            <Update release="72">
+                <Date>2015-08-12</Date>
+                <Version>44.0.2403.155</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="71">
+                <Date>2015-08-05</Date>
+                <Version>44.0.2403.130</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="70">
+                <Date>2015-07-29</Date>
+                <Version>44.0.2403.125</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="69">
+                <Date>2015-07-25</Date>
+                <Version>44.0.2403.107</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="68">
+                <Date>2015-07-22</Date>
+                <Version>44.0.2403.89</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="67">
+                <Date>2015-07-15</Date>
+                <Version>43.0.2357.134</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="66">
+                <Date>2015-06-23</Date>
+                <Version>43.0.2357.130</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="65">
+                <Date>2015-06-13</Date>
+                <Version>43.0.2357.125</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="63">
+                <Date>2015-06-09</Date>
+                <Version>43.0.2357.124</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -395,7 +523,7 @@
             <Summary xml:lang="tr">Google Talk için video sohbet tarayıcı eklentisi</Summary>
             <Description xml:lang="en">The Google Talk Plugin is a browser plugin that enables you to use Google voice and video chat to chat face to face with family and friends.</Description>
             <Description xml:lang="tr">Google Talk Plugin, aileniz ve arkadaşlarınızla yüz yüze sohbet etmek için Google&apos;nin sesli ve görüntülü sohbet hizmetini kullanmanızı sağlayan bir tarayıcı eklentisidir.</Description>
-            <Archive type="binary" sha1sum="d75fad757750b4830c4e401ade92b4993e2a4ab2" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
+            <Archive type="binary" sha1sum="1c3cc0411444587b56178de4868eb5d0ff742ec0" target="x86_64">http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb</Archive>
             <SourceURI>google-talkplugin/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -434,6 +562,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2015-08-10</Date>
+                <Version>5.4.3.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
             <Update release="11">
                 <Date>2014-08-27</Date>
                 <Version>5.4.2.0</Version>
@@ -515,50 +650,134 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>wuala</Name>
-            <Homepage>http://www.wuala.com/</Homepage>
+            <Name>e-takip</Name>
+            <Homepage>http://www.uyap.gov.tr/destek/avukatport/etakip/etakip.htm</Homepage>
             <Packager>
-                <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
             </Packager>
-            <License>2011 LaCie AG. Alls rights reserved.</License>
+            <License>FDL-1.3</License>
             <IsA>app:gui</IsA>
             <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Wuala için dosya aktarım paketi.Wuala is secure storage for all your files.</Summary>
-            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
-            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.Wuala is secure cloud storage, a haven in the cloud to store your files. You can safely access and share your files with friends, family, and co-workers.</Description>
-            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
-            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>jre7-openjdk</Dependency>
-                <Dependency>jre7-openjdk-headless</Dependency>
-            </BuildDependencies>
-            <SourceURI>wuala/pspec.xml</SourceURI>
+            <Summary xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından işlemlerini yapabilmeri için E-takip.</Summary>
+            <Description xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından icra takibi açabilmesi, dosyalarını inceleyebilmeleri, harç ve masraflarını yatırabilmeleri gibi, fiziksel ortamda yapılan bir çok işlemin elektronik ortamda mekandan bağımsız olarak yapılmasını sağlayan bir sistemdir.</Description>
+            <Archive type="targz" sha1sum="1def0dce0eaebe39f326a47a0f089453984aae47">https://dl.dropboxusercontent.com/s/bh3fdcg2y65kid2/etakip-06042014.tar.gz</Archive>
+            <SourceURI>e-takip/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>wuala</Name>
+            <Name>e-takip</Name>
             <RuntimeDependencies>
                 <Dependency>jre7-openjdk</Dependency>
                 <Dependency>jre7-openjdk-headless</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share</Path>
-                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/java/e-takip</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
             </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
-            </AdditionalFiles>
         </Package>
         <History>
             <Update release="1">
-                <Date>2012-03-09</Date>
+                <Date>2014-04-06</Date>
                 <Version>1.0</Version>
-                <Comment>new version.</Comment>
+                <Comment>First Release</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>steam</Name>
+            <Homepage>http://store.steampowered.com/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>Valve Corporation</License>
+            <IsA>app</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Steam for linux</Summary>
+            <Summary xml:lang="tr">Linux için steam</Summary>
+            <Description xml:lang="en">Steam Digital Platform Runner</Description>
+            <Description xml:lang="tr">Steam dijital platform çalıştırıcısı</Description>
+            <Icon>steam</Icon>
+            <Archive type="targz" sha1sum="ca7ff02af5e14e3532eb449a08016c041973f48d">http://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.50.tar.gz</Archive>
+            <Patches>
+                <Patch level="1">alsa_sdl_audiodriver.patch</Patch>
+            </Patches>
+            <SourceURI>steam/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>steam</Name>
+            <RuntimeDependencies>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mesa-32bit</Dependency>
+                <Dependency>libudev-32bit</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="7">
+                <Date>2015-07-15</Date>
+                <Version>1.0.0.50</Version>
+                <Comment>Version bump</Comment>
                 <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2014-09-01</Date>
+                <Version>1.0.0.49</Version>
+                <Comment>Version bump</Comment>
+                <Name>Nikolay Semenov</Name>
+                <Email>tribunal@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-08-23</Date>
+                <Version>1.0.0.48</Version>
+                <Comment>Version bump</Comment>
+                <Name>Stefan Gronewold (groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-06-29</Date>
+                <Version>1.0.0.47</Version>
+                <Comment>Dep fix</Comment>
+                <Name>Nikolay Semenov</Name>
+                <Email>tribunal@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-06-15</Date>
+                <Version>1.0.0.47</Version>
+                <Comment>Remove unnecessary deps</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-03-21</Date>
+                <Version>1.0.0.47</Version>
+                <Comment>Version bump</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-09-07</Date>
+                <Version>1.0.0.41</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -603,827 +822,54 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>viber</Name>
-            <Homepage>http://www.viber.com/products/linux/</Homepage>
-            <Packager>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Packager>
-            <License>custom</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Free calls, text and picture sharing with anyone, anywhere!</Summary>
-            <Summary xml:lang="tr">Konuşma ve yazışma uygulaması</Summary>
-            <Description xml:lang="en">Free calls, text and picture sharing with anyone, anywhere!</Description>
-            <Description xml:lang="tr">Ücretsiz arama, mesajlaşma ve konuşma yazılımı</Description>
-            <Icon>viber</Icon>
-            <Archive type="tarxz" sha1sum="59fe606f84c81a8d1cb8df606bb5e25bf4c750a9">https://dl.dropboxusercontent.com/u/60245852/source/viber-3.1.2.3.tar.xz</Archive>
-            <SourceURI>viber/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>viber</Name>
-            <RuntimeDependencies>
-                <Dependency>mesa</Dependency>
-                <Dependency>libXi</Dependency>
-                <Dependency>libxslt</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>libXrender</Dependency>
-                <Dependency>libXcomposite</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/viber</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-            </Files>
-            <Provides>
-                <COMAR script="package.py">System.Package</COMAR>
-            </Provides>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2014-03-23</Date>
-                <Version>3.1.2.3</Version>
-                <Comment>First Release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>plex-media-server</Name>
-            <Homepage>http://www.plexapp.com</Homepage>
-            <Packager>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Packager>
-            <License>GPL</License>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
-            <Summary xml:lang="tr">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
-            <Description xml:lang="en">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir.</Description>
-            <Description xml:lang="tr">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir. </Description>
-            <Archive type="binary" sha1sum="1c44ce0febb4aa7a1950b6aeb786c8b742e292a7" target="i686">http://downloads.plexapp.com/plex-media-server/0.9.9.14.531-7eef8c6/plexmediaserver_0.9.9.14.531-7eef8c6_i386.deb</Archive>
-            <Archive type="binary" sha1sum="51f3d46634eee245d89a471e4e324ac5dc159d3a" target="x86_64">http://downloads.plexapp.com/plex-media-server/0.9.9.14.531-7eef8c6/plexmediaserver_0.9.9.14.531-7eef8c6_amd64.deb</Archive>
-            <SourceURI>plex-media-server/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>plex-media-server</Name>
-            <RuntimeDependencies>
-                <Dependency>avahi</Dependency>
-                <Dependency>rsync</Dependency>
-                <Dependency>apache</Dependency>
-                <Dependency>firefox</Dependency>
-                <Dependency>lame</Dependency>
-                <Dependency>libass</Dependency>
-                <Dependency>fribidi</Dependency>
-                <Dependency>libxslt</Dependency>
-                <Dependency>rtmpdump</Dependency>
-                <Dependency>FreeImage</Dependency>
-                <Dependency>avahi-libs</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-                <Dependency>libvo-aacenc</Dependency>
-                <Dependency>libxslt-32bit</Dependency>
-                <Dependency>libxml2-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/share/plexmediaserver</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="library">/usr/lib/plexmediaserver</Path>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="executable">/usr/sbin</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/plexmediamanager.desktop" permission="0644" owner="root">plexmediamanager.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/plex-start.desktop" permission="0644" owner="root">plex-start.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/plexstart.png" permission="0644" owner="root">plexstart.png</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2014-08-23</Date>
-                <Version>0.9.9.14.531</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-01-03</Date>
-                <Version>0.9.8.18.290</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2013-08-04</Date>
-                <Version>0.9.7.22.510</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-07-29</Date>
-                <Version>0.9.7.12.408</Version>
-                <Comment>missing dep.</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-07-24</Date>
-                <Version>0.9.7.12.408</Version>
-                <Comment>First release.</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>cherrytree</Name>
-            <Homepage>http://www.giuspen.com/cherrytree/</Homepage>
-            <Packager>
-                <Name>Pisi Linux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3+</License>
-            <IsA>app:gui</IsA>
-            <PartOf>office</PartOf>
-            <Summary xml:lang="en">Cherrytree A hierarchical note taking application</Summary>
-            <Summary xml:lang="tr">Uygulama alarak hiyerarşik not</Summary>
-            <Description xml:lang="en">A hierarchical note taking application, featuring rich text and syntax highlighting, storing data in a single xml or sqlite file.</Description>
-            <Description xml:lang="tr">Özellikler :
-
-- Zengin metin ( ön plan rengi , arka plan rengi , kalın , italik , üstü çizili , altı çizili , küçük , h1 , h2 , h3, simge , üst simge , monospace )
-- Sözdizimi (zengin metingeçerli düğüm devre dışı olduğunda ) vurgulama
-- Taşıma görüntüler : eklememetin , edit ( döndürmek / yeniden boyutlandırma ) , png dosyayı kaydedin
-- Taşıma listeleri ( madde işaretli , numaralı , yapılacaklar aralarında ve anahtarı , vardiya ile çok satırlı + enter )
-- (Düz metin olan hücreler ) işleme basit tablolar , kes / kopyala / yapıştır sıra , ithalat / ihracat csv dosyası olarak
-- Taşıma codeboxes : otomatik kutuları normal bir zengin metin metin vurgulanır
-- Metin, resim , tablo ve codeboxes hizalama ( sol / merkez / sağ)
-- Köprüler ( web sayfalarına bağlantılar , bağlantılar düğümler / düğümleri + çapalar , dosyalara bağlantılar , klasörlere bağlantılar )
-- Yazım denetimi ( pygtkspellcheck ve pyenchant kullanarak)
-- Içi uygulama copy / paste : Tek görüntü , tek codeboxes , tek tablolar ve zengin metin , görüntü , codeboxes ve tablolar bir bileşik seçim desteklenen
-- Çapraz başvuru copy / paste ( OpenOffice ve gmail ile test ) : Tek görüntü, tek codeboxes , tek tablolar ve zengin metin , görüntü , codeboxes ve tablolar bir bileşik seçim desteklenen
--Dosya yöneticisi ve cherrytree yapıştırarak dosyaların bir listesini kopyalama dosyaların bağlantıları bir liste oluşturmak , görüntülerimetin tanınan ve eklenen
-- Seçim / düğüm / düğüm ve alt düğümler pdf dosyası olarak baskı ve kaydetmek /tüm ağaç
-- Seçim / düğüm / düğüm ve alt düğümler html ihracat /tüm ağaç
-- Seçim / düğüm / düğüm ve alt düğümler düz metin ihracat /tüm ağaç
-- Başlıkları H1, H2 ve H3 dayalı bir düğüm / düğüm ve alt düğümler / bütün ağaç için TOC üretimi
-- Tüm düğümler bulmak , geçerli düğüm bulmak , bir düğümü bulmak
-- , Düğüm adları yerine geçerli düğüm yerine , tüm düğümleri değiştirin
-- En sonen son bulmak , yineleme yineleme , yerineson uygulamalı metin biçimlendirme yineleme
-- Sepet ithalat , Cherrytree , gnote , KeepNote , açış , biliyordun , MemPad , notecase , fatma treepad lite , TuxCards , Zim
-- Seçim / düğüm / düğüm ve alt düğümler /bütün ağacın dosyayı Cherrytree ihracat
-- ( Http://www.7-zip.org/ kullanarak) şifre koruması
-- Ağaç düğümleri sürükle ve bırak</Description>
-            <Archive type="tarxz" sha1sum="54873683f366362b95f22f9a0e77674bdad9caea">http://www.giuspen.com/software/cherrytree-0.35.0.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>desktop-file-utils</Dependency>
-            </BuildDependencies>
-            <SourceURI>cherrytree/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>cherrytree</Name>
-            <RuntimeDependencies>
-                <Dependency>python-enchant</Dependency>
-                <Dependency>python-gtk</Dependency>
-                <Dependency>python-gtksourceview</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/cherrytree/cherrytree.desktop" permission="0644" owner="root" group="root">cherrytree.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/cherrytree/cherrytree.svg" permission="0644" owner="root" group="root">cherrytree.png</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2014-10-08</Date>
-                <Version>0.35.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-08-23</Date>
-                <Version>0.34.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-07-13</Date>
-                <Version>0.33.4</Version>
-                <Comment>Version Bump</Comment>
-                <Name>Ganesh Iyer</Name>
-                <Email>iyer.gb.linux@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2013-12-13</Date>
-                <Version>0.31.5</Version>
-                <Comment>First release</Comment>
-                <Name>Ganesh Iyer</Name>
-                <Email>iyer.gb.linux@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>google-chrome</Name>
-            <Homepage>http://chrome.google.com/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>EULA</License>
-            <IsA>app:gui</IsA>
-            <PartOf>network.web</PartOf>
-            <Summary xml:lang="de">Google Chrome für Linux</Summary>
-            <Summary xml:lang="en">Google Chrome for Linux</Summary>
-            <Summary xml:lang="es">Google Chrome para Linux</Summary>
-            <Description xml:lang="de">Google Chrome ist ein Web-Browser der von Google Inc. entwickelt wird. Wichtige Bestandteile sind die Rendering-Engine Webkit, sowie die JavaScript Engine. Beliebt macht den Browser seine einfach zu bedienende Oberfläche und die hohe Geschwindigkeit.</Description>
-            <Description xml:lang="en">Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
-            <Description xml:lang="es">Google Chrome es un navegador web desarrollado por Google Inc... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
-            <Icon>google-chrome</Icon>
-            <Archive type="binary" sha1sum="66b59c537b4cc835183a9521fc301e6048954c0a">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
-            <BuildDependencies>
-                <Dependency>rpm2targz</Dependency>
-            </BuildDependencies>
-            <SourceURI>google-chrome/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>google-chrome</Name>
-            <RuntimeDependencies>
-                <Dependency>cairo</Dependency>
-                <Dependency>atk</Dependency>
-                <Dependency>libXcomposite</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>libXrender</Dependency>
-                <Dependency>icon-theme-hicolor</Dependency>
-                <Dependency>gconf</Dependency>
-                <Dependency>libevent</Dependency>
-                <Dependency>libXi</Dependency>
-                <Dependency>libXdamage</Dependency>
-                <Dependency>libXfixes</Dependency>
-                <Dependency>libXtst</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>minizip</Dependency>
-                <Dependency>nspr</Dependency>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>libXScrnSaver</Dependency>
-                <Dependency>icu4c</Dependency>
-                <Dependency>nss</Dependency>
-                <Dependency>cups</Dependency>
-                <Dependency>libxslt</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>libjpeg-turbo</Dependency>
-                <Dependency>libgcrypt</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>libvpx</Dependency>
-                <Dependency>flac</Dependency>
-                <Dependency>libpng</Dependency>
-                <Dependency>bzip2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="config">/etc/</Path>
-                <Path fileType="executable">/usr/bin/</Path>
-                <Path fileType="library">/usr/lib/</Path>
-                <Path fileType="man">/usr/share/man/</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-                <Path fileType="data">/opt/google/</Path>
-                <Path fileType="data">/usr/share/pixmaps/</Path>
-                <Path fileType="data">/usr/share/applications/</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="47">
-                <Date>2014-12-11</Date>
-                <Version>39.0.2171.95</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="46">
-                <Date>2014-12-04</Date>
-                <Version>39.0.2171.71</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>Poyraz76@pisilinux.org</Email>
-            </Update>
-            <Update release="45">
-                <Date>2014-11-19</Date>
-                <Version>39.0.2171.65</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="44">
-                <Date>2014-10-28</Date>
-                <Version>38.0.2125.111</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="43">
-                <Date>2014-10-15</Date>
-                <Version>38.0.2125.104</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="42">
-                <Date>2014-10-08</Date>
-                <Version>38.0.2125.101</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="41" type="security">
-                <Date>2014-09-10</Date>
-                <Version>37.0.2062.120</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="40">
-                <Date>2014-09-06</Date>
-                <Version>37.0.2062.103</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Richard de Bruin(richdb)</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="39">
-                <Date>2014-09-04</Date>
-                <Version>37.0.2062.94</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="38">
-                <Date>2014-08-29</Date>
-                <Version>36.0.1985.143</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="37">
-                <Date>2014-07-17</Date>
-                <Version>35.0.1916.153.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="36">
-                <Date>2014-05-29</Date>
-                <Version>35.0.36</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="35" type="security">
-                <Date>2014-05-14</Date>
-                <Version>34.0.1847.137.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="34" type="security">
-                <Date>2014-04-25</Date>
-                <Version>34.0.1847.132.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="34">
-                <Date>2014-04-10</Date>
-                <Version>34.0.1847.550</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="33" type="security">
-                <Date>2014-03-22</Date>
-                <Version>33.0.1750.152</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="33" type="security">
-                <Date>2014-03-04</Date>
-                <Version>33.0.1750.146_1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="33" type="security">
-                <Date>2014-02-24</Date>
-                <Version>33.0.1750.117</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="33">
-                <Date>2014-02-20</Date>
-                <Version>33.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="30" type="security">
-                <Date>2014-01-18</Date>
-                <Version>32.0.1700.77</Version>
-                <Comment>Version bump</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="29" type="security">
-                <Date>2013-12-06</Date>
-                <Version>31.0.1650.63</Version>
-                <Comment>Version bump</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="28" type="security">
-                <Date>2013-10-19</Date>
-                <Version>30.0.1599.101</Version>
-                <Comment>Version bump</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="27" type="security">
-                <Date>2013-09-19</Date>
-                <Version>29.0.1547.76</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>yoyofv@gmail.com</Email>
-            </Update>
-            <Update release="26" type="security">
-                <Date>2013-08-31</Date>
-                <Version>29.0.1547.65</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>yoyofv@gmail.com</Email>
-            </Update>
-            <Update release="25" type="security">
-                <Date>2013-08-31</Date>
-                <Version>28.0.1500.95</Version>
-                <Comment>Version update</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@gmail.com</Email>
-            </Update>
-            <Update release="24" type="security">
-                <Date>2013-07-15</Date>
-                <Version>28.0.1500.71</Version>
-                <Comment>Version update</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@gmail.com</Email>
-            </Update>
-            <Update release="23" type="security">
-                <Date>2013-29-06</Date>
-                <Version>28.0.1500.63</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>yoyofv@gmail.com</Email>
-            </Update>
-            <Update release="22" type="security">
-                <Date>2013-05-25</Date>
-                <Version>27.0.1453.93</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>yoyofv@gmail.com</Email>
-            </Update>
-            <Update release="21" type="security">
-                <Date>2013-03-27</Date>
-                <Version>26.0.1410.43</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>yoyofv@gmail.com</Email>
-            </Update>
-            <Update release="20" type="security">
-                <Date>2013-03-14</Date>
-                <Version>25.0.1364.172</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>parduslife@gmail.com</Email>
-            </Update>
-            <Update release="19" type="security">
-                <Date>2013-02-28</Date>
-                <Version>25.0.1364.97</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>parduslife@gmail.com</Email>
-            </Update>
-            <Update release="18" type="security">
-                <Date>2013-02-15</Date>
-                <Version>24.0.1312.70</Version>
-                <Comment>Version update</Comment>
-                <Name>Yoyo Fernández</Name>
-                <Email>parduslife@gmail.com</Email>
-            </Update>
-            <Update release="17" type="security">
-                <Date>2013-02-07</Date>
-                <Version>24.0.1312.69</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="16" type="security">
-                <Date>2013-01-20</Date>
-                <Version>24.0.1312.56</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="15" type="security">
-                <Date>2012-09-13</Date>
-                <Version>21.0.1180.89</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="14" type="security">
-                <Date>2012-08-09</Date>
-                <Version>21.0.1180.75</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="13" type="security">
-                <Date>2012-07-22</Date>
-                <Version>20.0.1132.57</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="12" type="security">
-                <Date>2012-05-17</Date>
-                <Version>19.0.1084.46</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="11">
-                <Date>2012-04-14</Date>
-                <Version>18.0.1025.162</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="10" type="security">
-                <Date>2012-03-29</Date>
-                <Version>18.0.1025.142</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="9" type="security">
-                <Date>2012-03-12</Date>
-                <Version>17.0.963.79</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="8" type="security">
-                <Date>2012-02-20</Date>
-                <Version>17.0.963.56</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="7">
-                <Date>2012-02-09</Date>
-                <Version>17.0.963.46</Version>
-                <Comment>Version update and make releasenumber equal to i686</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="5">
-                <Date>2011-12-02</Date>
-                <Version>15.0.874.121</Version>
-                <Comment>Version update and move runtimedep libpng12 to libpng12-pardususerde</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2011-11-13</Date>
-                <Version>15.0.874.120</Version>
-                <Comment>Version update and wrong package name in translations.xml (there was &quot;picasa&quot; - instead of &quot;google-chrome&quot;)</Comment>
-                <Name>Gürkan ZENGIN</Name>
-                <Email>gurkan@pardususer.de</Email>
-            </Update>
-            <Update release="3">
-                <Date>2011-09-20</Date>
-                <Version>14.0.835.163</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2011-08-20</Date>
-                <Version>13.0.782.112</Version>
-                <Comment>Version update</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2011-05-13</Date>
-                <Version>11.0.696.68</Version>
-                <Comment>First release.</Comment>
-                <Name>Gürkan ZENGIN</Name>
-                <Email>gurkan@pardususer.de</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>ndiswrapper</Name>
-            <Homepage>http://ndiswrapper.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <IsA>driver</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">A network driver wrapper</Summary>
-            <Summary xml:lang="tr">Bir sürücü ara yazılımı(wrapper)</Summary>
-            <Summary xml:lang="es">Capa de abstracción de controladores</Summary>
-            <Description xml:lang="fr">ndiswrapper permet d&apos;utiliser les pilotes Windows pour les cartes réseau sans-fil sans pilote adéquat sous Linux.</Description>
-            <Description xml:lang="en">module-ndiswrapper allows you to use Windows XP drivers for WLAN cards without proper Linux drivers.</Description>
-            <Description xml:lang="tr">ndiswrapper, Linux sürücüsü olmayan kablosuz kartların Windows sürücüleri kullanılarak çalıştırılmasını sağlayan bir yazılımdır.</Description>
-            <Description xml:lang="es">ndiswrapper permite usar controladores de windows XP para tarjetas WLAN que no tienen controladores propios para Linux.</Description>
-            <Archive type="targz" sha1sum="75fbbda677fe91ee07a6f6a8e19b1f3e2479540f">http://download.sourceforge.net/ndiswrapper/ndiswrapper-1.59.tar.gz</Archive>
-            <AdditionalFiles>
-                <AdditionalFile target="ndiswrapper-1.59.patch">ndiswrapper-1.59.patch</AdditionalFile>
-            </AdditionalFiles>
-            <BuildDependencies>
-                <Dependency>kernel-module-headers</Dependency>
-            </BuildDependencies>
-            <SourceURI>ndiswrapper/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>ndiswrapper</Name>
-            <Files>
-                <Path fileType="library" permanent="true">/lib/modules</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/etc/ndiswrapper</Path>
-                <Path fileType="executable">/usr/sbin</Path>
-                <Path fileType="executable">/sbin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2014-04-28</Date>
-                <Version>1.59</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>draftsight</Name>
-            <Homepage>http://www.3ds.com/products-services/draftsight</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>AS IS</License>
-            <License>EULA</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="tr">DraftSight ® - DWG dosyaları için CAD ​​yazılımı.</Summary>
-            <Summary xml:lang="de">DraftSight®: Kostenlose Profi-CAD-Software.</Summary>
-            <Summary xml:lang="en">DraftSight® - Free CAD software for your DWG files</Summary>
-            <Summary xml:lang="es">DraftSight®: Programa CAD gratuito* de nivel profesional.</Summary>
-            <Description xml:lang="tr">DraftSight profesyonel CAD kullanıcılarının, öğrencilerin ve eğitimcilerin DWG dosyalarını oluşturmasını, düzenlemesini ve görüntülemesini sağlar.</Description>
-            <Description xml:lang="de">Mit DraftSight können professionelle CAD-Anwender, Studenten und Ausbilder DWG-Dateien erstellen, bearbeiten und ansehen.</Description>
-            <Description xml:lang="en">DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
-            <Description xml:lang="es">Con DraftSight, los usuarios CAD profesionales, estudiantes y educadores pueden crear, editar y visualizar ficheros DWG.</Description>
-            <Icon>draftsight</Icon>
-            <Archive type="binary" sha1sum="88e5ebc69ef42f5b86b3612502d2baeede23fa3f">http://dl-ak.solidworks.com/nonsecure/draftsight/V1R6.0/draftSight.rpm</Archive>
-            <BuildDependencies>
-                <Dependency>rpm2targz</Dependency>
-            </BuildDependencies>
-            <SourceURI>draftsight/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>draftsight</Name>
-            <RuntimeDependencies>
-                <Dependency>glib2-32bit</Dependency>
-                <Dependency>mesa-glu-32bit</Dependency>
-                <Dependency>mesa-32bit</Dependency>
-                <Dependency>cups-32bit</Dependency>
-                <Dependency>libglade</Dependency>
-                <Dependency>libICE-32bit</Dependency>
-                <Dependency>libSM-32bit</Dependency>
-                <Dependency>libX11-32bit</Dependency>
-                <Dependency>libXext-32bit</Dependency>
-                <Dependency>libXrender-32bit</Dependency>
-                <Dependency>libXt-32bit</Dependency>
-                <Dependency>nas-32bit</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-                <Dependency>alsa-lib-32bit</Dependency>
-                <Dependency>fontconfig-32bit</Dependency>
-                <Dependency>expat-32bit</Dependency>
-                <Dependency>libudev-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/draftsight.bin</Path>
-                <Path fileType="executable">/usr/bin/draftsight</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-                <Path fileType="data">/usr/share/pixmaps/</Path>
-                <Path fileType="data">/usr/share/applications/</Path>
-                <Path fileType="data">/opt/dassault-systemes/</Path>
-                <Path fileType="data">/var/opt/dassault-systemes/</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/draftsight.desktop" permission="0644" owner="root">draftsight.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/bin/draftsight" permission="0755" owner="root">draftsight</AdditionalFile>
-                <AdditionalFile target="/opt/dassault-systemes/DraftSight/Libraries/libaudio.so.2" permission="0644" owner="root">libaudio.so.2</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/draftsight.png" permission="0644" owner="root">draftsight.png</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2014-10-17</Date>
-                <Version>6.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Kamil Atlı</Name>
-                <Email>suvari@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2014-04-01</Date>
-                <Version>5.1</Version>
-                <Comment>First Release</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>xcfa</Name>
-            <Homepage>http://www.xcfa.tuxfamily.org/static2/xcfa</Homepage>
+            <Name>luckyBackup</Name>
+            <Homepage>http://luckybackup.sourceforge.net/news.html</Homepage>
             <Packager>
                 <Name>Pisi Linux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">XCFA. This stands for X Convert File Audio</Summary>
-            <Description xml:lang="en">XCFA is a tool to extract the contens of Audio-CDs and convert musical audio files conversion to FLAC, WAV, OGG, M4A, MPC, MP3, WavPack and many other formats.</Description>
-            <Archive type="targz" sha1sum="bf31d7c253f097cd22e497c9e65fe2d884626f44">http://download.tuxfamily.org/xcfaudio/xcfa_download/src/xcfa-4.3.8.tar.gz</Archive>
-            <SourceURI>xcfa/pspec.xml</SourceURI>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A powerful, fast and reliable backup and sync tool</Summary>
+            <Description xml:lang="en">luckyBackup is an application for data back-up and synchronization powered by the rsync tool.</Description>
+            <Archive type="targz" sha1sum="067e5ea0ce23944942d3ff0bf7e1133370872ee4">http://sourceforge.net/projects/luckybackup/files/0.4.8/source/luckybackup-0.4.8.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>qt-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>luckyBackup/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>xcfa</Name>
+            <Name>luckyBackup</Name>
             <RuntimeDependencies>
-                <Dependency>gtk2</Dependency>
-                <Dependency>taglib</Dependency>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency>vte</Dependency>
-                <Dependency>curl</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>openssh</Dependency>
+                <Dependency>qt</Dependency>
+                <Dependency>rsync</Dependency>
+                <Dependency>xdg-utils</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="application">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man/man1</Path>
-                <Path fileType="pixmaps">/usr/share/pixmaps</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable" permanent="0">/usr/bin/luckybackup</Path>
+                <Path fileType="data" permanent="0">/usr/share/applications/*</Path>
+                <Path fileType="doc" permanent="0">/usr/share/doc/luckybackup/*</Path>
+                <Path fileType="data" permanent="0">/usr/share/luckybackup/*</Path>
+                <Path fileType="data" permanent="0">/usr/share/*</Path>
+                <Path fileType="man" permanent="0">/usr/share/man/man8/luckybackup.8.gz</Path>
+                <Path fileType="data" permanent="0">/usr/share/pixmaps/*</Path>
             </Files>
         </Package>
         <History>
-            <Update release="1">
-                <Date>2014-05-15</Date>
-                <Version>4.3.8</Version>
-                <Comment>First release</Comment>
+            <Update release="2">
+                <Date>2014-04-13</Date>
+                <Version>0.4.8</Version>
+                <Comment>Version bump.</Comment>
                 <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-12-14</Date>
+                <Version>0.4.7</Version>
+                <Comment>First Release</Comment>
+                <Name>Stefan Gronewold (groni)</Name>
                 <Email>groni@pisilinux.org</Email>
             </Update>
         </History>
@@ -1507,6 +953,560 @@
                 <Comment>First release.</Comment>
                 <Name>Antoon Tolboom</Name>
                 <Email>atolboo@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ndiswrapper</Name>
+            <Homepage>http://ndiswrapper.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <IsA>driver</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">A network driver wrapper</Summary>
+            <Summary xml:lang="tr">Bir sürücü ara yazılımı(wrapper)</Summary>
+            <Summary xml:lang="es">Capa de abstracción de controladores</Summary>
+            <Description xml:lang="fr">ndiswrapper permet d&apos;utiliser les pilotes Windows pour les cartes réseau sans-fil sans pilote adéquat sous Linux.</Description>
+            <Description xml:lang="en">module-ndiswrapper allows you to use Windows XP drivers for WLAN cards without proper Linux drivers.</Description>
+            <Description xml:lang="tr">ndiswrapper, Linux sürücüsü olmayan kablosuz kartların Windows sürücüleri kullanılarak çalıştırılmasını sağlayan bir yazılımdır.</Description>
+            <Description xml:lang="es">ndiswrapper permite usar controladores de windows XP para tarjetas WLAN que no tienen controladores propios para Linux.</Description>
+            <Archive type="targz" sha1sum="75fbbda677fe91ee07a6f6a8e19b1f3e2479540f">http://download.sourceforge.net/ndiswrapper/ndiswrapper-1.59.tar.gz</Archive>
+            <AdditionalFiles>
+                <AdditionalFile target="ndiswrapper-1.59.patch">ndiswrapper-1.59.patch</AdditionalFile>
+            </AdditionalFiles>
+            <BuildDependencies>
+                <Dependency>kernel-module-headers</Dependency>
+            </BuildDependencies>
+            <SourceURI>ndiswrapper/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ndiswrapper</Name>
+            <Files>
+                <Path fileType="library" permanent="true">/lib/modules</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/etc/ndiswrapper</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2014-04-28</Date>
+                <Version>1.59</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>Rssowl</Name>
+            <Homepage>http://www.rssowl.org/</Homepage>
+            <Packager>
+                <Name>Pisi Linux community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>Eclipse Public License</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network.rss</PartOf>
+            <Summary xml:lang="en">RSS Owl is a powerful application to organize, search and read feeds.</Summary>
+            <Summary xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu.</Summary>
+            <Description xml:lang="en">RSS Owl is a powerful application to organize, search and read your news feeds in a comfortable way.</Description>
+            <Description xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu. RSSOwl sen, toplamak, düzenlemek ve haber arama sağlayan kullanışlı, sonsuz esneklik ile kullanımı kolay arayüz.</Description>
+            <Archive type="zip" sha1sum="d69e059317f831484fc6b27df299f7e3e6b18d1b">http://sourceforge.net/projects/rssowl/files/rssowl%202/2.2.1/rssowl-2.2.1.linux.x86_64.zip</Archive>
+            <SourceURI>Rssowl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>Rssowl</Name>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libIDL</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>nss</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>startup-notification</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/opt</Path>
+                <Path fileType="data">/usr</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/rssowl.desktop" permission="0644" owner="root" group="root">rssowl.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/rssowl.xpm" permission="0644" owner="root" group="root">rssowl.xpm</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2014-08-23</Date>
+                <Version>2.2</Version>
+                <Comment>First Release</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>chrome-remote-desktop</Name>
+            <Homepage>http://www.google.com</Homepage>
+            <Packager>
+                <Name>Ergün Salman</Name>
+                <Email>Poyraz76@pisilinux.org</Email>
+            </Packager>
+            <License>custom</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Ücretsiz uzaktan masaüstü erişim programı</Summary>
+            <Description xml:lang="en">Free remote desktop</Description>
+            <Icon>chrome-remote-desktop</Icon>
+            <Archive type="binary" sha1sum="ed41acb78707da341ba3ae9e4ec77eb08f473b75">https://dl.dropboxusercontent.com/s/i90kkszfcd4sevu/chrome-remote-desktop_current_amd64.deb</Archive>
+            <SourceURI>chrome-remote-desktop/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>chrome-remote-desktop</Name>
+            <Files>
+                <Path fileType="data">/usr/share/doc/chrome-remote-desktop/</Path>
+                <Path fileType="data">/opt/google/chrome-remote-desktop</Path>
+                <Path fileType="config">/etc/init.d</Path>
+                <Path fileType="config">/etc/pam.d</Path>
+                <Path fileType="config">/etc/cron.daily</Path>
+                <Path fileType="config">/etc/opt/chrome/native-messaging-hosts/</Path>
+            </Files>
+            <Provides>
+                <COMAR script="package.py">System.Package</COMAR>
+            </Provides>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2015-09-020</Date>
+                <Version>45.0.2454.17</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2015-07-08</Date>
+                <Version>44.0.2403.44</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2015-03-24</Date>
+                <Version>41.0.2272.41</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2015-01-17</Date>
+                <Version>40.0.2214.44</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-12-10</Date>
+                <Version>39.0.2171.46</Version>
+                <Comment>First Release</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>opera</Name>
+            <Homepage>http://www.opera.com</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>OPERA-9.0</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Opera web browser</Summary>
+            <Summary xml:lang="tr">Opera internet tarayıcısı</Summary>
+            <Summary xml:lang="pl">Przeglądarka internetowa Opera</Summary>
+            <Summary xml:lang="es">Opera navegador web</Summary>
+            <Description xml:lang="en">Opera is a standards-compliant graphical Web browser.</Description>
+            <Description xml:lang="tr">Opera, standartlarla uyumlu, grafik arayüzlü bir internet tarayıcısıdır.</Description>
+            <Description xml:lang="pl">Opera - wieloplatformowa przeglądarka internetowa cechująca się szybkim przeglądaniem i wyświetlaniem stron.</Description>
+            <Description xml:lang="es">Navegador web Opera, un navegador compatible con los estándares rápido y funcional.</Description>
+            <Icon>opera</Icon>
+            <Archive type="binary" sha1sum="84cb0a05b0bc897f9637921bed4e82d16b32e230" target="x86_64">http://get.geo.opera.com.global.prod.fastly.net/pub/opera/desktop/32.0.1948.25/linux/opera-stable_32.0.1948.25_amd64.deb</Archive>
+            <SourceURI>opera/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>opera</Name>
+            <RuntimeDependencies>
+                <Dependency>nss</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cups</Dependency>
+                <Dependency>nspr</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/opera</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc/opera-stable</Path>
+                <Path fileType="data">/usr/share/icons/hicolor</Path>
+                <Path fileType="data">/usr/share/menu</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <Provides>
+                <COMAR script="package.py">System.Package</COMAR>
+            </Provides>
+        </Package>
+        <History>
+            <Update release="9">
+                <Date>2015-09-21</Date>
+                <Version>32.0.1948.25</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="8">
+                <Date>2014-12-05</Date>
+                <Version>26.0.1656.32</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ekin Dursun</Name>
+                <Email>ekin.dursun@pisilinux.org</Email>
+            </Update>
+            <Update release="7">
+                <Date>2014-05-29</Date>
+                <Version>12.16</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Stefan Gronewold (groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2014-03-03</Date>
+                <Version>12.16</Version>
+                <Comment>Rebuild for openjdk</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2013-07-05</Date>
+                <Version>12.16</Version>
+                <Comment>security bump</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-04-04</Date>
+                <Version>12.15</Version>
+                <Comment>security bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-02-06</Date>
+                <Version>12.14</Version>
+                <Comment>* Update addresses a re-occuring crash, allowing users to update two or more extensions at one time.</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-02-01</Date>
+                <Version>12.13</Version>
+                <Comment>* Fixed an issue where Opera gets internal communication errors on Facebook
+                * Fixed an issue where no webpages load on startup, if Opera is disconnected from the Internet
+                * Fixed an issue where images will not load after back navigation, when a site uses the HTML5 history API (deviantart.com)
+                * A new stand-alone update-checker, as part of a planned upgrade of the auto-update system
+                * Security fixes</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-12-30</Date>
+                <Version>12.12</Version>
+                <Comment>First release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xcfa</Name>
+            <Homepage>http://www.xcfa.tuxfamily.org/static2/xcfa</Homepage>
+            <Packager>
+                <Name>Pisi Linux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">XCFA. This stands for X Convert File Audio</Summary>
+            <Description xml:lang="en">XCFA is a tool to extract the contens of Audio-CDs and convert musical audio files conversion to FLAC, WAV, OGG, M4A, MPC, MP3, WavPack and many other formats.</Description>
+            <Archive type="targz" sha1sum="bf31d7c253f097cd22e497c9e65fe2d884626f44">http://download.tuxfamily.org/xcfaudio/xcfa_download/src/xcfa-4.3.8.tar.gz</Archive>
+            <SourceURI>xcfa/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xcfa</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>vte</Dependency>
+                <Dependency>curl</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="application">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="pixmaps">/usr/share/pixmaps</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2014-05-15</Date>
+                <Version>4.3.8</Version>
+                <Comment>First release</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>sayonara</Name>
+            <Homepage>http://sayonara.luciocarreras.de/index.html</Homepage>
+            <Packager>
+                <Name>Pisi Linux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
+            <Summary xml:lang="tr">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
+            <Description xml:lang="en">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
+            <Description xml:lang="tr">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
+            <Icon>sayonara</Icon>
+            <Archive type="targz" sha1sum="8eba711cf9cf01e281028a8de472553cab409adb">ftp://sayonara-player.com/sayonara/sayonara-player-r73.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>qt-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>taglib-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>gst-plugins-bad-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>sayonara/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sayonara</Name>
+            <RuntimeDependencies>
+                <Dependency>qt</Dependency>
+                <Dependency>gst-plugins-bad</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>curl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2015-08-10</Date>
+                <Version>0.6.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-08-03</Date>
+                <Version>0.4.0</Version>
+                <Comment>First release</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wuala</Name>
+            <Homepage>http://www.wuala.com/</Homepage>
+            <Packager>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Packager>
+            <License>2011 LaCie AG. Alls rights reserved.</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Wuala için dosya aktarım paketi.Wuala is secure storage for all your files.</Summary>
+            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
+            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.Wuala is secure cloud storage, a haven in the cloud to store your files. You can safely access and share your files with friends, family, and co-workers.</Description>
+            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>jre7-openjdk</Dependency>
+                <Dependency>jre7-openjdk-headless</Dependency>
+            </BuildDependencies>
+            <SourceURI>wuala/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wuala</Name>
+            <RuntimeDependencies>
+                <Dependency>jre7-openjdk</Dependency>
+                <Dependency>jre7-openjdk-headless</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2012-03-09</Date>
+                <Version>1.0</Version>
+                <Comment>new version.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>draftsight</Name>
+            <Homepage>http://www.3ds.com/products-services/draftsight</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>AS IS</License>
+            <License>EULA</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="tr">DraftSight ® - DWG dosyaları için CAD ​​yazılımı.</Summary>
+            <Summary xml:lang="de">DraftSight®: Kostenlose Profi-CAD-Software.</Summary>
+            <Summary xml:lang="en">DraftSight® - Free CAD software for your DWG files</Summary>
+            <Summary xml:lang="es">DraftSight®: Programa CAD gratuito* de nivel profesional.</Summary>
+            <Description xml:lang="tr">DraftSight profesyonel CAD kullanıcılarının, öğrencilerin ve eğitimcilerin DWG dosyalarını oluşturmasını, düzenlemesini ve görüntülemesini sağlar.</Description>
+            <Description xml:lang="de">Mit DraftSight können professionelle CAD-Anwender, Studenten und Ausbilder DWG-Dateien erstellen, bearbeiten und ansehen.</Description>
+            <Description xml:lang="en">DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
+            <Description xml:lang="es">Con DraftSight, los usuarios CAD profesionales, estudiantes y educadores pueden crear, editar y visualizar ficheros DWG.</Description>
+            <Icon>draftsight</Icon>
+            <Archive type="binary" sha1sum="8717571bf0a8ac4b51d8d0206a84b0ffe0cf1917">http://www.draftsight.com/download-linux-fedora</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>draftsight/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>draftsight</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2-32bit</Dependency>
+                <Dependency>mesa-glu-32bit</Dependency>
+                <Dependency>mesa-32bit</Dependency>
+                <Dependency>cups-32bit</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libICE-32bit</Dependency>
+                <Dependency>libSM-32bit</Dependency>
+                <Dependency>libX11-32bit</Dependency>
+                <Dependency>libXext-32bit</Dependency>
+                <Dependency>libXrender-32bit</Dependency>
+                <Dependency>libXt-32bit</Dependency>
+                <Dependency>nas-32bit</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+                <Dependency>alsa-lib-32bit</Dependency>
+                <Dependency>fontconfig-32bit</Dependency>
+                <Dependency>expat-32bit</Dependency>
+                <Dependency>libudev-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/draftsight.bin</Path>
+                <Path fileType="executable">/usr/bin/draftsight</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="data">/usr/share/pixmaps/</Path>
+                <Path fileType="data">/usr/share/applications/</Path>
+                <Path fileType="data">/opt/dassault-systemes/</Path>
+                <Path fileType="data">/var/opt/dassault-systemes/</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/draftsight.desktop" permission="0644" owner="root">draftsight.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/bin/draftsight" permission="0755" owner="root">draftsight</AdditionalFile>
+                <AdditionalFile target="/opt/dassault-systemes/DraftSight/Libraries/libaudio.so.2" permission="0644" owner="root">libaudio.so.2</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/draftsight.png" permission="0644" owner="root">draftsight.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2015-08-10</Date>
+                <Version>6.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-10-17</Date>
+                <Version>6.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-04-01</Date>
+                <Version>5.1</Version>
+                <Comment>First Release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

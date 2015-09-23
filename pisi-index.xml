@@ -1,6 +1,149 @@
 <PISI>
     <SpecFile>
         <Source>
+            <Name>Rssowl</Name>
+            <Homepage>http://www.rssowl.org/</Homepage>
+            <Packager>
+                <Name>Pisi Linux community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>Eclipse Public License</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network.rss</PartOf>
+            <Summary xml:lang="en">RSS Owl is a powerful application to organize, search and read feeds.</Summary>
+            <Summary xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu.</Summary>
+            <Description xml:lang="en">RSS Owl is a powerful application to organize, search and read your news feeds in a comfortable way.</Description>
+            <Description xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu. RSSOwl sen, toplamak, düzenlemek ve haber arama sağlayan kullanışlı, sonsuz esneklik ile kullanımı kolay arayüz.</Description>
+            <Archive type="zip" sha1sum="d69e059317f831484fc6b27df299f7e3e6b18d1b">http://sourceforge.net/projects/rssowl/files/rssowl%202/2.2.1/rssowl-2.2.1.linux.x86_64.zip</Archive>
+            <SourceURI>Rssowl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>Rssowl</Name>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libIDL</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>nss</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>startup-notification</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/opt</Path>
+                <Path fileType="data">/usr</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/rssowl.desktop" permission="0644" owner="root" group="root">rssowl.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/rssowl.xpm" permission="0644" owner="root" group="root">rssowl.xpm</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2014-08-23</Date>
+                <Version>2.2</Version>
+                <Comment>First Release</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ndiswrapper</Name>
+            <Homepage>http://ndiswrapper.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <IsA>driver</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">A network driver wrapper</Summary>
+            <Summary xml:lang="tr">Bir sürücü ara yazılımı(wrapper)</Summary>
+            <Summary xml:lang="es">Capa de abstracción de controladores</Summary>
+            <Description xml:lang="fr">ndiswrapper permet d&apos;utiliser les pilotes Windows pour les cartes réseau sans-fil sans pilote adéquat sous Linux.</Description>
+            <Description xml:lang="en">module-ndiswrapper allows you to use Windows XP drivers for WLAN cards without proper Linux drivers.</Description>
+            <Description xml:lang="tr">ndiswrapper, Linux sürücüsü olmayan kablosuz kartların Windows sürücüleri kullanılarak çalıştırılmasını sağlayan bir yazılımdır.</Description>
+            <Description xml:lang="es">ndiswrapper permite usar controladores de windows XP para tarjetas WLAN que no tienen controladores propios para Linux.</Description>
+            <Archive type="targz" sha1sum="75fbbda677fe91ee07a6f6a8e19b1f3e2479540f">http://download.sourceforge.net/ndiswrapper/ndiswrapper-1.59.tar.gz</Archive>
+            <AdditionalFiles>
+                <AdditionalFile target="ndiswrapper-1.59.patch">ndiswrapper-1.59.patch</AdditionalFile>
+            </AdditionalFiles>
+            <BuildDependencies>
+                <Dependency>kernel-module-headers</Dependency>
+            </BuildDependencies>
+            <SourceURI>ndiswrapper/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ndiswrapper</Name>
+            <Files>
+                <Path fileType="library" permanent="true">/lib/modules</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/etc/ndiswrapper</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2014-04-28</Date>
+                <Version>1.59</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>e-takip</Name>
+            <Homepage>http://www.uyap.gov.tr/destek/avukatport/etakip/etakip.htm</Homepage>
+            <Packager>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Packager>
+            <License>FDL-1.3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından işlemlerini yapabilmeri için E-takip.</Summary>
+            <Description xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından icra takibi açabilmesi, dosyalarını inceleyebilmeleri, harç ve masraflarını yatırabilmeleri gibi, fiziksel ortamda yapılan bir çok işlemin elektronik ortamda mekandan bağımsız olarak yapılmasını sağlayan bir sistemdir.</Description>
+            <Archive type="targz" sha1sum="1def0dce0eaebe39f326a47a0f089453984aae47">https://dl.dropboxusercontent.com/s/bh3fdcg2y65kid2/etakip-06042014.tar.gz</Archive>
+            <SourceURI>e-takip/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>e-takip</Name>
+            <RuntimeDependencies>
+                <Dependency>jre7-openjdk</Dependency>
+                <Dependency>jre7-openjdk-headless</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/java/e-takip</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2014-04-06</Date>
+                <Version>1.0</Version>
+                <Comment>First Release</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>cherrytree</Name>
             <Homepage>http://www.giuspen.com/cherrytree/</Homepage>
             <Packager>
@@ -103,103 +246,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>plex-media-server</Name>
-            <Homepage>http://www.plexapp.com</Homepage>
-            <Packager>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Packager>
-            <License>GPL</License>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
-            <Summary xml:lang="tr">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
-            <Description xml:lang="en">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir.</Description>
-            <Description xml:lang="tr">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir. </Description>
-            <Archive type="binary" sha1sum="3225a2ff1cd8f1684ac6c4a01d0ebe0a547a1b17" target="i686">https://downloads.plex.tv/plex-media-server/0.9.12.8.1362-4601e39/plexmediaserver_0.9.12.8.1362-4601e39_i386.deb</Archive>
-            <Archive type="binary" sha1sum="16b9cdd0c6015f0e43e9d706e264d55a6ad10e90" target="x86_64">https://downloads.plex.tv/plex-media-server/0.9.12.8.1362-4601e39/plexmediaserver_0.9.12.8.1362-4601e39_amd64.deb</Archive>
-            <SourceURI>plex-media-server/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>plex-media-server</Name>
-            <RuntimeDependencies>
-                <Dependency>avahi</Dependency>
-                <Dependency>rsync</Dependency>
-                <Dependency>apache</Dependency>
-                <Dependency>firefox</Dependency>
-                <Dependency>lame</Dependency>
-                <Dependency>libass</Dependency>
-                <Dependency>fribidi</Dependency>
-                <Dependency>libxslt</Dependency>
-                <Dependency>rtmpdump</Dependency>
-                <Dependency>FreeImage</Dependency>
-                <Dependency>avahi-libs</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-                <Dependency>libvo-aacenc</Dependency>
-                <Dependency>libxslt-32bit</Dependency>
-                <Dependency>libxml2-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/share/plexmediaserver</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="library">/usr/lib/plexmediaserver</Path>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="executable">/usr/sbin</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/plexmediamanager.desktop" permission="0644" owner="root">plexmediamanager.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/plex-start.desktop" permission="0644" owner="root">plex-start.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/plexstart.png" permission="0644" owner="root">plexstart.png</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="6">
-                <Date>2015-08-10</Date>
-                <Version>0.9.12.8.1362</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="5">
-                <Date>2014-08-23</Date>
-                <Version>0.9.9.14.531</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-01-03</Date>
-                <Version>0.9.8.18.290</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2013-08-04</Date>
-                <Version>0.9.7.22.510</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-07-29</Date>
-                <Version>0.9.7.12.408</Version>
-                <Comment>missing dep.</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-07-24</Date>
-                <Version>0.9.7.12.408</Version>
-                <Comment>First release.</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>viber</Name>
             <Homepage>http://www.viber.com/products/linux/</Homepage>
             <Packager>
@@ -250,103 +296,128 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>teamviewer</Name>
-            <Homepage>http://www.teamviewer.com/</Homepage>
+            <Name>uyap</Name>
+            <Homepage>http://www.uyap.gov.tr</Homepage>
+            <Packager>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Packager>
+            <License>IBC</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Udf dosya uzantısı açmaya yarayan program.</Summary>
+            <Description xml:lang="en">Udf dosya uzantısı açmaya yarayan program.</Description>
+            <Archive type="targz" sha1sum="c4d5d4f9d164d0579137a2405ca0891495d7ed12">https://dl.dropboxusercontent.com/s/uo7fy33800q4jo4/uyap.tar.gz</Archive>
+            <SourceURI>uyap/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>uyap</Name>
+            <RuntimeDependencies>
+                <Dependency>jre7-openjdk</Dependency>
+                <Dependency>jre7-openjdk-headless</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/java/uyap</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2014-04-06</Date>
+                <Version>1.0</Version>
+                <Comment>First Release</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>draftsight</Name>
+            <Homepage>http://www.3ds.com/products-services/draftsight</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Packager>
-            <License>as-is</License>
-            <License>TeamViewer GmbH</License>
+            <License>AS IS</License>
+            <License>EULA</License>
             <IsA>app:gui</IsA>
             <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">User friendly remote control application</Summary>
-            <Summary xml:lang="tr">Kullanıcı dostu masaüstü paylaşım uygulaması</Summary>
-            <Description xml:lang="en">TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com</Description>
-            <Description xml:lang="tr">Teamviewer uzaktan bakım,online sunum ,dosya transferi yapmaya olanak sağlayan bir masaüstü paylaşım yazılımıdır.</Description>
-            <Archive type="binary" sha1sum="c48bf049cd71390aff26c95627232250883ebf88">http://download.teamviewer.com/download/teamviewer.i686.rpm</Archive>
+            <Summary xml:lang="tr">DraftSight ® - DWG dosyaları için CAD ​​yazılımı.</Summary>
+            <Summary xml:lang="de">DraftSight®: Kostenlose Profi-CAD-Software.</Summary>
+            <Summary xml:lang="en">DraftSight® - Free CAD software for your DWG files</Summary>
+            <Summary xml:lang="es">DraftSight®: Programa CAD gratuito* de nivel profesional.</Summary>
+            <Description xml:lang="tr">DraftSight profesyonel CAD kullanıcılarının, öğrencilerin ve eğitimcilerin DWG dosyalarını oluşturmasını, düzenlemesini ve görüntülemesini sağlar.</Description>
+            <Description xml:lang="de">Mit DraftSight können professionelle CAD-Anwender, Studenten und Ausbilder DWG-Dateien erstellen, bearbeiten und ansehen.</Description>
+            <Description xml:lang="en">DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
+            <Description xml:lang="es">Con DraftSight, los usuarios CAD profesionales, estudiantes y educadores pueden crear, editar y visualizar ficheros DWG.</Description>
+            <Icon>draftsight</Icon>
+            <Archive type="binary" sha1sum="8717571bf0a8ac4b51d8d0206a84b0ffe0cf1917">http://www.draftsight.com/download-linux-fedora</Archive>
             <BuildDependencies>
                 <Dependency>rpm2targz</Dependency>
             </BuildDependencies>
-            <SourceURI>teamviewer/pspec.xml</SourceURI>
+            <SourceURI>draftsight/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>teamviewer</Name>
+            <Name>draftsight</Name>
             <RuntimeDependencies>
-                <Dependency>libXtst-32bit</Dependency>
-                <Dependency>alsa-lib-32bit</Dependency>
-                <Dependency>libXdamage-32bit</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-                <Dependency>freetype-32bit</Dependency>
+                <Dependency>glib2-32bit</Dependency>
+                <Dependency>mesa-glu-32bit</Dependency>
+                <Dependency>mesa-32bit</Dependency>
+                <Dependency>cups-32bit</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libICE-32bit</Dependency>
                 <Dependency>libSM-32bit</Dependency>
                 <Dependency>libX11-32bit</Dependency>
-                <Dependency>libXau-32bit</Dependency>
                 <Dependency>libXext-32bit</Dependency>
-                <Dependency>libXrandr-32bit</Dependency>
-                <Dependency>libXfixes-32bit</Dependency>
                 <Dependency>libXrender-32bit</Dependency>
-                <Dependency>harfbuzz-32bit</Dependency>
+                <Dependency>libXt-32bit</Dependency>
+                <Dependency>nas-32bit</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+                <Dependency>alsa-lib-32bit</Dependency>
+                <Dependency>fontconfig-32bit</Dependency>
+                <Dependency>expat-32bit</Dependency>
+                <Dependency>libudev-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/opt/teamviewer*</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="config">/etc/init.d</Path>
-                <Path fileType="config">/etc/teamviewer</Path>
-                <Path fileType="data">/var/log</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin/draftsight.bin</Path>
+                <Path fileType="executable">/usr/bin/draftsight</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="data">/usr/share/pixmaps/</Path>
+                <Path fileType="data">/usr/share/applications/</Path>
+                <Path fileType="data">/opt/dassault-systemes/</Path>
+                <Path fileType="data">/var/opt/dassault-systemes/</Path>
             </Files>
-            <Provides>
-                <COMAR script="service.py">System.Service</COMAR>
-            </Provides>
             <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/teamviewer.desktop" permission="0644" owner="root">teamviewer.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/teamviewer.png" permission="0644" owner="root">teamviewer.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/draftsight.desktop" permission="0644" owner="root">draftsight.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/bin/draftsight" permission="0755" owner="root">draftsight</AdditionalFile>
+                <AdditionalFile target="/opt/dassault-systemes/DraftSight/Libraries/libaudio.so.2" permission="0644" owner="root">libaudio.so.2</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/draftsight.png" permission="0644" owner="root">draftsight.png</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
-            <Update release="6">
-                <Date>2015-08-21</Date>
-                <Version>10.0.46203</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
-            </Update>
-            <Update release="5">
-                <Date>2015-01-20</Date>
-                <Version>10.0.37742</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-12-09</Date>
-                <Version>10.0.36281</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
-            </Update>
             <Update release="3">
-                <Date>2014-12-03</Date>
-                <Version>10.0.35002</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
+                <Date>2015-08-10</Date>
+                <Version>6.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
             </Update>
             <Update release="2">
-                <Date>2014-05-10</Date>
-                <Version>9.0.24147</Version>
-                <Comment>*Version bump to 9 series
-                     *Add comar script</Comment>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
+                <Date>2014-10-17</Date>
+                <Version>6.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
             </Update>
             <Update release="1">
-                <Date>2013-08-03</Date>
-                <Version>7.0.9377</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
+                <Date>2014-04-01</Date>
+                <Version>5.1</Version>
+                <Comment>First Release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -509,6 +580,231 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>sayonara</Name>
+            <Homepage>http://sayonara.luciocarreras.de/index.html</Homepage>
+            <Packager>
+                <Name>Pisi Linux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
+            <Summary xml:lang="tr">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
+            <Description xml:lang="en">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
+            <Description xml:lang="tr">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
+            <Icon>sayonara</Icon>
+            <Archive type="targz" sha1sum="8eba711cf9cf01e281028a8de472553cab409adb">ftp://sayonara-player.com/sayonara/sayonara-player-r73.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>qt-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>taglib-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>gst-plugins-bad-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>sayonara/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sayonara</Name>
+            <RuntimeDependencies>
+                <Dependency>qt</Dependency>
+                <Dependency>gst-plugins-bad</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>curl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2015-08-10</Date>
+                <Version>0.6.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-08-03</Date>
+                <Version>0.4.0</Version>
+                <Comment>First release</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>vivaldi</Name>
+            <Homepage>http://vivaldi.com/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>EULA</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network.web</PartOf>
+            <Summary xml:lang="en">Vivaldi for Linux</Summary>
+            <Description xml:lang="en">Vivaldi is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
+            <Icon>vivaldi</Icon>
+            <Archive type="binary" sha1sum="9644606d529f703bda9e68f73a94d8162f7bd1b4">https://vivaldi.com/download/vivaldi_TP4.1.0.219.50-1.x86_64.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>vivaldi/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>vivaldi</Name>
+            <RuntimeDependencies>
+                <Dependency>nss</Dependency>
+                <Dependency>cups</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libxkbfile</Dependency>
+                <Dependency>pepperflash</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+                <Dependency>libXcomposite</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/cron.daily</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="data">/opt/vivaldi/</Path>
+                <Path fileType="data">/usr/share/icons/hicolor/</Path>
+                <Path fileType="data">/usr/share/applications/</Path>
+                <Path fileType="data">/usr/share/xfce4/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2015-09-24</Date>
+                <Version>1.0.219.50</Version>
+                <Comment>Frist relase</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>plex-media-server</Name>
+            <Homepage>http://www.plexapp.com</Homepage>
+            <Packager>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Packager>
+            <License>GPL</License>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
+            <Summary xml:lang="tr">Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
+            <Description xml:lang="en">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir.</Description>
+            <Description xml:lang="tr">Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir. </Description>
+            <Archive type="binary" sha1sum="3225a2ff1cd8f1684ac6c4a01d0ebe0a547a1b17" target="i686">https://downloads.plex.tv/plex-media-server/0.9.12.8.1362-4601e39/plexmediaserver_0.9.12.8.1362-4601e39_i386.deb</Archive>
+            <Archive type="binary" sha1sum="16b9cdd0c6015f0e43e9d706e264d55a6ad10e90" target="x86_64">https://downloads.plex.tv/plex-media-server/0.9.12.8.1362-4601e39/plexmediaserver_0.9.12.8.1362-4601e39_amd64.deb</Archive>
+            <SourceURI>plex-media-server/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>plex-media-server</Name>
+            <RuntimeDependencies>
+                <Dependency>avahi</Dependency>
+                <Dependency>rsync</Dependency>
+                <Dependency>apache</Dependency>
+                <Dependency>firefox</Dependency>
+                <Dependency>lame</Dependency>
+                <Dependency>libass</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>rtmpdump</Dependency>
+                <Dependency>FreeImage</Dependency>
+                <Dependency>avahi-libs</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+                <Dependency>libvo-aacenc</Dependency>
+                <Dependency>libxslt-32bit</Dependency>
+                <Dependency>libxml2-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/plexmediaserver</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="library">/usr/lib/plexmediaserver</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/plexmediamanager.desktop" permission="0644" owner="root">plexmediamanager.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/plex-start.desktop" permission="0644" owner="root">plex-start.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/plexstart.png" permission="0644" owner="root">plexstart.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2015-08-10</Date>
+                <Version>0.9.12.8.1362</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-08-23</Date>
+                <Version>0.9.9.14.531</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-01-03</Date>
+                <Version>0.9.8.18.290</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-08-04</Date>
+                <Version>0.9.7.22.510</Version>
+                <Comment>V.Bump</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-07-29</Date>
+                <Version>0.9.7.12.408</Version>
+                <Comment>missing dep.</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-07-24</Date>
+                <Version>0.9.7.12.408</Version>
+                <Comment>First release.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>google-talkplugin</Name>
             <Homepage>http://www.google.com/chat/video</Homepage>
             <Packager>
@@ -650,40 +946,357 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>e-takip</Name>
-            <Homepage>http://www.uyap.gov.tr/destek/avukatport/etakip/etakip.htm</Homepage>
+            <Name>picasa</Name>
+            <Homepage>http://picasa.google.com/</Homepage>
             <Packager>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
             </Packager>
-            <License>FDL-1.3</License>
+            <License>EULA</License>
+            <License>GPLV2</License>
+            <License>LGPLV2</License>
             <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından işlemlerini yapabilmeri için E-takip.</Summary>
-            <Description xml:lang="en">Avukatların ve vatandaşların adliyeye gitmeden bürolarından icra takibi açabilmesi, dosyalarını inceleyebilmeleri, harç ve masraflarını yatırabilmeleri gibi, fiziksel ortamda yapılan bir çok işlemin elektronik ortamda mekandan bağımsız olarak yapılmasını sağlayan bir sistemdir.</Description>
-            <Archive type="targz" sha1sum="1def0dce0eaebe39f326a47a0f089453984aae47">https://dl.dropboxusercontent.com/s/bh3fdcg2y65kid2/etakip-06042014.tar.gz</Archive>
-            <SourceURI>e-takip/pspec.xml</SourceURI>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="tr">Linux İçin Picasa</Summary>
+            <Summary xml:lang="de">Picasa für Linux</Summary>
+            <Summary xml:lang="en">Picasa for Linux with face recognition</Summary>
+            <Description xml:lang="tr">Picasa, dijital fotoğraflarınızı aramaya, düzenlemeye, üzerinde değişiklik yapmaya, ve internet aracı&apos;ile paylaşmak için bir Google programıdır.</Description>
+            <Description xml:lang="de">Picasa ist eine Bilderverwaltungssoftware von Google, zum Verwalten, Archivieren, Bearbeiten und Erstellung von online Webalben Ihrer Fotos.</Description>
+            <Description xml:lang="en">Picasa is a software from Google for organizing, editing or sharing digital photos over internet from your computer.</Description>
+            <Icon>picasa</Icon>
+            <Archive type="binary" sha1sum="148a74dc0c39e2e676c4ccc8d9c0bf919a9afc56">http://www.mediafire.com/download/wjpkhrbdjkf5h9k/picasa-3.9-2pclos2012.src.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>picasa/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>e-takip</Name>
+            <Name>picasa</Name>
+            <RuntimeDependencies>
+                <Dependency>openssl-32bit</Dependency>
+                <Dependency>libXau-32bit</Dependency>
+                <Dependency>libXmu-32bit</Dependency>
+                <Dependency>libXpm-32bit</Dependency>
+                <Dependency>libXxf86vm-32bit</Dependency>
+                <Dependency>alsa-lib-32bit</Dependency>
+                <Dependency>audiofile-32bit</Dependency>
+                <Dependency>cups-32bit</Dependency>
+                <Dependency>freetype-32bit</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>libgphoto2</Dependency>
+                <Dependency>sane-backends</Dependency>
+                <Dependency>libxslt-32bit</Dependency>
+                <Dependency>lcms-32bit</Dependency>
+                <Dependency>lsb-release</Dependency>
+                <Dependency>firefox</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/opt/google/</Path>
+                <Path fileType="data">/usr/</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="data">/etc/xdg</Path>
+                <Path fileType="data">/usr/share/desktop-directories</Path>
+            </Files>
+            <Conflicts>
+                <Package>picasa-improved-play-function</Package>
+            </Conflicts>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/picasa.desktop" permission="0644" owner="root">picasa.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/picasa-kdehal.desktop" permission="0644" owner="root">picasa-kdehal.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/picasa-fontcfg.desktop" permission="0644" owner="root">picasa-fontcfg.desktop</AdditionalFile>
+                <AdditionalFile target="/etc/xdg/menus/applications-merged/picasa.menu" permission="0644">picasa.menu</AdditionalFile>
+                <AdditionalFile target="/usr/share/desktop-directories/Picasa.directory" permission="0644">Picasa.directory</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2013-07-20</Date>
+                <Version>3.9.0</Version>
+                <Comment>change source</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-12-17</Date>
+                <Version>3.9.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Antoon Tolboom</Name>
+                <Email>atolboo@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>chrome-remote-desktop</Name>
+            <Homepage>http://www.google.com</Homepage>
+            <Packager>
+                <Name>Ergün Salman</Name>
+                <Email>Poyraz76@pisilinux.org</Email>
+            </Packager>
+            <License>custom</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Ücretsiz uzaktan masaüstü erişim programı</Summary>
+            <Description xml:lang="en">Free remote desktop</Description>
+            <Icon>chrome-remote-desktop</Icon>
+            <Archive type="binary" sha1sum="ed41acb78707da341ba3ae9e4ec77eb08f473b75">https://dl.dropboxusercontent.com/s/i90kkszfcd4sevu/chrome-remote-desktop_current_amd64.deb</Archive>
+            <SourceURI>chrome-remote-desktop/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>chrome-remote-desktop</Name>
+            <Files>
+                <Path fileType="data">/usr/share/doc/chrome-remote-desktop/</Path>
+                <Path fileType="data">/opt/google/chrome-remote-desktop</Path>
+                <Path fileType="config">/etc/init.d</Path>
+                <Path fileType="config">/etc/pam.d</Path>
+                <Path fileType="config">/etc/cron.daily</Path>
+                <Path fileType="config">/etc/opt/chrome/native-messaging-hosts/</Path>
+            </Files>
+            <Provides>
+                <COMAR script="package.py">System.Package</COMAR>
+            </Provides>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2015-09-020</Date>
+                <Version>45.0.2454.17</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2015-07-08</Date>
+                <Version>44.0.2403.44</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2015-03-24</Date>
+                <Version>41.0.2272.41</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2015-01-17</Date>
+                <Version>40.0.2214.44</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-12-10</Date>
+                <Version>39.0.2171.46</Version>
+                <Comment>First Release</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wuala</Name>
+            <Homepage>http://www.wuala.com/</Homepage>
+            <Packager>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Packager>
+            <License>2011 LaCie AG. Alls rights reserved.</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Wuala için dosya aktarım paketi.Wuala is secure storage for all your files.</Summary>
+            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
+            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.Wuala is secure cloud storage, a haven in the cloud to store your files. You can safely access and share your files with friends, family, and co-workers.</Description>
+            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
+            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>jre7-openjdk</Dependency>
+                <Dependency>jre7-openjdk-headless</Dependency>
+            </BuildDependencies>
+            <SourceURI>wuala/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wuala</Name>
             <RuntimeDependencies>
                 <Dependency>jre7-openjdk</Dependency>
                 <Dependency>jre7-openjdk-headless</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/java/e-takip</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="doc">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
             </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
+            </AdditionalFiles>
         </Package>
         <History>
             <Update release="1">
-                <Date>2014-04-06</Date>
+                <Date>2012-03-09</Date>
                 <Version>1.0</Version>
+                <Comment>new version.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>namso-01@hotmail.it</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>luckyBackup</Name>
+            <Homepage>http://luckybackup.sourceforge.net/news.html</Homepage>
+            <Packager>
+                <Name>Pisi Linux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A powerful, fast and reliable backup and sync tool</Summary>
+            <Description xml:lang="en">luckyBackup is an application for data back-up and synchronization powered by the rsync tool.</Description>
+            <Archive type="targz" sha1sum="067e5ea0ce23944942d3ff0bf7e1133370872ee4">http://sourceforge.net/projects/luckybackup/files/0.4.8/source/luckybackup-0.4.8.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>qt-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>luckyBackup/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>luckyBackup</Name>
+            <RuntimeDependencies>
+                <Dependency>openssh</Dependency>
+                <Dependency>qt</Dependency>
+                <Dependency>rsync</Dependency>
+                <Dependency>xdg-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable" permanent="0">/usr/bin/luckybackup</Path>
+                <Path fileType="data" permanent="0">/usr/share/applications/*</Path>
+                <Path fileType="doc" permanent="0">/usr/share/doc/luckybackup/*</Path>
+                <Path fileType="data" permanent="0">/usr/share/luckybackup/*</Path>
+                <Path fileType="data" permanent="0">/usr/share/*</Path>
+                <Path fileType="man" permanent="0">/usr/share/man/man8/luckybackup.8.gz</Path>
+                <Path fileType="data" permanent="0">/usr/share/pixmaps/*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2014-04-13</Date>
+                <Version>0.4.8</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-12-14</Date>
+                <Version>0.4.7</Version>
                 <Comment>First Release</Comment>
+                <Name>Stefan Gronewold (groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>teamviewer</Name>
+            <Homepage>http://www.teamviewer.com/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>as-is</License>
+            <License>TeamViewer GmbH</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">User friendly remote control application</Summary>
+            <Summary xml:lang="tr">Kullanıcı dostu masaüstü paylaşım uygulaması</Summary>
+            <Description xml:lang="en">TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com</Description>
+            <Description xml:lang="tr">Teamviewer uzaktan bakım,online sunum ,dosya transferi yapmaya olanak sağlayan bir masaüstü paylaşım yazılımıdır.</Description>
+            <Archive type="binary" sha1sum="c48bf049cd71390aff26c95627232250883ebf88">http://download.teamviewer.com/download/teamviewer.i686.rpm</Archive>
+            <BuildDependencies>
+                <Dependency>rpm2targz</Dependency>
+            </BuildDependencies>
+            <SourceURI>teamviewer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>teamviewer</Name>
+            <RuntimeDependencies>
+                <Dependency>libXtst-32bit</Dependency>
+                <Dependency>alsa-lib-32bit</Dependency>
+                <Dependency>libXdamage-32bit</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+                <Dependency>freetype-32bit</Dependency>
+                <Dependency>libSM-32bit</Dependency>
+                <Dependency>libX11-32bit</Dependency>
+                <Dependency>libXau-32bit</Dependency>
+                <Dependency>libXext-32bit</Dependency>
+                <Dependency>libXrandr-32bit</Dependency>
+                <Dependency>libXfixes-32bit</Dependency>
+                <Dependency>libXrender-32bit</Dependency>
+                <Dependency>harfbuzz-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/opt/teamviewer*</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="config">/etc/init.d</Path>
+                <Path fileType="config">/etc/teamviewer</Path>
+                <Path fileType="data">/var/log</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Provides>
+                <COMAR script="service.py">System.Service</COMAR>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/teamviewer.desktop" permission="0644" owner="root">teamviewer.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/teamviewer.png" permission="0644" owner="root">teamviewer.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2015-08-21</Date>
+                <Version>10.0.46203</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2015-01-20</Date>
+                <Version>10.0.37742</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-12-09</Date>
+                <Version>10.0.36281</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-12-03</Date>
+                <Version>10.0.35002</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ergün Salman</Name>
+                <Email>poyraz76@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-05-10</Date>
+                <Version>9.0.24147</Version>
+                <Comment>*Version bump to 9 series
+                     *Add comar script</Comment>
                 <Name>Alihan Öztürk</Name>
                 <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-08-03</Date>
+                <Version>7.0.9377</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -783,349 +1396,54 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>uyap</Name>
-            <Homepage>http://www.uyap.gov.tr</Homepage>
-            <Packager>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
-            </Packager>
-            <License>IBC</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Udf dosya uzantısı açmaya yarayan program.</Summary>
-            <Description xml:lang="en">Udf dosya uzantısı açmaya yarayan program.</Description>
-            <Archive type="targz" sha1sum="c4d5d4f9d164d0579137a2405ca0891495d7ed12">https://dl.dropboxusercontent.com/s/uo7fy33800q4jo4/uyap.tar.gz</Archive>
-            <SourceURI>uyap/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>uyap</Name>
-            <RuntimeDependencies>
-                <Dependency>jre7-openjdk</Dependency>
-                <Dependency>jre7-openjdk-headless</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/java/uyap</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2014-04-06</Date>
-                <Version>1.0</Version>
-                <Comment>First Release</Comment>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>luckyBackup</Name>
-            <Homepage>http://luckybackup.sourceforge.net/news.html</Homepage>
+            <Name>xcfa</Name>
+            <Homepage>http://www.xcfa.tuxfamily.org/static2/xcfa</Homepage>
             <Packager>
                 <Name>Pisi Linux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
-            <PartOf>util.archive</PartOf>
-            <Summary xml:lang="en">A powerful, fast and reliable backup and sync tool</Summary>
-            <Description xml:lang="en">luckyBackup is an application for data back-up and synchronization powered by the rsync tool.</Description>
-            <Archive type="targz" sha1sum="067e5ea0ce23944942d3ff0bf7e1133370872ee4">http://sourceforge.net/projects/luckybackup/files/0.4.8/source/luckybackup-0.4.8.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>qt-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>luckyBackup/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>luckyBackup</Name>
-            <RuntimeDependencies>
-                <Dependency>openssh</Dependency>
-                <Dependency>qt</Dependency>
-                <Dependency>rsync</Dependency>
-                <Dependency>xdg-utils</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable" permanent="0">/usr/bin/luckybackup</Path>
-                <Path fileType="data" permanent="0">/usr/share/applications/*</Path>
-                <Path fileType="doc" permanent="0">/usr/share/doc/luckybackup/*</Path>
-                <Path fileType="data" permanent="0">/usr/share/luckybackup/*</Path>
-                <Path fileType="data" permanent="0">/usr/share/*</Path>
-                <Path fileType="man" permanent="0">/usr/share/man/man8/luckybackup.8.gz</Path>
-                <Path fileType="data" permanent="0">/usr/share/pixmaps/*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2014-04-13</Date>
-                <Version>0.4.8</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2013-12-14</Date>
-                <Version>0.4.7</Version>
-                <Comment>First Release</Comment>
-                <Name>Stefan Gronewold (groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>picasa</Name>
-            <Homepage>http://picasa.google.com/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>EULA</License>
-            <License>GPLV2</License>
-            <License>LGPLV2</License>
-            <IsA>app:gui</IsA>
-            <PartOf>multimedia.graphics</PartOf>
-            <Summary xml:lang="tr">Linux İçin Picasa</Summary>
-            <Summary xml:lang="de">Picasa für Linux</Summary>
-            <Summary xml:lang="en">Picasa for Linux with face recognition</Summary>
-            <Description xml:lang="tr">Picasa, dijital fotoğraflarınızı aramaya, düzenlemeye, üzerinde değişiklik yapmaya, ve internet aracı&apos;ile paylaşmak için bir Google programıdır.</Description>
-            <Description xml:lang="de">Picasa ist eine Bilderverwaltungssoftware von Google, zum Verwalten, Archivieren, Bearbeiten und Erstellung von online Webalben Ihrer Fotos.</Description>
-            <Description xml:lang="en">Picasa is a software from Google for organizing, editing or sharing digital photos over internet from your computer.</Description>
-            <Icon>picasa</Icon>
-            <Archive type="binary" sha1sum="148a74dc0c39e2e676c4ccc8d9c0bf919a9afc56">http://www.mediafire.com/download/wjpkhrbdjkf5h9k/picasa-3.9-2pclos2012.src.rpm</Archive>
-            <BuildDependencies>
-                <Dependency>rpm2targz</Dependency>
-            </BuildDependencies>
-            <SourceURI>picasa/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>picasa</Name>
-            <RuntimeDependencies>
-                <Dependency>openssl-32bit</Dependency>
-                <Dependency>libXau-32bit</Dependency>
-                <Dependency>libXmu-32bit</Dependency>
-                <Dependency>libXpm-32bit</Dependency>
-                <Dependency>libXxf86vm-32bit</Dependency>
-                <Dependency>alsa-lib-32bit</Dependency>
-                <Dependency>audiofile-32bit</Dependency>
-                <Dependency>cups-32bit</Dependency>
-                <Dependency>freetype-32bit</Dependency>
-                <Dependency>libexif</Dependency>
-                <Dependency>libgphoto2</Dependency>
-                <Dependency>sane-backends</Dependency>
-                <Dependency>libxslt-32bit</Dependency>
-                <Dependency>lcms-32bit</Dependency>
-                <Dependency>lsb-release</Dependency>
-                <Dependency>firefox</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/opt/google/</Path>
-                <Path fileType="data">/usr/</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-                <Path fileType="executable">/usr/bin/</Path>
-                <Path fileType="data">/etc/xdg</Path>
-                <Path fileType="data">/usr/share/desktop-directories</Path>
-            </Files>
-            <Conflicts>
-                <Package>picasa-improved-play-function</Package>
-            </Conflicts>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/picasa.desktop" permission="0644" owner="root">picasa.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/picasa-kdehal.desktop" permission="0644" owner="root">picasa-kdehal.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/picasa-fontcfg.desktop" permission="0644" owner="root">picasa-fontcfg.desktop</AdditionalFile>
-                <AdditionalFile target="/etc/xdg/menus/applications-merged/picasa.menu" permission="0644">picasa.menu</AdditionalFile>
-                <AdditionalFile target="/usr/share/desktop-directories/Picasa.directory" permission="0644">Picasa.directory</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2013-07-20</Date>
-                <Version>3.9.0</Version>
-                <Comment>change source</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2011-12-17</Date>
-                <Version>3.9.0</Version>
-                <Comment>First release.</Comment>
-                <Name>Antoon Tolboom</Name>
-                <Email>atolboo@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>ndiswrapper</Name>
-            <Homepage>http://ndiswrapper.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <IsA>driver</IsA>
             <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">A network driver wrapper</Summary>
-            <Summary xml:lang="tr">Bir sürücü ara yazılımı(wrapper)</Summary>
-            <Summary xml:lang="es">Capa de abstracción de controladores</Summary>
-            <Description xml:lang="fr">ndiswrapper permet d&apos;utiliser les pilotes Windows pour les cartes réseau sans-fil sans pilote adéquat sous Linux.</Description>
-            <Description xml:lang="en">module-ndiswrapper allows you to use Windows XP drivers for WLAN cards without proper Linux drivers.</Description>
-            <Description xml:lang="tr">ndiswrapper, Linux sürücüsü olmayan kablosuz kartların Windows sürücüleri kullanılarak çalıştırılmasını sağlayan bir yazılımdır.</Description>
-            <Description xml:lang="es">ndiswrapper permite usar controladores de windows XP para tarjetas WLAN que no tienen controladores propios para Linux.</Description>
-            <Archive type="targz" sha1sum="75fbbda677fe91ee07a6f6a8e19b1f3e2479540f">http://download.sourceforge.net/ndiswrapper/ndiswrapper-1.59.tar.gz</Archive>
-            <AdditionalFiles>
-                <AdditionalFile target="ndiswrapper-1.59.patch">ndiswrapper-1.59.patch</AdditionalFile>
-            </AdditionalFiles>
-            <BuildDependencies>
-                <Dependency>kernel-module-headers</Dependency>
-            </BuildDependencies>
-            <SourceURI>ndiswrapper/pspec.xml</SourceURI>
+            <Summary xml:lang="en">XCFA. This stands for X Convert File Audio</Summary>
+            <Description xml:lang="en">XCFA is a tool to extract the contens of Audio-CDs and convert musical audio files conversion to FLAC, WAV, OGG, M4A, MPC, MP3, WavPack and many other formats.</Description>
+            <Archive type="targz" sha1sum="bf31d7c253f097cd22e497c9e65fe2d884626f44">http://download.tuxfamily.org/xcfaudio/xcfa_download/src/xcfa-4.3.8.tar.gz</Archive>
+            <SourceURI>xcfa/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>ndiswrapper</Name>
+            <Name>xcfa</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>vte</Dependency>
+                <Dependency>curl</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </RuntimeDependencies>
             <Files>
-                <Path fileType="library" permanent="true">/lib/modules</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/etc/ndiswrapper</Path>
-                <Path fileType="executable">/usr/sbin</Path>
-                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="application">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="pixmaps">/usr/share/pixmaps</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2014-04-28</Date>
-                <Version>1.59</Version>
+                <Date>2014-05-15</Date>
+                <Version>4.3.8</Version>
                 <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>Rssowl</Name>
-            <Homepage>http://www.rssowl.org/</Homepage>
-            <Packager>
-                <Name>Pisi Linux community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Eclipse Public License</License>
-            <IsA>app:gui</IsA>
-            <PartOf>network.rss</PartOf>
-            <Summary xml:lang="en">RSS Owl is a powerful application to organize, search and read feeds.</Summary>
-            <Summary xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu.</Summary>
-            <Description xml:lang="en">RSS Owl is a powerful application to organize, search and read your news feeds in a comfortable way.</Description>
-            <Description xml:lang="tr">RSSOwl ücretsiz ve güçlü bir haber besleme okuyucu. RSSOwl sen, toplamak, düzenlemek ve haber arama sağlayan kullanışlı, sonsuz esneklik ile kullanımı kolay arayüz.</Description>
-            <Archive type="zip" sha1sum="d69e059317f831484fc6b27df299f7e3e6b18d1b">http://sourceforge.net/projects/rssowl/files/rssowl%202/2.2.1/rssowl-2.2.1.linux.x86_64.zip</Archive>
-            <SourceURI>Rssowl/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>Rssowl</Name>
-            <RuntimeDependencies>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency>atk</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>libIDL</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>libXrender</Dependency>
-                <Dependency>libXt</Dependency>
-                <Dependency>nss</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>pixman</Dependency>
-                <Dependency>startup-notification</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/opt</Path>
-                <Path fileType="data">/usr</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/rssowl.desktop" permission="0644" owner="root" group="root">rssowl.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/rssowl.xpm" permission="0644" owner="root" group="root">rssowl.xpm</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2014-08-23</Date>
-                <Version>2.2</Version>
-                <Comment>First Release</Comment>
                 <Name>Stefan Gronewold(groni)</Name>
                 <Email>groni@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>chrome-remote-desktop</Name>
-            <Homepage>http://www.google.com</Homepage>
-            <Packager>
-                <Name>Ergün Salman</Name>
-                <Email>Poyraz76@pisilinux.org</Email>
-            </Packager>
-            <License>custom</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Ücretsiz uzaktan masaüstü erişim programı</Summary>
-            <Description xml:lang="en">Free remote desktop</Description>
-            <Icon>chrome-remote-desktop</Icon>
-            <Archive type="binary" sha1sum="ed41acb78707da341ba3ae9e4ec77eb08f473b75">https://dl.dropboxusercontent.com/s/i90kkszfcd4sevu/chrome-remote-desktop_current_amd64.deb</Archive>
-            <SourceURI>chrome-remote-desktop/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>chrome-remote-desktop</Name>
-            <Files>
-                <Path fileType="data">/usr/share/doc/chrome-remote-desktop/</Path>
-                <Path fileType="data">/opt/google/chrome-remote-desktop</Path>
-                <Path fileType="config">/etc/init.d</Path>
-                <Path fileType="config">/etc/pam.d</Path>
-                <Path fileType="config">/etc/cron.daily</Path>
-                <Path fileType="config">/etc/opt/chrome/native-messaging-hosts/</Path>
-            </Files>
-            <Provides>
-                <COMAR script="package.py">System.Package</COMAR>
-            </Provides>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2015-09-020</Date>
-                <Version>45.0.2454.17</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2015-07-08</Date>
-                <Version>44.0.2403.44</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2015-03-24</Date>
-                <Version>41.0.2272.41</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2015-01-17</Date>
-                <Version>40.0.2214.44</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2014-12-10</Date>
-                <Version>39.0.2171.46</Version>
-                <Comment>First Release</Comment>
-                <Name>Ergün Salman</Name>
-                <Email>poyraz76@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1253,260 +1571,6 @@
                 <Comment>First release</Comment>
                 <Name>Erdinç Gültekin</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>xcfa</Name>
-            <Homepage>http://www.xcfa.tuxfamily.org/static2/xcfa</Homepage>
-            <Packager>
-                <Name>Pisi Linux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">XCFA. This stands for X Convert File Audio</Summary>
-            <Description xml:lang="en">XCFA is a tool to extract the contens of Audio-CDs and convert musical audio files conversion to FLAC, WAV, OGG, M4A, MPC, MP3, WavPack and many other formats.</Description>
-            <Archive type="targz" sha1sum="bf31d7c253f097cd22e497c9e65fe2d884626f44">http://download.tuxfamily.org/xcfaudio/xcfa_download/src/xcfa-4.3.8.tar.gz</Archive>
-            <SourceURI>xcfa/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>xcfa</Name>
-            <RuntimeDependencies>
-                <Dependency>gtk2</Dependency>
-                <Dependency>taglib</Dependency>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency>vte</Dependency>
-                <Dependency>curl</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>desktop-file-utils</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="application">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man/man1</Path>
-                <Path fileType="pixmaps">/usr/share/pixmaps</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2014-05-15</Date>
-                <Version>4.3.8</Version>
-                <Comment>First release</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>sayonara</Name>
-            <Homepage>http://sayonara.luciocarreras.de/index.html</Homepage>
-            <Packager>
-                <Name>Pisi Linux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
-            <Summary xml:lang="tr">Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
-            <Description xml:lang="en">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
-            <Description xml:lang="tr">Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
-            <Icon>sayonara</Icon>
-            <Archive type="targz" sha1sum="8eba711cf9cf01e281028a8de472553cab409adb">ftp://sayonara-player.com/sayonara/sayonara-player-r73.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>qt-devel</Dependency>
-                <Dependency>gstreamer-devel</Dependency>
-                <Dependency>taglib-devel</Dependency>
-                <Dependency>libnotify-devel</Dependency>
-                <Dependency>gst-plugins-bad-devel</Dependency>
-                <Dependency>gst-plugins-base-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>sayonara/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>sayonara</Name>
-            <RuntimeDependencies>
-                <Dependency>qt</Dependency>
-                <Dependency>gst-plugins-bad</Dependency>
-                <Dependency>gst-plugins-base</Dependency>
-                <Dependency>gst-plugins-good</Dependency>
-                <Dependency>gst-plugins-ugly</Dependency>
-                <Dependency>gstreamer</Dependency>
-                <Dependency>taglib</Dependency>
-                <Dependency>libnotify</Dependency>
-                <Dependency>curl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2015-08-10</Date>
-                <Version>0.6.6</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2014-08-03</Date>
-                <Version>0.4.0</Version>
-                <Comment>First release</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>wuala</Name>
-            <Homepage>http://www.wuala.com/</Homepage>
-            <Packager>
-                <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
-            </Packager>
-            <License>2011 LaCie AG. Alls rights reserved.</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="en">Wuala için dosya aktarım paketi.Wuala is secure storage for all your files.</Summary>
-            <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
-            <Description xml:lang="en">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.Wuala is secure cloud storage, a haven in the cloud to store your files. You can safely access and share your files with friends, family, and co-workers.</Description>
-            <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
-            <Archive type="targz" sha1sum="adb8cb6bf1b6b92aae44702899b27d1413c72073">http://dl.dropbox.com/u/60245852/wuala.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>jre7-openjdk</Dependency>
-                <Dependency>jre7-openjdk-headless</Dependency>
-            </BuildDependencies>
-            <SourceURI>wuala/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>wuala</Name>
-            <RuntimeDependencies>
-                <Dependency>jre7-openjdk</Dependency>
-                <Dependency>jre7-openjdk-headless</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share</Path>
-                <Path fileType="library">/usr/lib</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/icons/wuala.ico" permission="0644" owner="root">wuala.ico</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/wuala.png" permission="0644" owner="root">wuala.png</AdditionalFile>
-                <AdditionalFile target="/usr/share/applications/wuala.desktop" permission="0644" owner="root">wuala.desktop</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2012-03-09</Date>
-                <Version>1.0</Version>
-                <Comment>new version.</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>namso-01@hotmail.it</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>draftsight</Name>
-            <Homepage>http://www.3ds.com/products-services/draftsight</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>AS IS</License>
-            <License>EULA</License>
-            <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
-            <Summary xml:lang="tr">DraftSight ® - DWG dosyaları için CAD ​​yazılımı.</Summary>
-            <Summary xml:lang="de">DraftSight®: Kostenlose Profi-CAD-Software.</Summary>
-            <Summary xml:lang="en">DraftSight® - Free CAD software for your DWG files</Summary>
-            <Summary xml:lang="es">DraftSight®: Programa CAD gratuito* de nivel profesional.</Summary>
-            <Description xml:lang="tr">DraftSight profesyonel CAD kullanıcılarının, öğrencilerin ve eğitimcilerin DWG dosyalarını oluşturmasını, düzenlemesini ve görüntülemesini sağlar.</Description>
-            <Description xml:lang="de">Mit DraftSight können professionelle CAD-Anwender, Studenten und Ausbilder DWG-Dateien erstellen, bearbeiten und ansehen.</Description>
-            <Description xml:lang="en">DraftSight lets professional CAD users, students and educators create, edit and view DWG files.</Description>
-            <Description xml:lang="es">Con DraftSight, los usuarios CAD profesionales, estudiantes y educadores pueden crear, editar y visualizar ficheros DWG.</Description>
-            <Icon>draftsight</Icon>
-            <Archive type="binary" sha1sum="8717571bf0a8ac4b51d8d0206a84b0ffe0cf1917">http://www.draftsight.com/download-linux-fedora</Archive>
-            <BuildDependencies>
-                <Dependency>rpm2targz</Dependency>
-            </BuildDependencies>
-            <SourceURI>draftsight/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>draftsight</Name>
-            <RuntimeDependencies>
-                <Dependency>glib2-32bit</Dependency>
-                <Dependency>mesa-glu-32bit</Dependency>
-                <Dependency>mesa-32bit</Dependency>
-                <Dependency>cups-32bit</Dependency>
-                <Dependency>libglade</Dependency>
-                <Dependency>libICE-32bit</Dependency>
-                <Dependency>libSM-32bit</Dependency>
-                <Dependency>libX11-32bit</Dependency>
-                <Dependency>libXext-32bit</Dependency>
-                <Dependency>libXrender-32bit</Dependency>
-                <Dependency>libXt-32bit</Dependency>
-                <Dependency>nas-32bit</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-                <Dependency>alsa-lib-32bit</Dependency>
-                <Dependency>fontconfig-32bit</Dependency>
-                <Dependency>expat-32bit</Dependency>
-                <Dependency>libudev-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/draftsight.bin</Path>
-                <Path fileType="executable">/usr/bin/draftsight</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-                <Path fileType="data">/usr/share/pixmaps/</Path>
-                <Path fileType="data">/usr/share/applications/</Path>
-                <Path fileType="data">/opt/dassault-systemes/</Path>
-                <Path fileType="data">/var/opt/dassault-systemes/</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/draftsight.desktop" permission="0644" owner="root">draftsight.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/bin/draftsight" permission="0755" owner="root">draftsight</AdditionalFile>
-                <AdditionalFile target="/opt/dassault-systemes/DraftSight/Libraries/libaudio.so.2" permission="0644" owner="root">libaudio.so.2</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/draftsight.png" permission="0644" owner="root">draftsight.png</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2015-08-10</Date>
-                <Version>6.2</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-10-17</Date>
-                <Version>6.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Kamil Atlı</Name>
-                <Email>suvari@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2014-04-01</Date>
-                <Version>5.1</Version>
-                <Comment>First Release</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>erdincgultekin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>Vivaldi</Name>
+        <Summary xml:lang="de">Vivaldi für Linux</Summary>
+	<Summary xml:lang="es">Vivaldi para Linux</Summary>
+        <Description xml:lang="de">Vivaldi ist ein Web-Browser der von  Vivaldi Technologies™. entwickelt wird. Wichtige Bestandteile sind die Rendering-Engine Webkit, sowie die JavaScript Engine. Beliebt macht den Browser seine einfach zu bedienende Oberfläche und die hohe Geschwindigkeit.</Description>
+	<Description xml:lang="es">Vivaldi es un navegador web desarrollado por  Vivaldi Technologies™... Usa el motor de renderizado WebKit, así como el motor de JavaScript. Un navegador popular con una interfaz fácil de usar y de alta velocidad.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vivaldi</Name>
+        <Homepage>http://vivaldi.com/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>EULA</License>
+        <Icon>vivaldi</Icon>
+        <PartOf>network.web</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Vivaldi for Linux</Summary>
+        <Description>Vivaldi is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
+        <Archive sha1sum="9644606d529f703bda9e68f73a94d8162f7bd1b4" type="binary">https://vivaldi.com/download/vivaldi_TP4.1.0.219.50-1.x86_64.rpm</Archive>
+	<BuildDependencies>
+            <Dependency>rpm2targz</Dependency>	    	    
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>vivaldi</Name>
+        <RuntimeDependencies>
+            <Dependency>nss</Dependency>
+	    <Dependency>cups</Dependency>
+	    <Dependency>gtk2</Dependency>
+	    <Dependency>cairo</Dependency>
+	    <Dependency>gconf</Dependency>
+	    <Dependency>libXi</Dependency>
+	    <Dependency>pango</Dependency>
+	    <Dependency>libXext</Dependency>
+	    <Dependency>libXtst</Dependency>
+	    <Dependency>alsa-lib</Dependency>
+	    <Dependency>libXfixes</Dependency>
+	    <Dependency>libXrandr</Dependency>
+	    <Dependency>fontconfig</Dependency>
+	    <Dependency>gdk-pixbuf</Dependency>
+	    <Dependency>libXcursor</Dependency>
+	    <Dependency>libXdamage</Dependency>
+	    <Dependency>libXrender</Dependency>
+	    <Dependency>libxkbfile</Dependency>
+	    <Dependency>pepperflash</Dependency>
+	    <Dependency>libXScrnSaver</Dependency>
+	    <Dependency>libXcomposite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/cron.daily</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/opt/vivaldi/</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/</Path>
+            <Path fileType="data">/usr/share/applications/</Path>
+            <Path fileType="data">/usr/share/xfce4/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-09-24</Date>
+            <Version>1.0.219.50</Version>
+            <Comment>Frist relase</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

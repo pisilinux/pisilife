@@ -12,8 +12,8 @@ WorkDir = "."
 NoStrip = ["/"]
 
 def setup():
-    shelltools.system("rpm2targz -v %s/vivaldi_TP4.1.0.219.50-1.x86_64.rpm" %get.workDIR())
-    shelltools.system("tar xfvz %s/vivaldi_TP4.1.0.219.50-1.x86_64.tar.gz --exclude=usr/bin --exclude=etc" %get.workDIR())
+    shelltools.system("rpm2targz -v %s/vivaldi-beta-1.0.303.52-2.x86_64.rpm" %get.workDIR())
+    shelltools.system("tar xfvz %s/vivaldi-beta-1.0.303.52-2.x86_64.tar.gz --exclude=usr/bin --exclude=etc" %get.workDIR())
     shelltools.chmod(get.workDIR() + "/opt/vivaldi/*", 0755)
 
 def install():

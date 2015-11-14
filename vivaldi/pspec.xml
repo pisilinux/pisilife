@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA>
         <Summary>Vivaldi for Linux</Summary>
         <Description>Vivaldi is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
-        <Archive sha1sum="9644606d529f703bda9e68f73a94d8162f7bd1b4" type="binary">https://vivaldi.com/download/vivaldi_TP4.1.0.219.50-1.x86_64.rpm</Archive>
+        <Archive sha1sum="8b8730ac7df743cca6d1d835b95d961597e7c773" type="binary">https://vivaldi.com/download/vivaldi-beta-1.0.303.52-2.x86_64.rpm</Archive>
 	<BuildDependencies>
             <Dependency>rpm2targz</Dependency>	    	    
         </BuildDependencies>
@@ -54,10 +54,17 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2015-09-24</Date>
+        <Update release="2">
+            <Date>2015-11-14</Date>
             <Version>1.0.219.50</Version>
             <Comment>Frist relase</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2015-09-24</Date>
+            <Version>1.0.303.52</Version>
+            <Comment>Version Bump</Comment>
             <Name>Ergün Salman</Name>
             <Email>poyraz76@pisilinux.org</Email>
         </Update>

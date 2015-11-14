@@ -54,17 +54,17 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2015-11-14</Date>
-            <Version>1.0.219.50</Version>
-            <Comment>Frist relase</Comment>
+    	<Update release="2">
+            <Date>2015-09-24</Date>
+            <Version>1.0.303.52</Version>
+            <Comment>Version Bump</Comment>
             <Name>Ergün Salman</Name>
             <Email>poyraz76@pisilinux.org</Email>
         </Update>
         <Update release="1">
-            <Date>2015-09-24</Date>
-            <Version>1.0.303.52</Version>
-            <Comment>Version Bump</Comment>
+            <Date>2015-11-14</Date>
+            <Version>1.0.219.50</Version>
+            <Comment>Frist relase</Comment>
             <Name>Ergün Salman</Name>
             <Email>poyraz76@pisilinux.org</Email>
         </Update>

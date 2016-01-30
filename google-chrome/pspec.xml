@@ -14,9 +14,9 @@
         <IsA>app:gui</IsA>
         <Summary>Google Chrome for Linux</Summary>
         <Description>Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
-        <Archive sha1sum="519be70047a9fce3171dc280d1b7123bc88a4bd9" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+        <Archive sha1sum="9aa2558ac700779d7bb2faaed4bb03b04a055c61" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
 	<BuildDependencies>
-            <Dependency>rpm2targz</Dependency>	    
+            <Dependency>rpm2targz</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -55,12 +55,12 @@
             <Dependency>icu4c</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>cups</Dependency>
-            <Dependency>libxslt</Dependency>            
-            <Dependency>libjpeg-turbo</Dependency>            
+            <Dependency>libxslt</Dependency> 
+            <Dependency>libjpeg-turbo</Dependency> 
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libvpx</Dependency>
-            <Dependency>flac</Dependency>                        
-        </RuntimeDependencies>
+            <Dependency>flac</Dependency>  
+            </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/</Path>
             <Path fileType="executable">/usr/bin/</Path>
@@ -74,10 +74,10 @@
     </Package>
     <History>
         <Update release="75">
-            <Date>2015-12-17</Date>
-            <Version>47.0.2526.106</Version>
-            <Comment>Release bump.</Comment>
-            <Name>Stefan Gronewold</Name>
+            <Date>2016-01-30</Date>
+            <Version>48.02564.97</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>
         <Update release="74">

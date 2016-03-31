@@ -16,7 +16,7 @@
         <BuildDependencies>
             <Dependency>desktop-file-utils</Dependency>
         </BuildDependencies>
-           <Archive sha1sum="eb94c3c16163816176097919b99becaefc6a83e0" type="tarxz">http://www.giuspen.com/software/cherrytree-0.35.9.tar.xz</Archive>
+           <Archive sha1sum="900e6bbdbd0b3c270584dcd2469a22b824ac119a" type="tarxz">http://www.giuspen.com/software/cherrytree-0.36.9.tar.xz</Archive>
     </Source>
     <Package>
         <Name>cherrytree</Name>
@@ -33,11 +33,18 @@
         <RuntimeDependencies>
             <Dependency>python-enchant</Dependency>
             <Dependency>python-gtk</Dependency>
-            <Dependency>python-gtksourceview</Dependency>
+            <!--<Dependency>python-gtksourceview</Dependency>-->
             <Dependency>python3</Dependency>
         </RuntimeDependencies>
     </Package>
     <History>
+        <Update release="6">
+            <Date>2016-03-31</Date>
+            <Version>0.36.9</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="5">
             <Date>2015-08-10</Date>
             <Version>0.35.9</Version>

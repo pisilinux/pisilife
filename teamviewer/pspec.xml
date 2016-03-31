@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA> 
         <Summary>User friendly remote control application</Summary>
         <Description>TeamViewer is a computer software for remote control, desktop sharing, and file transfer between Linux, Windows and Apple computers. TeamViewer is free for personal use. You can use TeamViewer completely free of charge to access your private computers or to help your friends with their computer problems. To buy a license for commercial use, please visit http://www.teamviewer.com </Description>
-        <Archive sha1sum="c48bf049cd71390aff26c95627232250883ebf88" type="binary">http://download.teamviewer.com/download/teamviewer.i686.rpm</Archive>
+        <Archive sha1sum="b6b0b07a92d975e33ed97b5a453ed7a738ceb387" type="binary">http://download.teamviewer.com/download/teamviewer.i686.rpm</Archive>
         <BuildDependencies>
             <Dependency>rpm2targz</Dependency>
         </BuildDependencies>
@@ -55,6 +55,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2016-03-31</Date>
+            <Version>11.0.57095</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
     <Update release="6">
             <Date>2015-08-21</Date>
             <Version>10.0.46203</Version>
@@ -99,4 +106,4 @@
             <Email>admins@pisilinux.org</Email>
         </Update>
     </History>
-</PISI> 
+</PISI>

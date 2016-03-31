@@ -11,11 +11,29 @@
         <Icon>chrome-remote-desktop</Icon>
         <Summary>Ücretsiz uzaktan masaüstü erişim programı</Summary>
         <Description>Free remote desktop</Description>
-        <Archive sha1sum="ed41acb78707da341ba3ae9e4ec77eb08f473b75" type="binary">https://dl.dropboxusercontent.com/s/i90kkszfcd4sevu/chrome-remote-desktop_current_amd64.deb</Archive>
+        <Archive sha1sum="fd5bf20e1d2c71eb91ca70c2c422dd8c6e7c7ef4" type="binary">http://dl.google.com/linux/chrome-remote-desktop/deb/pool/main/c/chrome-remote-desktop/chrome-remote-desktop_49.0.2623.40_amd64.deb</Archive>
     </Source>
 
     <Package>
         <Name>chrome-remote-desktop</Name>
+        <RuntimeDependencies>
+            <Dependency>nss</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>freetype</Dependency>
+        </RuntimeDependencies>
         <Files>
 	    <Path fileType="data">/usr/share/doc/chrome-remote-desktop/</Path>
 	    <Path fileType="data">/opt/google/chrome-remote-desktop</Path>
@@ -31,6 +49,13 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>2016-03-31</Date>
+            <Version>49.0.2623</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="5">
             <Date>2015-09-020</Date>
             <Version>45.0.2454.17</Version>

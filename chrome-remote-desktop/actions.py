@@ -8,7 +8,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 
 def setup():
-    shelltools.system("ar x chrome-remote-desktop_current_amd64.deb")
+    shelltools.system("ar x chrome-remote-desktop_49.0.2623.40_amd64.deb")
     shelltools.system("tar xfvz data.tar.gz")
 
 def install():

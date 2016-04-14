@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>wuala</Name>
-        <Summary xml:lang="tr">Wuala için dosya aktarım paketi</Summary>
-        <Description xml:lang="tr">wuala hesabınıza erişmenizi ve kontrol etmenizi sağlar.</Description>
-    </Source>
-</PISI>

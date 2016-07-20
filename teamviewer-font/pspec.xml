@@ -17,9 +17,6 @@
 
     <Package>
         <Name>teamviewer-fonts</Name>
-        <RuntimeDependencies>
-            <Dependency>teamviewer</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/</Path>
             <Path fileType="data">/opt/teamviewer/</Path>

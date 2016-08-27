@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA>
         <Summary>Google Chrome for Linux</Summary>
         <Description>Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
-        <Archive sha1sum="7a1bf0a0dc13dbc47263b425ffaf219ac15185f9" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
+        <Archive sha1sum="8dcee461a9f32a0e02fba1c1aec827d476f84b1a" type="binary">https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</Archive>
 	<BuildDependencies>
             <Dependency>rpm2targz</Dependency>
         </BuildDependencies>
@@ -60,7 +60,7 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libvpx</Dependency>
             <Dependency>flac</Dependency>  
-            </RuntimeDependencies>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/</Path>
             <Path fileType="executable">/usr/bin/</Path>
@@ -73,180 +73,82 @@
         </Files>
     </Package>
     <History>
-        <Update release="88">
+        <Update release="11">
+            <Date>2016-08-04</Date>
+            <Version>52.0.2743.116</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="10">
+            <Date>2016-07-21</Date>
+            <Version>52.0.2743.82</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="9">
             <Date>2016-06-24</Date>
             <Version>51.0.2704.106</Version>
             <Comment>Version bump.</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>
-        <Update release="87">
+        <Update release="8">
+            <Date>2016-06-17</Date>
+            <Version>51.0.2704.103</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="7">
             <Date>2016-06-09</Date>
             <Version>51.0.2704.84</Version>
             <Comment>Version bump.</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>
-        <Update release="86">
-            <Date>2016-06-07</Date>
+        <Update release="6">
+            <Date>2016-06-02</Date>
             <Version>51.0.2704.79</Version>
             <Comment>Version bump.</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>
-         <Update release="85">
+        <Update release="5">
+            <Date>2016-05-26</Date>
+            <Version>51.0.2704.63</Version>
+            <Comment>Release bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
+            <Date>2016-05-12</Date>
+            <Version>50.0.2661.102</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2016-04-29</Date>
+            <Version>50.0.2661.94</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
             <Date>2016-04-22</Date>
             <Version>50.0.2661.86</Version>
             <Comment>Version bump.</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>
-        <Update release="84">
+        <Update release="1">
             <Date>2016-04-14</Date>
             <Version>50.0.2661.75</Version>
-            <Comment>Release bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="83">
-            <Date>2016-04-08</Date>
-            <Version>49.0.26.23.112</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="82">
-            <Date>2016-03-29</Date>
-            <Version>49.0.26.23.110</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="81">
-            <Date>2016-03-25</Date>
-            <Version>49.0.26.23.108</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="80">
-            <Date>2016-03-09</Date>
-            <Version>49.0.26.23.87</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="79">
-            <Date>2016-03-03</Date>
-            <Version>49.0.26.23.75</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="78">
-            <Date>2016-02-19</Date>
-            <Version>48.02564.116</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="77">
-            <Date>2016-02-10</Date>
-            <Version>48.02564.109</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="76">
-            <Date>2016-02-04</Date>
-            <Version>48.0.2526.103</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="75">
-            <Date>2016-01-30</Date>
-            <Version>48.02564.97</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="74">
-            <Date>2015-09-21</Date>
-            <Version>45.0.2454.93</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Ergün Salman</Name>
-            <Email>poyraz76@pisilinux.org</Email>
-        </Update>
-        <Update release="73">
-            <Date>2015-09-03</Date>
-            <Version>45.0.2454.85</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="72">
-            <Date>2015-08-12</Date>
-            <Version>44.0.2403.155</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="71">
-            <Date>2015-08-05</Date>
-            <Version>44.0.2403.130</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="70">
-            <Date>2015-07-29</Date>
-            <Version>44.0.2403.125</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="69">
-            <Date>2015-07-25</Date>
-            <Version>44.0.2403.107</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="68">
-            <Date>2015-07-22</Date>
-            <Version>44.0.2403.89</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="67">
-            <Date>2015-07-15</Date>
-            <Version>43.0.2357.134</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="66">
-            <Date>2015-06-23</Date>
-            <Version>43.0.2357.130</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-        <Update release="65">
-            <Date>2015-06-13</Date>
-            <Version>43.0.2357.125</Version>
-            <Comment>Version bump.</Comment>
+            <Comment>First Release.</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>        
-        <Update release="63">
-            <Date>2015-06-09</Date>
-            <Version>43.0.2357.124</Version>
-            <Comment>Version bump.</Comment>
-            <Name>Stefan Gronewold(groni)</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
     </History>
 </PISI>

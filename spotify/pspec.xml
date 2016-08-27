@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA> 
         <Summary>Music Player</Summary>
         <Description>Listen to music using Spotify</Description>
-        <Archive sha1sum="d5b6b6bf978554ec1ebfff05b6a9048c8d2b0747" type="binary">http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.27.71.g0a26e3b2-9_amd64.deb</Archive>
+        <Archive sha1sum="7372f571601aa861e5f837aaaae8b50494dcf6df" type="binary">http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.36.120.g536a862f-20_amd64.deb</Archive>
         <BuildDependencies>
             <Dependency>binutils</Dependency>
             <Dependency>libXScrnSaver</Dependency>
@@ -66,6 +66,13 @@
         </AdditionalFiles>
     </Package>
     <History>
+    	<Update release="2">
+            <Date>2016-01-28</Date>
+            <Version>1.0.36.120</Version>
+            <Comment>First Release.</Comment>
+	    <Name>Stefan Gronewold</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2016-01-28</Date>
             <Version>1.0.27.71</Version>

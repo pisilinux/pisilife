@@ -24,7 +24,7 @@
         <RuntimeDependencies>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>mesa-32bit</Dependency>
-            <Dependency>udev-32bit</Dependency>
+            <Dependency>udev</Dependency>
             <Dependency>desktop-file-utils</Dependency>
             <!--<Dependency>udev-32bit</Dependency>-->
         </RuntimeDependencies>

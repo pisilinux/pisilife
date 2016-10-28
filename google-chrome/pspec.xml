@@ -15,8 +15,7 @@
         <Summary>Google Chrome for Linux</Summary>
         <Description>Google Chrome is another web browser which runs web pages and applications with lightning speed due to its superior JavaScript rendering engine.</Description>
         <Archive sha1sum="dc435f866d61930d5db71588b289e1ead1016ec6" type="binary">http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_54.0.2840.71-1_amd64.deb</Archive>
-        <BuildDependencies>
-            <Dependency>rpm2targz</Dependency>
+        <BuildDependencies>            
             <Dependency>binutils</Dependency>
         </BuildDependencies>
     </Source>
